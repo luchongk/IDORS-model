@@ -34,12 +34,15 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
     training_set_file = open("training_set.txt", "w")
     test_set_file = open("test_set.txt", "w")
     
-    for pair in pairs:
+    for i, pair in enumerate(pairs):
         result = "__label__"+ pair[1] + " " + preprocess(pair[0]) + "\n"
         if i < split_index:
             training_set_file.writelines(result)
         else:
             test_set_file.writelines(result)
+
+    training_set_file.close()
+    test_set_file.close()
 
 def preprocess(tweet):
     p.set_options(p.OPT.MENTION, p.OPT.URL, p.OPT.EMOJI, p.OPT.HASHTAG, p.OPT.NUMBER)
@@ -52,6 +55,8 @@ def preprocess(tweet):
     return unidecode.unidecode(rightFix)
 
 if __name__ == "__main__":
+    TRAINING_RATION = 0.8
+
     with open('datasets/dev_es.tsv') as tsvfile:
         reader = csv.DictReader(tsvfile, dialect='excel-tab')
         pairs = [(r['text'], r['HS']) for r in reader]
