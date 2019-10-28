@@ -46,7 +46,10 @@ def train(training_dataset, example_dim, save):
     model.add(tf.keras.layers.Dense(16, activation='relu'))
     model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
 
+    print(model.summary())
+
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
     model.fit(training_dataset, epochs=3)
 
     if save:
@@ -94,12 +97,11 @@ if __name__ == "__main__":
     test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text])
 
     training_dataset = tf.data.Dataset.from_tensor_slices((training_dataset_embeddings, training_dataset_labels))
+    training_dataset = training_dataset.batch(64)
 
     test_dataset = tf.data.Dataset.from_tensor_slices((test_dataset_embeddings, test_dataset_labels))
+    test_dataset = test_dataset.batch(64)
                                                     
     example_dim = training_dataset_embeddings[0].shape
-
-    print(example_dim)
-
+    
     train_and_test(training_dataset, test_dataset, example_dim, retrain, save)                                                       
-
