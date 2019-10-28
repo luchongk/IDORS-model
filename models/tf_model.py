@@ -1,8 +1,10 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
+
+import re, sys
 import tensorflow as tf
-import fasttext
 import numpy as np
-import re
+
+from fasttext import load_model
 
 def get_dataset():
     parsing_regex = re.compile(r'^__label__(\d)\s{1}(.*)$')
@@ -10,40 +12,94 @@ def get_dataset():
     train_file = open('training_set.txt')
     test_file = open('test_set.txt')
 
-    _training_dataset = []
-    _testing_dataset = []
+    training_dataset = []
+    test_dataset = []
 
     for line in train_file:
         match = re.match(parsing_regex, line)
-        _training_dataset.append((match[2], match[1]))
+        training_dataset.append((match[2], match[1]))
 
     for line in test_file:
         match = re.match(parsing_regex, line)
-        _testing_dataset.append((match[2], match[1]))
+        test_dataset.append((match[2], match[1]))
 
-    return _training_dataset, _testing_dataset
+    return training_dataset, test_dataset
 
-def dataset_to_embeddings(_dataset, _ft_model):
-    result = []
-    for example in _dataset:
-        result.append((get_tweet_embedding(example[0], _ft_model), example[1]))
+def dataset_to_embeddings(dataset, ft_model):
+    result = np.empty((len(dataset), ft_model.get_dimension()))
+
+    for index, example in enumerate(dataset):
+        result[index] = get_tweet_embedding(example[0], ft_model)
 
     return result
     
-def get_tweet_embedding(tweet, _ft_model):
-    vec = np.repeat(0.0, _ft_model.dim)
+def get_tweet_embedding(tweet, ft_model):
+    vec = np.repeat(0.0, ft_model.get_dimension())
     words = tweet.split()
     for word in words:
-        vec += np.array(_ft_model[word])
+        vec += np.array(ft_model.get_word_vector(word))
     return np.divide(vec, len(words))
 
-if __name__ == "__main__":
-    training_dataset, test_dataset = get_dataset()
-    ft_model = fasttext.load_model('baseline.bin')
+def train(training_dataset, example_dim, save):
+    model = tf.keras.Sequential()
+    model.add(tf.keras.layers.Flatten(input_shape=example_dim))
+    model.add(tf.keras.layers.Dense(16, activation='relu'))
+    model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
 
-    first_tweet_split = training_dataset[0][0].split()
-    first_tweet_split_embeddings = []
-    for word in first_tweet_split:
-        first_tweet_split_embeddings.append(ft_model[word])
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    model.fit(training_dataset, epochs=3)
+
+    if save:
+        model.save('tf_model.h5')
+
+    return model
+
+def test(test_dataset, model):
+    model.evaluate(test_dataset)
+
+def train_and_test(training_dataset, test_dataset, example_dim, retrain, save):
+    model = None
     
-    print(len(first_tweet_split_embeddings), len(first_tweet_split))
+    if retrain:
+        model = train(training_dataset, example_dim, save)
+    else:
+        try:
+            model = tf.keras.models.load_model('tf_model.h5')
+        except ImportError as h5_err:
+            print(h5_err)
+            print("You need to install h5py to load a TensorFlow model, aborting...")
+        except IOError as io_err:
+            print(io_err)
+            print("Couldn't find a saved TensorFlow model, aborting...")
+    
+    if model:
+        test(test_dataset, model)
+
+if __name__ == "__main__":
+    retrain = True if '--retrain' in sys.argv else False 
+    save = True if '--save' in sys.argv else False
+
+    training_dataset_text, test_dataset_text = get_dataset()
+    try:
+        ft_model = load_model("baseline.bin")
+    except ValueError as err:
+        print(err)
+        print("Couldn't find a saved model, aborting...")
+        exit(0)
+
+    training_dataset_embeddings = dataset_to_embeddings(training_dataset_text, ft_model)
+    training_dataset_labels = np.asarray([int(ex[1]) for ex in training_dataset_text])
+
+    test_dataset_embeddings = dataset_to_embeddings(test_dataset_text, ft_model)
+    test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text])
+
+    training_dataset = tf.data.Dataset.from_tensor_slices((training_dataset_embeddings, training_dataset_labels))
+
+    test_dataset = tf.data.Dataset.from_tensor_slices((test_dataset_embeddings, test_dataset_labels))
+                                                    
+    example_dim = training_dataset_embeddings[0].shape
+
+    print(example_dim)
+
+    train_and_test(training_dataset, test_dataset, example_dim, retrain, save)                                                       
+
