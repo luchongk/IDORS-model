@@ -46,10 +46,13 @@ def train(training_dataset, example_dim, save):
     model.add(tf.keras.layers.Dense(16, activation='relu'))
     model.add(tf.keras.layers.Dense(1, activation='sigmoid'))
 
-    print(model.summary())
+    # print(model.summary()) # Uncomment this if you want a summary of the model to be printed
 
-    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy', 
+                                                                         tf.keras.metrics.Precision(),
+                                                                         tf.keras.metrics.Recall()])
 
+    print("\n Training the model! \n")
     model.fit(training_dataset, epochs=3)
 
     if save:
@@ -57,7 +60,8 @@ def train(training_dataset, example_dim, save):
 
     return model
 
-def test(test_dataset, model):
+def test(test_dataset, model):    
+    print("\n Testing the model! \n")
     model.evaluate(test_dataset)
 
 def train_and_test(training_dataset, test_dataset, example_dim, retrain, save):
@@ -96,12 +100,14 @@ if __name__ == "__main__":
     test_dataset_embeddings = dataset_to_embeddings(test_dataset_text, ft_model)
     test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text])
 
+    tf.compat.v1.disable_eager_execution() # Comment this if you want to debug the model
+
     training_dataset = tf.data.Dataset.from_tensor_slices((training_dataset_embeddings, training_dataset_labels))
-    training_dataset = training_dataset.batch(64)
+    training_dataset = training_dataset.shuffle(400).batch(64)
 
     test_dataset = tf.data.Dataset.from_tensor_slices((test_dataset_embeddings, test_dataset_labels))
     test_dataset = test_dataset.batch(64)
                                                     
     example_dim = training_dataset_embeddings[0].shape
-    
+
     train_and_test(training_dataset, test_dataset, example_dim, retrain, save)                                                       
