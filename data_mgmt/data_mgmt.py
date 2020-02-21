@@ -2,23 +2,13 @@ import csv
 import preprocessor as p
 import re
 import unidecode
+import numpy as np
+
 from random import shuffle
 from math import floor
 
 #TODO: -exclamation/question/ellipsis
 #      -stopwords
-
-""" class Dataset:
-    def __init__(self, dataset, length):
-        self.dataset = dataset
-        self.length = length
-
-    def take(self, count):
-        return Dataset(dataset.take(count), dataset.length - count)
-
-    def skip(self, count):
-        return Dataset(dataset.skip(count), dataset.length - count)
- """
 
 def new_dataset(dataset_tsv_file, training_set_ratio):
     pairs = None
@@ -54,33 +44,37 @@ def preprocess(tweet):
 
     return unidecode.unidecode(rightFix)
 
-if __name__ == "__main__":
-    TRAINING_RATION = 0.8
 
-    with open('datasets/dev_es.tsv') as tsvfile:
-        reader = csv.DictReader(tsvfile, dialect='excel-tab')
-        pairs = [(r['text'], r['HS']) for r in reader]
+def get_dataset():
+    parsing_regex = re.compile(r'^__label__(\d)\s{1}(.*)$')
 
-        shuffle(pairs)
-        
-        split_index = floor(TRAINING_RATIO * len(pairs))
+    train_file = open('training_set.txt')
+    test_file = open('test_set.txt')
 
-        training_set = open("training_set.txt", "w")
-        test_set = open("test_set.txt", "w")
-        
-        for i, (tweet, label) in enumerate(pairs):
-            tweet = tweet.lower()
-            tokenized = p.tokenize(tweet)
-            leftFix = re.sub(r'(\S)(\$[^$\s]+?\$)', r'\1 \2', tokenized)
-            rightFix = re.sub(r'(\$[^$\s]+?\$)(\S)', r'\1 \2', leftFix)
-            
-            result = "__label__"+ label + " " + unidecode.unidecode(rightFix)+ "\n"
-            
-            if i < split_index:
-                training_set.writelines(result)
-            else:
-                test_set.writelines(result)
+    training_dataset = []
+    test_dataset = []
 
-        training_set.close()
-        test_set.close()    
+    for line in train_file:
+        match = re.match(parsing_regex, line)
+        training_dataset.append((match[2], match[1]))
 
+    for line in test_file:
+        match = re.match(parsing_regex, line)
+        test_dataset.append((match[2], match[1]))
+
+    return training_dataset, test_dataset
+
+def dataset_to_embeddings(dataset, ft_model):
+    result = np.empty((len(dataset), ft_model.get_dimension()))
+
+    for index, example in enumerate(dataset):
+        result[index] = get_tweet_embedding(example[0], ft_model)
+
+    return result
+    
+def get_tweet_embedding(tweet, ft_model):
+    vec = np.repeat(0.0, ft_model.get_dimension())
+    words = tweet.split()
+    for word in words:
+        vec += np.array(ft_model.get_word_vector(word))
+    return np.divide(vec, len(words))
