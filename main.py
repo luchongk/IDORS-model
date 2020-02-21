@@ -42,10 +42,10 @@ test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text])
 tf.keras.backend.set_floatx('float64')
 
 training_dataset = tf.data.Dataset.from_tensor_slices((training_dataset_embeddings, training_dataset_labels))
-training_dataset = training_dataset.shuffle(400).batch(25, drop_remainder=True)
+training_dataset = training_dataset.shuffle(400).batch(64, drop_remainder=True)
 
 test_dataset = tf.data.Dataset.from_tensor_slices((test_dataset_embeddings, test_dataset_labels))
-test_dataset = test_dataset.batch(25, drop_remainder=True)
+test_dataset = test_dataset.batch(64, drop_remainder=True)
                                                 
 example_dim = training_dataset_embeddings[0].shape
 
@@ -56,16 +56,16 @@ optimizer = tf.keras.optimizers.Adam()
 
 # Metrics that will measure loss and accuracy of the model over the training process
 train_loss = tf.keras.metrics.Mean(name='train_loss')
-train_accuracy = tf.keras.metrics.BinaryCrossentropy(name='train_accuracy')
+train_accuracy = tf.keras.metrics.BinaryAccuracy(name='train_accuracy')
 
 # Metrics that will measure loss and accuracy of the model over the testing process
 test_loss = tf.keras.metrics.Mean(name='test_loss')
-test_accuracy = tf.keras.metrics.BinaryCrossentropy(name='test_accuracy')
+test_accuracy = tf.keras.metrics.BinaryAccuracy(name='test_accuracy')
 
 # Loss function
 loss_object = tf.keras.losses.BinaryCrossentropy()
 
-EPOCHS = 5
+EPOCHS = 100
 
 if not retrain:
     try:
@@ -85,11 +85,11 @@ for epoch in range(EPOCHS):
 
     if retrain:
         for images, labels in training_dataset:
-            train_step(model, images, tf.reshape(labels, [25,1]), loss_object, optimizer, train_loss, train_accuracy)  
+            train_step(model, images, tf.reshape(labels, [64,1]), loss_object, optimizer, train_loss, train_accuracy)  
 
     if model:
         for test_images, test_labels in test_dataset:
-            test_step(model, test_images, tf.reshape(test_labels, [25,1]), loss_object, test_loss, test_accuracy)
+            test_step(model, test_images, tf.reshape(test_labels, [64,1]), loss_object, test_loss, test_accuracy)
 
     template = 'Epoch {}, Loss: {}, Accuracy: {}, Test Loss: {}, Test Accuracy: {}'
     print(template.format(epoch+1,
