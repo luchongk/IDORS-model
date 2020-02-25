@@ -56,16 +56,16 @@ optimizer = tf.keras.optimizers.Adam()
 
 # Metrics that will measure loss and accuracy of the model over the training process
 train_loss = tf.keras.metrics.Mean(name='train_loss')
-train_accuracy = tf.keras.metrics.BinaryCrossentropy(name='train_accuracy')
+train_accuracy = tf.keras.metrics.BinaryAccuracy(name='train_accuracy')
 
 # Metrics that will measure loss and accuracy of the model over the testing process
 test_loss = tf.keras.metrics.Mean(name='test_loss')
-test_accuracy = tf.keras.metrics.BinaryCrossentropy(name='test_accuracy')
+test_accuracy = tf.keras.metrics.BinaryAccuracy(name='test_accuracy')
 
 # Loss function
-loss_object = tf.keras.losses.BinaryCrossentropy()
+loss_object = tf.keras.losses.BinaryCrossentropy(from_logits=True)
 
-EPOCHS = 5
+EPOCHS = 100
 
 if not retrain:
     try:

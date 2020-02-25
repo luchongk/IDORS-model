@@ -22,7 +22,7 @@ class TfModel(Model):
 @tf.function
 def train_step(model, tweets, labels, loss_object, optimizer, train_loss, train_accuracy):
     with tf.GradientTape() as tape:
-        predictions = model(tweets)
+        predictions = model(tweets, training=True)
         loss = loss_object(labels, predictions)
 
     gradients = tape.gradient(loss, model.trainable_variables)
