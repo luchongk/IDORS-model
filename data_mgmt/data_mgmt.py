@@ -1,14 +1,14 @@
-import csv
-import preprocessor as p
-import re
-import unidecode
-import numpy as np
+import csv, re, unidecode, nltk 
+import preprocessor as p, numpy as np
 
 from random import shuffle
 from math import floor
+from nltk.corpus import stopwords
 
 #TODO: -exclamation/question/ellipsis
-#      -stopwords
+
+nltk.download('punkt')
+nltk.download('stopwords')
 
 def new_dataset(dataset_tsv_file, training_set_ratio):
     pairs = None
@@ -35,15 +35,23 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
     test_set_file.close()
 
 def preprocess(tweet):
-    p.set_options(p.OPT.MENTION, p.OPT.URL, p.OPT.EMOJI, p.OPT.HASHTAG, p.OPT.NUMBER)
-
     tweet = tweet.lower()
+    
+    ### Stopwords removal ###
+    tweet = nltk.word_tokenize(tweet)
+    stop_words = set(stopwords.words('spanish'))
+    new_sentence = []
+    for w in tweet:
+        if w not in stop_words:
+            new_sentence.append(w)
+    tweet = ' '.join(new_sentence)
+
+    p.set_options(p.OPT.MENTION, p.OPT.URL, p.OPT.EMOJI, p.OPT.HASHTAG, p.OPT.NUMBER)
     tokenized = p.tokenize(tweet)
     leftFix = re.sub(r'(\S)(\$[^$\s]+?\$)', r'\1 \2', tokenized)
     rightFix = re.sub(r'(\$[^$\s]+?\$)(\S)', r'\1 \2', leftFix)
 
     return unidecode.unidecode(rightFix)
-
 
 def get_dataset():
     parsing_regex = re.compile(r'^__label__(\d)\s{1}(.*)$')
