@@ -57,10 +57,14 @@ optimizer = tf.keras.optimizers.Adam()
 # Metrics that will measure loss and accuracy of the model over the training process
 train_loss = tf.keras.metrics.Mean(name='train_loss')
 train_accuracy = tf.keras.metrics.BinaryAccuracy(name='train_accuracy')
+train_precision = tf.keras.metrics.Precision(name='train_precision')
+train_recall = tf.keras.metrics.Recall(name='train_recall')
 
 # Metrics that will measure loss and accuracy of the model over the testing process
 test_loss = tf.keras.metrics.Mean(name='test_loss')
 test_accuracy = tf.keras.metrics.BinaryAccuracy(name='test_accuracy')
+test_precision = tf.keras.metrics.Precision(name='test_precision')
+test_recall = tf.keras.metrics.Recall(name='test_recall')
 
 # Loss function
 loss_object = tf.keras.losses.BinaryCrossentropy(from_logits=True)
@@ -85,18 +89,37 @@ for epoch in range(EPOCHS):
 
     if retrain:
         for images, labels in training_dataset:
-            train_step(model, images, tf.reshape(labels, [64,1]), loss_object, optimizer, train_loss, train_accuracy)  
+            train_step(model, 
+                       images, 
+                       tf.reshape(labels, [64,1]), 
+                       loss_object, 
+                       optimizer, 
+                       train_loss, 
+                       train_accuracy, 
+                       train_precision, 
+                       train_recall)  
 
     if model:
         for test_images, test_labels in test_dataset:
-            test_step(model, test_images, tf.reshape(test_labels, [64,1]), loss_object, test_loss, test_accuracy)
+            test_step(model, 
+                      test_images, 
+                      tf.reshape(test_labels, [64,1]), 
+                      loss_object, 
+                      test_loss, 
+                      test_accuracy,
+                      test_precision, 
+                      test_recall)
 
-    template = 'Epoch {}, Loss: {}, Accuracy: {}, Test Loss: {}, Test Accuracy: {}'
+    template = 'Epoch {}, Loss: {}, Accuracy: {}, Precision: {}, Recall: {}, Test Loss: {}, Test Accuracy: {}, Test Precision: {}, Test Recall: {}'
     print(template.format(epoch+1,
                         train_loss.result(),
                         train_accuracy.result()*100,
+                        train_precision.result()*100,
+                        train_recall.result()*100,
                         test_loss.result(),
-                        test_accuracy.result()*100))
+                        test_accuracy.result()*100,
+                        test_precision.result()*100,
+                        test_recall.result()*100))
 
 if save:
     model.save_weights('tf_weights.h5')       

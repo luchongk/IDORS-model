@@ -20,7 +20,7 @@ class TfModel(Model):
     return self.d2(x)
 
 @tf.function
-def train_step(model, tweets, labels, loss_object, optimizer, train_loss, train_accuracy):
+def train_step(model, tweets, labels, loss_object, optimizer, train_loss, train_accuracy, train_precision, train_recall):
     with tf.GradientTape() as tape:
         predictions = model(tweets, training=True)
         loss = loss_object(labels, predictions)
@@ -30,12 +30,16 @@ def train_step(model, tweets, labels, loss_object, optimizer, train_loss, train_
 
     train_loss(loss)
     train_accuracy(labels, predictions)
+    train_precision(labels, predictions)
+    train_recall(labels, predictions)
 
 @tf.function
-def test_step(model, tweets, labels, loss_object, test_loss, test_accuracy):
+def test_step(model, tweets, labels, loss_object, test_loss, test_accuracy, test_precision, test_recall):
     predictions = model(tweets)
     t_loss = loss_object(labels, predictions)
 
     test_loss(t_loss)
     test_accuracy(labels, predictions)
+    test_precision(labels, predictions)
+    test_recall(labels, predictions)
                                           
