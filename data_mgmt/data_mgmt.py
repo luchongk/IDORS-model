@@ -5,8 +5,6 @@ from random import shuffle
 from math import floor
 from nltk.corpus import stopwords
 
-#TODO: -exclamation/question/ellipsis
-
 nltk.download('punkt')
 nltk.download('stopwords')
 
@@ -48,6 +46,9 @@ def preprocess(tweet):
 
     p.set_options(p.OPT.MENTION, p.OPT.URL, p.OPT.EMOJI, p.OPT.HASHTAG, p.OPT.NUMBER)
     tokenized = p.tokenize(tweet)
+    tokenized = re.sub(r'([!¡]\s?){3,}', r' $EXCLAMATION$ ', tokenized)
+    tokenized = re.sub(r'([¿?]\s?){3,}', r' $QUESTION$ ', tokenized)
+    tokenized = re.sub(r'(\.\s?){3,}', r' $ELLIPSIS$ ', tokenized)
     leftFix = re.sub(r'(\S)(\$[^$\s]+?\$)', r'\1 \2', tokenized)
     rightFix = re.sub(r'(\$[^$\s]+?\$)(\S)', r'\1 \2', leftFix)
 
