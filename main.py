@@ -88,9 +88,9 @@ for epoch in range(EPOCHS):
     test_accuracy.reset_states()
 
     if retrain:
-        for images, labels in training_dataset:
+        for tweets, labels in training_dataset:
             train_step(model, 
-                       images, 
+                       tweets, 
                        tf.reshape(labels, [64,1]), 
                        loss_object, 
                        optimizer, 
@@ -100,9 +100,9 @@ for epoch in range(EPOCHS):
                        train_recall)  
 
     if model:
-        for test_images, test_labels in test_dataset:
+        for test_tweets, test_labels in test_dataset:
             test_step(model, 
-                      test_images, 
+                      test_tweets, 
                       tf.reshape(test_labels, [64,1]), 
                       loss_object, 
                       test_loss, 
