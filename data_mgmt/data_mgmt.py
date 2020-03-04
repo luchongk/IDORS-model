@@ -52,8 +52,6 @@ def preprocess(tweet):
     leftFix = re.sub(r'(\S)(\$[^$\s]+?\$)', r'\1 \2', tokenized)
     rightFix = re.sub(r'(\$[^$\s]+?\$)(\S)', r'\1 \2', leftFix)
 
-    if "$EXCLAMATION$" in rightFix or '$QUESTION$' in rightFix:
-        print(unidecode.unidecode(rightFix))
     return unidecode.unidecode(rightFix)
 
 def get_dataset():
