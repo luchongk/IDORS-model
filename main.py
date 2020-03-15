@@ -6,7 +6,7 @@ import tensorflow as tf
 from data_mgmt.data_mgmt import new_dataset, get_dataset, dataset_to_embeddings
 from fasttext import load_model
 
-from models.tf_model import train_step, test_step, TfModel
+from models.tf_model import TfModel
 
 # Data manager parameters
 reshuffle = True if '--reshuffle' in sys.argv else False
@@ -37,8 +37,6 @@ training_dataset_labels = np.asarray([int(ex[1]) for ex in training_dataset_text
 test_dataset_embeddings = dataset_to_embeddings(test_dataset_text, ft_model)
 test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text])
 
-## baseline_model.train_and_test(retrain, save)
-## tf.compat.v1.disable_eager_execution() # Comment this if you want to debug the model
 tf.keras.backend.set_floatx('float64')
 
 training_dataset = tf.data.Dataset.from_tensor_slices((training_dataset_embeddings, training_dataset_labels))
@@ -46,10 +44,9 @@ training_dataset = training_dataset.shuffle(400).batch(64, drop_remainder=True)
 
 test_dataset = tf.data.Dataset.from_tensor_slices((test_dataset_embeddings, test_dataset_labels))
 test_dataset = test_dataset.batch(64, drop_remainder=True)
-                                                
-example_dim = training_dataset_embeddings[0].shape
 
-model = TfModel(example_dim)
+# Dimension of the tweet embeddings                                                
+example_dim = training_dataset_embeddings[0].shape
 
 # Optimizer algorithm for training
 optimizer = tf.keras.optimizers.Adam()
@@ -69,7 +66,17 @@ test_recall = tf.keras.metrics.Recall(name='test_recall', dtype='float32')
 # Loss function
 loss_object = tf.keras.losses.BinaryCrossentropy(from_logits=True)
 
-EPOCHS = 100
+model = TfModel(example_dim,
+                loss_object, 
+                optimizer, 
+                train_loss, 
+                train_accuracy, 
+                train_precision, 
+                train_recall, 
+                test_loss, 
+                test_accuracy, 
+                test_precision, 
+                test_recall)
 
 if not retrain:
     try:
@@ -80,56 +87,5 @@ if not retrain:
     except IOError as io_err:
         print(io_err)
         print("Couldn't find a saved TensorFlow model, aborting...")
-
-for epoch in range(EPOCHS):
-    train_loss.reset_states()
-    train_accuracy.reset_states()
-    test_loss.reset_states()
-    test_accuracy.reset_states()
-
-    if retrain:
-        for tweets, labels in training_dataset:
-            train_step(model, 
-                       tweets, 
-                       tf.reshape(labels, [64,1]), 
-                       loss_object, 
-                       optimizer, 
-                       train_loss, 
-                       train_accuracy, 
-                       train_precision, 
-                       train_recall)  
-
-    if model:
-        for test_tweets, test_labels in test_dataset:
-            test_step(model, 
-                      test_tweets, 
-                      tf.reshape(test_labels, [64,1]), 
-                      loss_object, 
-                      test_loss, 
-                      test_accuracy,
-                      test_precision, 
-                      test_recall)
-
-    template = 'Epoch {}, Train Loss: {}, Train Accuracy: {}, Train Precision: {}, Train Recall: {}, Train F-score: {}, Test Loss: {}, Test Accuracy: {}, Test Precision: {}, Test Recall: {}, Test F-Score: {}'
-    
-    tr_precision = train_precision.result()*100
-    tr_recall = train_recall.result()*100
-    train_fscore = 2 * (tr_precision * tr_recall / (tr_precision + tr_recall))
-
-    tst_precision = test_precision.result()*100
-    tst_recall = test_recall.result()*100
-    test_fscore = 2 * (tst_precision * tst_recall / (tst_precision + tst_recall))
-    print(template.format(epoch+1,
-                        train_loss.result(),
-                        train_accuracy.result()*100,
-                        tr_precision,
-                        tr_recall,
-                        train_fscore,
-                        test_loss.result(),
-                        test_accuracy.result()*100,
-                        tst_precision,
-                        tst_recall,
-                        test_fscore))
-
-if save:
-    model.save_weights('tf_weights.h5')       
+else:
+    model.fit(training_dataset, test_dataset, 100, save)
