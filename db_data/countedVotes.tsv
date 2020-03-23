@@ -1,4 +1,6 @@
-tweet_id	text	count(v.is_hateful)	is_hateful
+tweet_id	text	count	is_hateful
+1026112053465899008	Jajajaa cállate indio estúpido metiche.hdp	1	0
+1026112053465899008	Jajajaa cállate indio estúpido metiche.hdp	2	1
 1026123061525995520	Me frustra muchísimo que amigos a los que quiero tengan actitudes de mierda. \nÚltimamente siempre veo tuits rollo "mu feminista pero con amigos q son mierdas noseké".	5	0
 1026148609321037825	Raza ayer iba subiendo a mi casa bien imbecil de lo pedo que estaba y un wey me dijo que me iba a robar que le diera mi fon y yo estaba bien pedo y como me espanté le rompí la madre y le puse una putiza y con una torta en la mano JAJAJAJAJAJAJAJA	3	0
 1026188109191495682	Maldito indio patiRajado  como usd no es el q esta pasando necesidades como los hermanos venezolanos    pero me doy cuenta que usd es un cretino  igual de burro y poco preparado que maburro	1	0
@@ -110,6 +112,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1031598425333276672	estafan con las porquerias haier y asi con todo. Uds ignorantes de mierda son complices de la desgracia de este pueblo y de permitir se destruyera este pais haga lo q haga el asno de maduro empeorara todo porq nadie le presta dinero a LADRON y todo chavista es LADRON asi q jodanc	2	1
 1031605314485776384	Guacalaaa comer pollo podrido como el cerebro de la ramera politica q tiene por testaferro.	3	0
 1031605314485776384	Guacalaaa comer pollo podrido como el cerebro de la ramera politica q tiene por testaferro.	3	1
+1031666822393806848	Estoy pensando en ofrecerme para transito de gatitos pero si el chino se encariña con otro gato y se lo saco me va a matar	3	0
 1031689237039525888	Maldito mamaguevo bruto pana, Venezuela se ha convertido en el único pais que todo es ilegal cuando en otros paises es lo normal y un derecho, maldito seas tu y toda tu generación chavista animal	2	0
 1031689237039525888	Maldito mamaguevo bruto pana, Venezuela se ha convertido en el único pais que todo es ilegal cuando en otros paises es lo normal y un derecho, maldito seas tu y toda tu generación chavista animal	3	1
 1031698633593380864	Basta de engendros como estos!! Otro que el negro de mierda y desperdicio humano de D’Elia, deberían procesarlos! Mira si ibas a decir esas cosas cuando gobernaban los laKras!!!\n#novuelvenmas	6	1
@@ -127,10 +130,10 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1031960594805604354	Que puto agobio que pesadez de mujer estoy hasta los cojones	3	0
 1031960594805604354	Que puto agobio que pesadez de mujer estoy hasta los cojones	2	1
 1031978585391804416	Estúpido imbecil, poco hombre, nunca, nunca maldito comunista debes tratar a una mujer de esa manera. Si a ella la tratas asi, recuerda q seguro tienes mujeres en tu familia y no te gustaría q se expresaran así de ellas, menos por una maldita ideología, cobarde. https://twitter.com/luis_xen/status/1031657551576936453 …	1	0
-1031978585391804416	Estúpido imbecil, poco hombre, nunca, nunca maldito comunista debes tratar a una mujer de esa manera. Si a ella la tratas asi, recuerda q seguro tienes mujeres en tu familia y no te gustaría q se expresaran así de ellas, menos por una maldita ideología, cobarde. https://twitter.com/luis_xen/status/1031657551576936453 …	2	1
+1031978585391804416	Estúpido imbecil, poco hombre, nunca, nunca maldito comunista debes tratar a una mujer de esa manera. Si a ella la tratas asi, recuerda q seguro tienes mujeres en tu familia y no te gustaría q se expresaran así de ellas, menos por una maldita ideología, cobarde. https://twitter.com/luis_xen/status/1031657551576936453 …	3	1
 1031982899430678528	La próxima temporada se llevarán los grises metálicos y el beige; y de noche, el clásico negro, con toques rojos, para matar seres humanos con estilo.https://twitter.com/ActualidadRT/status/1031976179761332226?s=19 …	1	0
 1031982899430678528	La próxima temporada se llevarán los grises metálicos y el beige; y de noche, el clásico negro, con toques rojos, para matar seres humanos con estilo.https://twitter.com/ActualidadRT/status/1031976179761332226?s=19 …	2	1
-1032026776850055175	Viejo marica, usted y el.hpta de @sergio_fajardo	1	1
+1032026776850055175	Viejo marica, usted y el.hpta de @sergio_fajardo	3	1
 1032040280550240257	@NicolasMaduro oye gordo maricon criminal échale la culpa a santo y a los Estados Unidos del temblor,cobarde hijo de puta	2	0
 1032040280550240257	@NicolasMaduro oye gordo maricon criminal échale la culpa a santo y a los Estados Unidos del temblor,cobarde hijo de puta	3	1
 1032043946338344960	No lo niego, pero estaba en Barcelona, no en Oran o Bagdad... Lo tenía bastante más fácil... Aunque la verdad, creo que hay mucho marica reprimido en los yihadistas, yo...	5	1
@@ -144,7 +147,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1032095489825624065	un negrata	4	1
 1032243394473598976	que pasa con el #UDIOTA del intendente MARTINEZ de #Valparaiso que como todo facho le estaba echando la culpa a los extranjeros, minimo que pida disculpas el imbecil  !!!!!	3	0
 1032243394473598976	que pasa con el #UDIOTA del intendente MARTINEZ de #Valparaiso que como todo facho le estaba echando la culpa a los extranjeros, minimo que pida disculpas el imbecil  !!!!!	2	1
-1032247377443414017	Amiksssssss sálvenme del profesor facho que tengoooooo	1	0
+1032247377443414017	Amiksssssss sálvenme del profesor facho que tengoooooo	3	0
 1032259420007399424	Es una chavista de mierda enchufada	2	0
 1032259420007399424	Es una chavista de mierda enchufada	3	1
 1032261189462646784	Está mina quedó en evidencia con este tweet. Lo viene haciendo desde siempre con ese pensamiento facho. En @Megatlon se hacen los boludos con esta mujer q hace años viene escribiendo lo mismo. No hay ni una gota de arrepentimiento en ese discurso q le hicieron hacer.	3	0
@@ -247,6 +250,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1036696986307715072	Al menos pretende algo superior a recibir una caja de comida al mes y a un bono por vagancia, maldito parásito chavista.	3	1
 1036707610165174275	Pero qué payaso y ridículo es. Me hace el día entero este perrito faldero de la izquierda chavista.  https://twitter.com/El_Universal_Mx/status/1036686240270016516 …	2	0
 1036707610165174275	Pero qué payaso y ridículo es. Me hace el día entero este perrito faldero de la izquierda chavista.  https://twitter.com/El_Universal_Mx/status/1036686240270016516 …	3	1
+1036843537323749381	Agoniza #UNASUR, ya era hora, con tanto zurdo corrupto y muchos ya en la carcel. #Lula.https://twitter.com/elcolombiano/status/1036841516935925760 …	3	1
 1036910091428085760	Idiota basura comunista ladrón asqueroso solo quieres destruir España chavista de mierda pic.twitter.com/cY6QGK27cQ	5	1
 1036965892893106176	Nuestro enemigo, también en máximo ejercicio, es la TV. Libertad para elegir entre más de 800 canales y nada  que ver so pena de convertirte en chavista,es decir, gobiernea, descerebrada, fanatica, vengativa, ignorante, abusiva y violenta. En resumen es tóxica y antiestética.	1	0
 1036965892893106176	Nuestro enemigo, también en máximo ejercicio, es la TV. Libertad para elegir entre más de 800 canales y nada  que ver so pena de convertirte en chavista,es decir, gobiernea, descerebrada, fanatica, vengativa, ignorante, abusiva y violenta. En resumen es tóxica y antiestética.	2	1
@@ -255,6 +259,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1037399924189659136	Esta es la realidad de los que viven en Venezuela gracias a la podrida revolución, son transportados como animales, mientras los corruptos coyotes de la mafia chavista viven como reyes. pic.twitter.com/QDVYim20VT	2	1
 1037486691815251968	Mañana tengo mi primer dia de clases y hay un chino culiao en el camarote de arriba q no para de roncar lo quiero matar	5	0
 1037486691815251968	Mañana tengo mi primer dia de clases y hay un chino culiao en el camarote de arriba q no para de roncar lo quiero matar	4	1
+1037490558636195841	No esperaba menos de ti.	2	0
 1037499898869030913	AD es socialista en que chino mandarin basico lo quieres? verga que ladilla este pais puros partidos socialistas de mierda	1	0
 1037499898869030913	AD es socialista en que chino mandarin basico lo quieres? verga que ladilla este pais puros partidos socialistas de mierda	2	1
 1037669639147253760	@jdiazdeportes ignorante estupido o poco inteligente, pensando que diciéndole gorda a @julisalazarmeza lo hace mejor, @julisalazarmeza eres la mejor periodista mujer de colombia amo su trabajo besos	1	0
@@ -309,6 +314,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1039104650669187072	ni encartonada JAJAAJAJAJAJAJAJAJAJ bai negro asqueroso	6	1
 1039188457141293058	Este fascista de mierda es tu gran referente? 	3	0
 1039188457141293058	Este fascista de mierda es tu gran referente? 	2	1
+1039206928008794112	Perro puto ete me dejó sin torta  https://twitter.com/JuaneGrilli/status/1038950303637364737 …	3	0
 1039302865330810880	Lo que @ElNuevoDia @ElVoceroOnLine @primerahora @Metro_PR @noticel simplemente no publican para mantener al pueblo  ignorante de la tragedia venezolana creada por el socialismo chavista. https://twitter.com/JoseAGuerra/status/1039121694085074952 …	5	0
 1039302865330810880	Lo que @ElNuevoDia @ElVoceroOnLine @primerahora @Metro_PR @noticel simplemente no publican para mantener al pueblo  ignorante de la tragedia venezolana creada por el socialismo chavista. https://twitter.com/JoseAGuerra/status/1039121694085074952 …	2	1
 1039318136384880641	Típico zurdo ignorante. Cuando se acaban los argumentos válidos, insultan...	3	0
@@ -500,7 +506,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1048217646796341250	Putos moros de mierda hay que echarlos de aquí como sea. Hay que limpiar toda esa basura de Europa. Europa es blanca. Por cierto, donde están las feministas para defender a esta mujer	3	1
 1048255144431947776	Cerra el orto feminazi, no tenes ni odea de futbol, segui organizando marchas para romper toda la ciudad ignorante	5	1
 1048259491081474048	Ojala que la pobre chica encuentre mejor persona que vos para confiar sus cosas. Solo sos una resentida y feminazi a sueldo!	3	0
-1048259491081474048	Ojala que la pobre chica encuentre mejor persona que vos para confiar sus cosas. Solo sos una resentida y feminazi a sueldo!	2	1
+1048259491081474048	Ojala que la pobre chica encuentre mejor persona que vos para confiar sus cosas. Solo sos una resentida y feminazi a sueldo!	3	1
 1048374498985222149	Me da una risa este tipo de cosas, por qué se cuidan o yo que sé pero ahora hasta una de 14 ya está más recorrida. Entonces Estar en embarazo le quita el valor a una mujer Cuando una puede ser más perra que la otra Jajaja Charros ome https://www.facebook.com/100005323182713/posts/971280396392724/ …	2	0
 1048374498985222149	Me da una risa este tipo de cosas, por qué se cuidan o yo que sé pero ahora hasta una de 14 ya está más recorrida. Entonces Estar en embarazo le quita el valor a una mujer Cuando una puede ser más perra que la otra Jajaja Charros ome https://www.facebook.com/100005323182713/posts/971280396392724/ …	3	1
 1048385348341043207	el gordo trolo de marta no me deja invitar al negro ok quedamos así enano de mierda	3	1
@@ -532,6 +538,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1048760785034534913	En el nombre del Padre, del hijo, del espiritu facho amén	2	1
 1048763133068754944	@rafaellacava10 Dice q no hay peor bazofia q un traidor, y es cierto, solo q se equivoca de persona, el traidor es un malandro bufón, q apoya a una dictadura criminal q mata de hambre al pueblo, a cambio de recibir su pedazo de la torta en q convirtieron a Vzla,, son unas lacras.	4	0
 1048763133068754944	@rafaellacava10 Dice q no hay peor bazofia q un traidor, y es cierto, solo q se equivoca de persona, el traidor es un malandro bufón, q apoya a una dictadura criminal q mata de hambre al pueblo, a cambio de recibir su pedazo de la torta en q convirtieron a Vzla,, son unas lacras.	1	1
+1048952944857681920	La concha puta de tu vieja Ronaldinho métete al fascista en el orto pelotudo de mierda	3	1
 1049004614220173315	Está el electorado facho, el electorado veleta, que un día te vota a CFK y al otro a Macri, los de izquierda que cuanto mejor peor y en un balotaje votaron a Macri, y los que votamos siempre peronismo.	2	0
 1049004614220173315	Está el electorado facho, el electorado veleta, que un día te vota a CFK y al otro a Macri, los de izquierda que cuanto mejor peor y en un balotaje votaron a Macri, y los que votamos siempre peronismo.	1	1
 1049317642081853442	Moro estupido de mierda	3	1
@@ -543,6 +550,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1049730299209424897	Un kg de helado y Netflix.... pero no el negro esclavo del capitalismo tiene que ir a laburar	2	1
 1049769828922339329	Y que tiene de raro que le digan triplehijueputa a ese asqueroso esperpento que el único deporte que practica el delincuente admistiado es despotricar contra todos los que no se comen su fábula Castro chavista de odio y rencor?	1	0
 1049769828922339329	Y que tiene de raro que le digan triplehijueputa a ese asqueroso esperpento que el único deporte que practica el delincuente admistiado es despotricar contra todos los que no se comen su fábula Castro chavista de odio y rencor?	4	1
+1049841409933631489	Pero chupame la verga negro hdphttps://twitter.com/Eric_Rustre11/status/1049838198136991744 …	3	1
 1050019593622839297	Si eres escoria fascista no se que cual es el insulto. Que quieres venir a pegarme? Tú que eres de los valientes que gritan Sieg Heil detrás de 10 nacionales.  Comeme los huevos fascista de mierda	2	0
 1050019593622839297	Si eres escoria fascista no se que cual es el insulto. Que quieres venir a pegarme? Tú que eres de los valientes que gritan Sieg Heil detrás de 10 nacionales.  Comeme los huevos fascista de mierda	3	1
 1050110707243655168	[#Periodismo] "¡Sos un idiota útil!": ¡Guillermo Moreno destrozó a Roberto Navarro! ¡Guerra entre referentes K! https://www.elintra.com.ar/argentina/2018/10/10/sos-un-idiota-util-guillermo-moreno-destrozo-roberto-navarro-guerra-entre-referentes-k-131707.html … pic.twitter.com/Rh8tUeKnYa	5	0
@@ -568,6 +576,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1050866765432016897	En criollo: anda a mamarte una montaña de guevos comunista de mierda, cuando esta porquería termine uds los traidores no podrán ni ser presidentes de un club de domino.	2	0
 1050866765432016897	En criollo: anda a mamarte una montaña de guevos comunista de mierda, cuando esta porquería termine uds los traidores no podrán ni ser presidentes de un club de domino.	3	1
 1050890962455670784	Somos nietos del indio que mataron esos hombres de mierda. Se llevaron el oro nos quitaron nuestras tierras pero nunca pudieron con la naturaleza, 	3	0
+1050898892206817280	Pero que faltan 3 ceros mas	2	0
 1050902774010052608	Negro cagon, tenías que matar al gordo puto ese !!!! Jaja	1	0
 1050902774010052608	Negro cagon, tenías que matar al gordo puto ese !!!! Jaja	4	1
 1050923989118439424	La mujer no es gorda, mucho menos obesa, dudo que tenga sobre peso, eso es un cuerpo real, que esta sociedad manipulada por estereotipos no lo sepa es otra cosa, y poniendo “los cuerpos gordos estan de moda” es alimento para la gente ignorante	3	0
@@ -600,6 +609,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1051814741893623808	Feliz Día de la Raza (atrasado)!Dedico 5 segundos a pensar en los Charrúas que matamos en Salsipuedes, en los términos racistas que se escuchan en un estadio como “negro de mierda”, en “el bolita”, “el plancha”, “el cubano”, “el venezolano”\nTodos somos lo mismo: cuerpo y alma 	3	0
 1051864590613667840	El nuevo disco de Bertín Osborne en realidad se titulaba "Yo debí enamorarme de tu madre, rojo comunista asqueroso, para haber criado a un hombre de verdad, comprometido con la patria y con Dios". Pero no le cabía.	1	0
 1051864590613667840	El nuevo disco de Bertín Osborne en realidad se titulaba "Yo debí enamorarme de tu madre, rojo comunista asqueroso, para haber criado a un hombre de verdad, comprometido con la patria y con Dios". Pero no le cabía.	2	1
+1051919375593349120	Ahora que recuerdo, soñé con joey montana marica que disque que estudiábamos juntos pero el estaba sin camisa 	3	0
 1051927484315422725	Oye pendejo te burlas de una enfermedad tan delicada como el cáncer de piel. No sabes maricon que la capa de ozono está cada vez más delgada y los rayos UV entran más fuerte que hace 10años? Mmv ojalá no te de a ti	2	0
 1051927484315422725	Oye pendejo te burlas de una enfermedad tan delicada como el cáncer de piel. No sabes maricon que la capa de ozono está cada vez más delgada y los rayos UV entran más fuerte que hace 10años? Mmv ojalá no te de a ti	1	1
 1051934694600859648	perdona me he perdido, desde cuando maricon y homosexual no va unido???? shocked me acabas de dejar	3	1
@@ -655,7 +665,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1054253767779143680	Este se ríe y mofa de la música y de los que tocan,y de la mano de Rufián haciendo el payaso grandes ingresos vendrán. Gran ejemplo de comunista que gratis aloja en sus inmuebles a los del continente negro que vienen a engordar la lista.	3	1
 1054485627146788867	#MúsicaNegra El #Rock nació del #Blues y el #Blues del primer grito del esclavo negro, esas "extrañas" entonaciones, traídas de África Occidental, que utilizaba para acompañar sus trabajos o para lanzar indirectas a otros. Así reconocía el nuevo ambiente. https://www.youtube.com/watch?v=aZSmfn5UjRU …	5	0
 1054485627146788867	#MúsicaNegra El #Rock nació del #Blues y el #Blues del primer grito del esclavo negro, esas "extrañas" entonaciones, traídas de África Occidental, que utilizaba para acompañar sus trabajos o para lanzar indirectas a otros. Así reconocía el nuevo ambiente. https://www.youtube.com/watch?v=aZSmfn5UjRU …	1	1
-1054493054881673216	realmente solo me gustaría tener hijos si fueran lgbt, pero con la suerte de mierda que tengo fijo que me salen heteros y de derechas :_________________	1	0
+1054493054881673216	realmente solo me gustaría tener hijos si fueran lgbt, pero con la suerte de mierda que tengo fijo que me salen heteros y de derechas :_________________	3	0
 1054499924858101760	Como hdp estuve amasando para hacer pan casero y torta dulce toda la mañana , para que mi Mamá CONJELE.. No te das cuenta que llueve mujer	3	0
 1054549823335133185	Loco, el embustero o idiota... condiciones que definen al chavista/madurista.	3	1
 1054655829260013568	estos dinosaurios politicos quieren seguir viviendo de la teta del estado ? esta mujer con esa mentalidad mediocre con ese plan vida , las manzaneras que lo entregaban se adueñiaban de la mercaderia, la leche y muchas veces terminaban en el trueque !!el pobre siempre pierde!!	2	0
@@ -682,7 +692,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1055448223450652673	O te va o el pueblo te sacará @PedroChavarryV no hay miedo carajo... No estás en los 80s de tu panzon ni en los 90s de tu chino sucio. O TE VAS O TE SACAMOS.	4	0
 1055448223450652673	O te va o el pueblo te sacará @PedroChavarryV no hay miedo carajo... No estás en los 80s de tu panzon ni en los 90s de tu chino sucio. O TE VAS O TE SACAMOS.	1	1
 1055587170856116225	Jajajajajajajajaja ay te odio. Sos mi amigo vos. No de este negro esclavo	3	1
-1055607749055315968	zurdo de mierda	1	1
+1055607749055315968	zurdo de mierda	3	1
 1055653101947023361	Jajaja payaso! Razonamiento kk, zurdo, peruca, anarquista	1	0
 1055653101947023361	Jajaja payaso! Razonamiento kk, zurdo, peruca, anarquista	2	1
 1055999888897572864	"¿Gemelos? ¿Qué falta ya? ¿Qué unos alienígenas robaron tu cuerpo? ¿Qué era un clon tuyo? ¡No seas estúpido!"\n\nSe quejó él. Pero más aún cuando cayó al suelo, por culpa del maldito moreno.\n\n"Grrr... ¡Supongo que el hecho de que seas un completo idiota hizo que no lo > https://twitter.com/RanmaAndHalf/status/1055997036212994048 …	3	0
@@ -799,6 +809,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1060712335529140224	"el puto y la torta siempre son alta pareja " ajajajajaj	3	1
 1060752419758297088	La zorra y la má fea en la familia soy una chulada Mujer chulada Plebe mendiga mocosa no bas hacer modelo eres una puta gorda fer y pobre eres una pendeja y problema en la familia  alv mija pic.twitter.com/qPUEt9rYuy	1	0
 1060752419758297088	La zorra y la má fea en la familia soy una chulada Mujer chulada Plebe mendiga mocosa no bas hacer modelo eres una puta gorda fer y pobre eres una pendeja y problema en la familia  alv mija pic.twitter.com/qPUEt9rYuy	2	1
+1060848959449690117	No te llamo de usted, xq no lo mereces.\nAhora idiotizado, ignorante, indecente y fascista eres un rato largo.....\nVuelve a la caverna de donde has salido...	1	0
+1060848959449690117	No te llamo de usted, xq no lo mereces.\nAhora idiotizado, ignorante, indecente y fascista eres un rato largo.....\nVuelve a la caverna de donde has salido...	2	1
 1060883238531555329	Otro ignorante: el género es la determinación genética, hombre es hombre y mujer es mujer... Lo que cada uno QUIERA transmitir es otra cosa... donde miente esa concejala?? #Bienvenidos13	1	0
 1060883238531555329	Otro ignorante: el género es la determinación genética, hombre es hombre y mujer es mujer... Lo que cada uno QUIERA transmitir es otra cosa... donde miente esa concejala?? #Bienvenidos13	4	1
 1060898475490066432	Es chavista, déjala nadar en paz en su charco de mierda.	3	1
@@ -810,6 +822,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1061244427254095877	Así de mal vamos. Desde el mismo momento que usó la palabra "feminazi", todas sus palabras quedaron invalidadas.\n\nUn tipo critica a las mujeres que llevan personajes masculinos en roles EN PLENO 2018 y encima viene otro a atacar y faltar por ello. Patético cuanto menos. https://twitter.com/xLucinaAYO/status/1061242366571483136 …	4	0
 1061244427254095877	Así de mal vamos. Desde el mismo momento que usó la palabra "feminazi", todas sus palabras quedaron invalidadas.\n\nUn tipo critica a las mujeres que llevan personajes masculinos en roles EN PLENO 2018 y encima viene otro a atacar y faltar por ello. Patético cuanto menos. https://twitter.com/xLucinaAYO/status/1061242366571483136 …	1	1
 1061270074483531776	"Las mujeres, dende entonces,\nconocí a todas en una;\nya no he de probar fortuna\ncon carta tan conocida:\nmujer y perra parida,\n¡no se me acerca ninguna!."	4	0
+1061305145265405957	Una mujer vale si es madre, si no a barrer iglesias. La Virgen Maria es lo maximo por madre de Jesus, Maria Magdalena una puta. La vision utilitaria de la mujer.	2	0
+1061305145265405957	Una mujer vale si es madre, si no a barrer iglesias. La Virgen Maria es lo maximo por madre de Jesus, Maria Magdalena una puta. La vision utilitaria de la mujer.	1	1
 1061345383086022656	El subnormal profundo de Rufian justificando una agresion. Esta claro que si llevase una camiseta de TERRA LLIURE pondria el grito en el cielo. Una agresion es una agresion, zopenco fascista de mierda. https://twitter.com/gabrielrufian/status/1061304705131929600 …	2	0
 1061345383086022656	El subnormal profundo de Rufian justificando una agresion. Esta claro que si llevase una camiseta de TERRA LLIURE pondria el grito en el cielo. Una agresion es una agresion, zopenco fascista de mierda. https://twitter.com/gabrielrufian/status/1061304705131929600 …	3	1
 1061392927669280768	Este maldito comunista HDLGP se pasó de jalabolas	2	0
@@ -835,7 +849,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1061706749336535040	Vos la estás jugando no pelotudazo? Te esperamos en el verano como dijo Ferreiro. Extraña a papá el viejo trolo.	1	1
 1061709029335011328	Ya no seas marica	1	0
 1061709029335011328	Ya no seas marica	4	1
-1061715950741938176	El vecino de Belen es un pelotudo al cuadrado! Gallina marica que encima grita solo PUTO	2	1
+1061715950741938176	El vecino de Belen es un pelotudo al cuadrado! Gallina marica que encima grita solo PUTO	3	1
 1061724024609345537	Le dije para ir al bingo hoy a la noche y ella tipo.... \n\n“Mañana me levanto a las 5 cornuda mantenida por el marica”\nJajaajjaja no me puedo parar d reir	3	1
 1061738756108115974	Amigo es el chabon que hace mas tiempo, se la da de estrellita, le piden seleccion y erro dos goles solo, uno a arco vacio y el otro mano a mano, y despues lo bardeo a un pibe, es un negro de mierda lo mires x donde lo mires	1	0
 1061738756108115974	Amigo es el chabon que hace mas tiempo, se la da de estrellita, le piden seleccion y erro dos goles solo, uno a arco vacio y el otro mano a mano, y despues lo bardeo a un pibe, es un negro de mierda lo mires x donde lo mires	2	1
@@ -861,12 +875,14 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1063240656909406210	Va a sonar idiota, pero me alegra que se una gente que puede pensar distinto (feminista y no feminista) en una lucha común. No más violencia a los pueblos originarios y no más cobardía por las llamadas fuerzas del orden.	2	1
 1063375278347640833	Quién le daría un doctorado "honoris causa" a este payaso fascista? Sería Carlos Castaño? Las AUC? AUV? 	2	0
 1063375278347640833	Quién le daría un doctorado "honoris causa" a este payaso fascista? Sería Carlos Castaño? Las AUC? AUV? 	3	1
+1063529718744530945	@fedebulos12 infórmate antes de hablar negro puto	3	1
 1063546539572953088	Yo no entiendo que es lo que tanto les molesta que la nena te salga torta y el pibe puto????? Los vas a dejar de querer por sus gustos?? Que pensamiento tan de mierda https://twitter.com/NickyMarquez1/status/1062747879268368384 …	2	0
 1063546539572953088	Yo no entiendo que es lo que tanto les molesta que la nena te salga torta y el pibe puto????? Los vas a dejar de querer por sus gustos?? Que pensamiento tan de mierda https://twitter.com/NickyMarquez1/status/1062747879268368384 …	1	1
 1063587337232359424	Encima que tengo sueño y eso me provoca mal humor el chino flasha que le quiero robar un vodka jajaja chupame la pija chino gil	1	0
 1063587337232359424	Encima que tengo sueño y eso me provoca mal humor el chino flasha que le quiero robar un vodka jajaja chupame la pija chino gil	3	1
 1063751469248204800	Tú en cambio seguro que prefieres sus matanzas semanales por no regular armas, su no derecho a la sanidad o educacion superior si no tienes dinero, o a su asqueroso presidente fascista y misógino.	3	0
 1063751469248204800	Tú en cambio seguro que prefieres sus matanzas semanales por no regular armas, su no derecho a la sanidad o educacion superior si no tienes dinero, o a su asqueroso presidente fascista y misógino.	2	1
+1063944859533361153	Será porque es el único canal que lo transmite?	2	0
 1064100691327758337	Si ETA hubiera querido acabar con el habría hecho la abominación q hicieron a M.B.Garrido.\n\nEncarcelaron a un carcelero, le mostraron la persecución y el dolor,\n\nY aunque no comparto lo que le hicieron,\nLe re-convirtieron en un tarado fascista.\n\nEstamos en la Época de post verdad	3	0
 1064100691327758337	Si ETA hubiera querido acabar con el habría hecho la abominación q hicieron a M.B.Garrido.\n\nEncarcelaron a un carcelero, le mostraron la persecución y el dolor,\n\nY aunque no comparto lo que le hicieron,\nLe re-convirtieron en un tarado fascista.\n\nEstamos en la Época de post verdad	2	1
 1064145738207293440	Una mujer inteligente, es todo aquello que un hombre mediocre no quiere tener https://gutenberg.rocks/una-mujer-inteligente-aquello-hombre-mediocre-no-quiere/ …	2	0
@@ -920,6 +936,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1064993651309375489	¿Hay alguien limpio y con dignidad en la organización criminal PPodrida de corruPPtos? ¿No existe ningún organismo que hagan dimitir a los sinvergüenzas corruPPtos? Nosotros les pagamos y encima nos están robando todos los días. Además manejan muchos millones en negro a repartir.	3	0
 1064993651309375489	¿Hay alguien limpio y con dignidad en la organización criminal PPodrida de corruPPtos? ¿No existe ningún organismo que hagan dimitir a los sinvergüenzas corruPPtos? Nosotros les pagamos y encima nos están robando todos los días. Además manejan muchos millones en negro a repartir.	2	1
 1065005513283387393	Que tiene que ver la cara según vos de "puto"? Vos tenés cara de negro pobre y nadie dice na	5	1
+1065009357090418688	Gracias milenials, ahora queen es marica	2	0
+1065009357090418688	Gracias milenials, ahora queen es marica	1	1
 1065029264700030976	Era trolo , no cuenta su opinión !	1	0
 1065029264700030976	Era trolo , no cuenta su opinión !	4	1
 1065067717315739649	en serio quien votaría para presidente al misógino de mierda de Olmedo? Un facho católico pro-vida sino no se explica.	5	0
@@ -971,6 +989,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1067226005641850880	Pero por qué un puto teléfono chino con android 1.1 saca mejores fotos que esas sondas de la nasa?	3	0
 1067332611138301952	El domingo por la noche, 5 moros asaltaron un comercio chino en la C/Pascual, en Murcia. Les pegaron una paliza a los dueños estando los hijos presentes. Los pillaron y van a estar 3 días en el calabozo. ¿Así de barato sale hacer algo así? Cobardes de mierda y justicia de mierda	2	0
 1067332611138301952	El domingo por la noche, 5 moros asaltaron un comercio chino en la C/Pascual, en Murcia. Les pegaron una paliza a los dueños estando los hijos presentes. Los pillaron y van a estar 3 días en el calabozo. ¿Así de barato sale hacer algo así? Cobardes de mierda y justicia de mierda	3	1
+1067396581652131840	Hace 26 hs y 30 m que estoy de servicio.  Que negro esclavo q soy	2	0
+1067396581652131840	Hace 26 hs y 30 m que estoy de servicio.  Que negro esclavo q soy	1	1
 1067409368814096384	Muchos de los que van de innovadores, fliparían con lo que hacía Chicho hace la torta de años. El puto amo.	3	0
 1067456318930325510	Tengo que hacer el trabajo final de ingles y ahora es cuando odio ser el único puto que no sabe un choto de inglés\n*inserte banderita lgbt en el gif* pic.twitter.com/FWgD2jOA6n	5	0
 1067503984523575297	Un comunista\njamás podrá ver,\nevaluar ni analizar nada\nobjetivamente.\n:\nSin importar q diga y jure\nhaber abandonado\nesa criminal peste ideológica la tara roja\nse instala en la psiquis\nde una manera tal que\nes prácticamente imposible erradicar\nesa mala yerba\ndel jardín mental... https://twitter.com/Gbastidas/status/1067399705661976576 …	3	1
@@ -1027,7 +1047,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1068480032803364866	@BDAprograma la resaca de la FACHA BORRACHA bullrich es impresionante, esta impresentable hizo un mamarracho balbuceando en ingles , no se sabe si fue porque no sabe nada de ingles o por la lengua dura ja ja ja ja ja, y el facho laje la mira con cariño ja ja ja ja ja ja	3	0
 1068480032803364866	@BDAprograma la resaca de la FACHA BORRACHA bullrich es impresionante, esta impresentable hizo un mamarracho balbuceando en ingles , no se sabe si fue porque no sabe nada de ingles o por la lengua dura ja ja ja ja ja, y el facho laje la mira con cariño ja ja ja ja ja ja	2	1
 1068490197413830657	Lo que más desprecio es el facho pobre, haciendo proselitismo de derecha	3	1
-1068535766500950016	agradezco no tener televisión  y no tener que escuchar al inoperante facho y cínico de macri	2	0
+1068535766500950016	agradezco no tener televisión  y no tener que escuchar al inoperante facho y cínico de macri	3	0
 1068535766500950016	agradezco no tener televisión  y no tener que escuchar al inoperante facho y cínico de macri	3	1
 1068538119383851009	que negro de mierda jajajaja se va ir sin nosotras	2	0
 1068538119383851009	que negro de mierda jajajaja se va ir sin nosotras	2	1
@@ -1058,6 +1078,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1070442496323411968	H.P.lenin moreno.mandad asrsinar a Jorge Glass se te termina la fiesta a Alibaba y lod 40 ladrones maldito\nArrastrado la vas a pagar bien caro ya pago la vicuna= traidora https://twitter.com/PatricioMery/status/1070138951854379008 …	1	0
 1070442496323411968	H.P.lenin moreno.mandad asrsinar a Jorge Glass se te termina la fiesta a Alibaba y lod 40 ladrones maldito\nArrastrado la vas a pagar bien caro ya pago la vicuna= traidora https://twitter.com/PatricioMery/status/1070138951854379008 …	2	1
 1070515623422320642	este chino es un hijo de puta es un panqueques de mierda	3	1
+1070714206192832513	A mi me da vergüenza como español que un comunista asqueroso como @pnique o @Pablo_Iglesias_  cobren de mis impuestos.	3	1
 1070776583638659073	A ti se te olvida indio de mierda @evoespueblo que ese mismo pueblo te dijo QUE NO EN UN REFERENDUM el cual te pasaste por el forro y tu enfermedad de poder y droga lo ignoras lanzándose otra vez como candidato presidencial....NO SEAS TU TAN CABRONhttps://twitter.com/evoespueblo/status/1070648512159891456 …	3	1
 1070842674087907329	Es really ? Usa las neuronas vos y decí la palabra apropiada que es “chorro” “ladron” “violador” diciendo negro discrimas por un color de piel. Quieras admitirlo o no es racista decir eso.	6	0
 1070842674087907329	Es really ? Usa las neuronas vos y decí la palabra apropiada que es “chorro” “ladron” “violador” diciendo negro discrimas por un color de piel. Quieras admitirlo o no es racista decir eso.	1	1
@@ -1070,9 +1091,17 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1071050918404243456	Que facilidad para hacer puto parkour de cualquier chino Jajajaja https://twitter.com/LuisElGroot/status/1070427475807744002 …	1	0
 1071050918404243456	Que facilidad para hacer puto parkour de cualquier chino Jajajaja https://twitter.com/LuisElGroot/status/1070427475807744002 …	2	1
 1071196607851520001	“Machirulo” ya es un insulto asumido y revindicado por los insultados, como “puto”, “negro”, “impresionista” o “fauve”.	6	0
+1071317057365598208	Pobre negrata...	3	0
 1071326777266630656	¡Asqueroso! Lo que está mujer descubrió oculto en su casa la dejó aterrorizada  (+video)\n - https://www.noticias24.com/mascotas/noticia/29770/asqueroso-esta-mujer-descubrio-que-su-casa-esta-infestada-de-ratas-gigantes-video/ … pic.twitter.com/KgtJEHBWQd	5	0
+1071342134811336704	+ levantó y sacudió su túnica y su falda— ¡Profesor! —Ignoró deliberadamente el comentario del moreno, ¿Qué podía esperar de un asqueroso Gryffindor? Enemigos naturales de la astucia serpentina de Slytherin— ¡No quiero irme de +	1	0
+1071347919645753346	Porq no le decis PUTA @hugoviciconte  y te ahorras palabras? Acaso no es eso lo q queres expresar? Sos un machista de mierda!! tipos como vos q tratan de puta a la mujer pensando q solas no pueden NO LOS QUEREMOS MAS. Vos y el sorete q acoso a la piba de 15 son iguales!	1	0
+1071367358298669056	Quejarse de la corrupción y querer investigar el dinero mal habido es ser comunista de clóset? Peor es ser un imbécil que acepta que lo jodan porque "toda la vida ha sido así" sin importar las condiciones. Ultra derechistas hasta que los botan del trabajo explotador de mierda. https://twitter.com/ObiWanRusobi/status/1070948422935547904 …	1	0
+1071373432472961025	Cual respeto de mierda ese es una basura que no sirve un corrupto ladrón que no quiere a este país y tu como que vienes de la misma calaña chavista de mierda jala bola	2	1
+1071384932361084928	Ay mira y una chica se queja de ACOSO REL y la llaman "feminazi de mierda" wou!	1	0
+1071386814005551105	callate mujer	1	1
 1071436871438426112	Vaya manera que tienen desde @elpais_espana de insultar a la gente. Ahora resulta que si no votas a la izquierda eres un ignorante además de fascista,claro.	3	0
 1071447979419164680	Me da temor salir de mi casa y no volver mas, me da temor tomar la decision de irme a estudiar a otra ciudad por el simple hecho de no saber si vamos a estar a salvo, me da temor ser mujer con tantos hdp sueltos! Con que necesidad xq tanto odio hacia nosotras	5	0
+1071466373308694529	Mi prima es bisexual y mi abuela le dice “ay no, si me quieren matar díganme que son lesbianas” encima mi abuela le dice “si te gustan las mujeres por qué estás con hombres?” ES BISEXUAL. Jaja si supiera que somos dos, y a mí me repugnan los hombres, fav y le digo que soy torta	3	0
 1071476417576271872	La gorda es una tipa que le dicen la puta que pertenece al grupo feminista putas y laycas y la que está a su lado con remera gris es una de sus secuaces la actriz porno Natalia Florencia alias María Riot.\n\nSi no me creen busquenlas en internet.	1	0
 1071476417576271872	La gorda es una tipa que le dicen la puta que pertenece al grupo feminista putas y laycas y la que está a su lado con remera gris es una de sus secuaces la actriz porno Natalia Florencia alias María Riot.\n\nSi no me creen busquenlas en internet.	4	1
 1071517604198653952	Con que cara bardea Pelé a messi negro puto jugabas contra conos vos la concha de tu madre	2	0
@@ -1083,6 +1112,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1071582390227779585	y a vos que verga te calienta quien se chamuya a mi novia argolluda preocupate porque te atiendan bien y por limpiarte la cajeta que tenes una crosta de mugre impresionante imbecil	3	1
 1071594827635191808	hoy en la calle un flaco me dijo que era muy hermosa y le conteste que era un pajero de mierda sjdjjsj quien me mando a ser tan comunista	2	0
 1071594827635191808	hoy en la calle un flaco me dijo que era muy hermosa y le conteste que era un pajero de mierda sjdjjsj quien me mando a ser tan comunista	1	1
+1071638211548626944	este jungkook es re maldito loco no quiere jugar conmigo al zepeto, me excluye del fan café listo quedamos así boludo no te voy a hablar nunca más encima yo que te digp que te queda lindo el pelo negro pero vos sos re tonto	3	0
 1071706843511250945	Buenos días amigo, ojalá pase, tiene que pasar y tenemos que decir BASTA, a tanto fascista, palmero, corrupto y estómago agradecido, se acabó, el pueblo manda, vamos con el domingo. Un besazo	3	0
 1071786181417885696	No veo a ninguna feminazi manifestándose en ARABIA Saudí... Ni siquiera veo a una feminazi manifestarse en España por la situación de la mujer en ARABIA Saudí... \nQué curioso que solamente lo hagan cuando interesa políticamente a un partido... No les interesa la mujer en absoluto pic.twitter.com/EXufVrSJvY	3	1
 1071801600770039808	Bienvenida a mi mundo Gloria, donde los zurdos me llaman facho y los conservas me llaman progre, get used to it https://twitter.com/GloriaAlvarez85/status/1068616921090805760 …	4	0
@@ -1098,6 +1128,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1071888482606419969	@fernandogagome maricon nos avandonaste en los ultimos minutos triador 	1	1
 1071889393559003136	Llora maldito maricon, llora maricon.	2	0
 1071889393559003136	Llora maldito maricon, llora maricon.	3	1
+1071897291756326913	Juaaa, por ser bostero maricon	2	0
+1071897291756326913	Juaaa, por ser bostero maricon	1	1
 1071899852911595521	Llora Argentino maricon!!! Jajajajajaja país de mierda es Argentina, solo dan putas y rateros. Me cago en Argentina!!!	3	1
 1071905926465110017	También MÁS  Q'EUSA (o como se escriba maricon) por no cumplir su palabra ambos quenchas	3	0
 1071905926465110017	También MÁS  Q'EUSA (o como se escriba maricon) por no cumplir su palabra ambos quenchas	2	1
@@ -1105,6 +1137,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1071909038571642880	A ver cabron hijo de puta. Ya nos mandaron a chingar a nuestra madre. Ven y acompáñanos. Desde cuando te gusta el fútbol sudamericano pinche maricon.	3	1
 1071921273062731776	No tiene límite, y el humor negro abarca cosas peores que una violación de un bebé, si no te gusta no lo consumas pero no nos digas que "tenemos que ir a un psicólogo" y al otro, que dejemos de verlo, sjw de mierda.	2	0
 1071921273062731776	No tiene límite, y el humor negro abarca cosas peores que una violación de un bebé, si no te gusta no lo consumas pero no nos digas que "tenemos que ir a un psicólogo" y al otro, que dejemos de verlo, sjw de mierda.	1	1
+1071927510554693632	No cabe duda eres una vieja ratera e igual que el puto de tu viejo moreno valle asesino de niños ratero de concesiones a transportistas y tu tienes 125 hectáreas en san jose chispa donde ni siquiera eres campesina hoja la te llegue un castigo	2	0
+1071927510554693632	No cabe duda eres una vieja ratera e igual que el puto de tu viejo moreno valle asesino de niños ratero de concesiones a transportistas y tu tienes 125 hectáreas en san jose chispa donde ni siquiera eres campesina hoja la te llegue un castigo	1	1
 1071964364176011264	Xadres\nNos están matando\nNos matan por el hecho de ser mujeres\nSos de derecha entonces sos facho\nSi te gusta Laje sos homofóbico\nNo tenés empatía\nSos pro aborto clandestino o sos pro aborto legal\nEstás en contra del aborto por religión\nLos países socialistas son los más exitosos	3	0
 1071964364176011264	Xadres\nNos están matando\nNos matan por el hecho de ser mujeres\nSos de derecha entonces sos facho\nSi te gusta Laje sos homofóbico\nNo tenés empatía\nSos pro aborto clandestino o sos pro aborto legal\nEstás en contra del aborto por religión\nLos países socialistas son los más exitosos	2	1
 1072093795817263105	Buen dia a todos los campeones que terminaron de matar a estos negros de mierda después de que hagan el acto de cobardía mas grande de la historia. Le ganamos a la CONMBEOL, AL ESTADO Y LA CORRUPCIÓN. Estan muertos, River. Los hicimos re mierda !!!!! No existen mas.	1	0
@@ -1127,7 +1161,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1073101425499086848	callate torta de rikota tenes que aparecer en todos lados donde esta la otra, ni por twitter se separan	1	0
 1073101425499086848	callate torta de rikota tenes que aparecer en todos lados donde esta la otra, ni por twitter se separan	2	1
 1073207744486871040	ese ni me quiere , maldito niño negro y esclavo tiene todo menos mi culo :)	3	1
-1073253156547633152	Literal! Desde sus videos de la loca de mierda, la mayoría de las cosas q dice concuerda con dudas o cosas q no me animaba a decir, gracias a ella hoy soy feminista  https://twitter.com/barbirecanati/status/1073219927040028677 …	1	0
+1073253156547633152	Literal! Desde sus videos de la loca de mierda, la mayoría de las cosas q dice concuerda con dudas o cosas q no me animaba a decir, gracias a ella hoy soy feminista  https://twitter.com/barbirecanati/status/1073219927040028677 …	3	0
 1073334401117970432	Gracias a dios el bebe q esta esperando mama, va a ser mas hijo mio que de mis viejos. Lo voy a criar bien feminista, para que el machista de papa se quiera matar y no le inculque sus creencias machistas.	1	0
 1073334401117970432	Gracias a dios el bebe q esta esperando mama, va a ser mas hijo mio que de mis viejos. Lo voy a criar bien feminista, para que el machista de papa se quiera matar y no le inculque sus creencias machistas.	2	1
 1073596863247515648	Ahora que "se retractó" respecto al régimen criminal de Maduro, tal vez "rectifique" aduciendo que se refería a un azote de besos y caricias... o alguna otra ridiculez, al mejor estilo comunista. https://twitter.com/abc_es/status/1073594714417491968 …	1	0
@@ -1214,11 +1248,13 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1076589509901537281	Obvio es un zurdo de mierda.	1	1
 1076590441380773888	ya pinche chino vete a darles en tu casa corrupto de mierda	3	1
 1077252552243245056	Por poco mancha la bandera del chino de mi Españita. Los sueldos de mierda, el analfabetismo, el racismo, machismo; eso te lo paso, pero sonarse en nuestra bandera!! Eso es intolerable !! Me ofende que se suene en una tela con los colores de la vandera de España	3	0
+1077259964622749698	En realidad no sé si es zurdo o diestro el burro ese (?)	2	0
 1077275905712627714	Ese general de pacotilla al caer la tiranía Narco Castro comunista debe ser degradado, juzgado y sentenciado a 30 años en la isla del burro.	1	0
 1077275905712627714	Ese general de pacotilla al caer la tiranía Narco Castro comunista debe ser degradado, juzgado y sentenciado a 30 años en la isla del burro.	2	1
 1077277868898496512	Mjeor hay que matar al Juez por pendejo (como ese wey tiene guaruras que le procupa) y linchar al puto ratero.	3	1
 1077315674018627587	JAJAJAJAAAJA lo de loca esta de más, chino de mierda jajajaaaj\nRespondeme en wpp	4	0
 1077315674018627587	JAJAJAJAAAJA lo de loca esta de más, chino de mierda jajajaaaj\nRespondeme en wpp	1	1
+1077353205737103360	epico	3	0
 1077715707780128768	Ojala que se logre, ese tipo es un mafioso, amiguete de los satrapas y de los corruptos, comunista para mas señas es lo mas indigno que se ha sentado en la silla de Pedro y es mucho decir si lo comparamos con los papas de la edad media, que fueron coruptos y lidibinosos.	5	0
 1077715707780128768	Ojala que se logre, ese tipo es un mafioso, amiguete de los satrapas y de los corruptos, comunista para mas señas es lo mas indigno que se ha sentado en la silla de Pedro y es mucho decir si lo comparamos con los papas de la edad media, que fueron coruptos y lidibinosos.	2	1
 1077722508336484352	Ídem... "Ese es mas puto", "teniendo mil hombres se hace torta", "que asco que se besen en público"\nAmo a mi familia pero estas cosas me provocan tanto!!!! que decidí levantarme e irme a dar una vuelta https://twitter.com/kevsho9/status/1077643780235378688 …	1	0
@@ -1236,7 +1272,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1078042704544780288	Mongolico de la vida\nCatalan de mierda\nPuto comunista\nValenciano de pueblo\nPobre\nRico\nInutil\n\nPuedo pasarme horas asi https://twitter.com/Arni_choripan/status/1078042024857792513 …	2	0
 1078042704544780288	Mongolico de la vida\nCatalan de mierda\nPuto comunista\nValenciano de pueblo\nPobre\nRico\nInutil\n\nPuedo pasarme horas asi https://twitter.com/Arni_choripan/status/1078042024857792513 …	6	1
 1078053533444964352	Sabe porque , este papa es un asqueroso comunista . #FueraPapa	3	1
-1078103784683982848	Da ASCO escuchar esta puta mierda pero escucharla de una mujer y de esa edad da más aún... El mundo se va a la mierda. https://twitter.com/Abejita_97/status/1077971500685250565 …	1	0
+1078103784683982848	Da ASCO escuchar esta puta mierda pero escucharla de una mujer y de esa edad da más aún... El mundo se va a la mierda. https://twitter.com/Abejita_97/status/1077971500685250565 …	2	0
+1078103784683982848	Da ASCO escuchar esta puta mierda pero escucharla de una mujer y de esa edad da más aún... El mundo se va a la mierda. https://twitter.com/Abejita_97/status/1077971500685250565 …	1	1
 1078115460418322433	Caya tarado..abogado comunista..csm	1	0
 1078115460418322433	Caya tarado..abogado comunista..csm	2	1
 1078152928068882432	Jajajajajajajaj el miedo no anda en burro indio @KUNOBP	5	0
@@ -1302,6 +1339,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1081103152311611393	La ley te afecta aunque no hayas hecho nada, simplemente con la palabra de una mujer.\n\nA lo mejor el puto peligro es el que miente a sus seguidores por un puñado de likes. https://twitter.com/gerardotc/status/1080797729801097216 …	1	1
 1081112960993509376	Que vd sea hombre o mujer cambia mucho el cuento, por eso no quiere decirlo, jeje. Q se cree, q la gente es idiota? No toma el pelo a nadie. Y habla de etiquetas pero me califica de progre. Otra incoherencia más, y van...	2	0
 1081112960993509376	Que vd sea hombre o mujer cambia mucho el cuento, por eso no quiere decirlo, jeje. Q se cree, q la gente es idiota? No toma el pelo a nadie. Y habla de etiquetas pero me califica de progre. Otra incoherencia más, y van...	1	1
+1081166123767422976	Este payaso comunista es indiferente al dolor que causa la tiranía Venezolana,   porque el hará lo mismo a los Mexicanos	3	1
 1081169089568083968	gente coachella es un festival de mierda y sus dueños son mas mierda todavia. estan financiando a chabones q apoyan a trump y q donan a fundaciones pro-gun y anti-lgbt. just saying.	2	0
 1081169089568083968	gente coachella es un festival de mierda y sus dueños son mas mierda todavia. estan financiando a chabones q apoyan a trump y q donan a fundaciones pro-gun y anti-lgbt. just saying.	1	1
 1081194591838183426	Sí, muchos se suicidan después de matar a su pareja mujer, o a sus hijos, o a los padres de su pareja mujer... O a todos. Ha habido muchos, es verdad.	4	0
@@ -1326,6 +1364,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1081498740819742720	Mmmm y que interés tuvo esta mujer para matar a la Sra .	1	1
 1081502675789848576	Doña comunista ante las leyes todos somos iguales, menos las feminazis, inmigrantes ilegales  y políticos corruptos.	2	0
 1081502675789848576	Doña comunista ante las leyes todos somos iguales, menos las feminazis, inmigrantes ilegales  y políticos corruptos.	4	1
+1081530296133144576	No eres más que un fascista corrupto del partido más corrupto de Europa \nCon un máster en mentiras,\nEl PP es corrupción!\nEl PP es corrupción!\nEl PP es corrupción!	3	1
 1081572533999149057	¿ALGUIEN SABE CÓMO SE LLAMA EL PELOTUDO ESTE DE TN?\n\nEstos borders que ponen de muñequitos de torta, no la entienden, no la quieren entender y les da bronca que otro entienda.\nEl idiota quiere linchamiento y... https://www.facebook.com/enrique.j.box/posts/10217736803670466 …	1	0
 1081572533999149057	¿ALGUIEN SABE CÓMO SE LLAMA EL PELOTUDO ESTE DE TN?\n\nEstos borders que ponen de muñequitos de torta, no la entienden, no la quieren entender y les da bronca que otro entienda.\nEl idiota quiere linchamiento y... https://www.facebook.com/enrique.j.box/posts/10217736803670466 …	2	1
 1081607243995533312	La ministra de justicia a contestado: ahora mismo se lo digo al maricon de Marlaska.	1	0
@@ -1360,10 +1399,13 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1081709757541597186	the cw realmente tiene un problema con matar siempre personajes lgbt	4	0
 1081715205522939904	Bueno uno que me gustaba dijo "negro de mierda",  así que mis probabilidades de volver a hablarle son 0% claramente	5	0
 1081715205522939904	Bueno uno que me gustaba dijo "negro de mierda",  así que mis probabilidades de volver a hablarle son 0% claramente	1	1
+1081898149420064768	es el comentario más estupido que he leido en el día... a no ser que seas empresario y seas una empresa con más de 50 trabajadores, entonces tu comentario es correcto para tí. Pero por lo visto eres un facho pobre, debes tener hasta fonasa	1	0
+1081898149420064768	es el comentario más estupido que he leido en el día... a no ser que seas empresario y seas una empresa con más de 50 trabajadores, entonces tu comentario es correcto para tí. Pero por lo visto eres un facho pobre, debes tener hasta fonasa	2	1
 1081910479927328768	Nada bueno es un burro asesino, narco y comunista	2	0
 1081910479927328768	Nada bueno es un burro asesino, narco y comunista	3	1
 1081956984675545090	Mamaaaa, que la bicicleta no es rápida, que no quería un Chocobar, comienzas a defender al ladron y a criticar al Gobierno. Zurdo de mierda, el chorro te robó el cerebro y no te avivaste... Nabo.	1	0
 1081956984675545090	Mamaaaa, que la bicicleta no es rápida, que no quería un Chocobar, comienzas a defender al ladron y a criticar al Gobierno. Zurdo de mierda, el chorro te robó el cerebro y no te avivaste... Nabo.	2	1
+1081958416476790784	El twit fue del 2013 pero la tipa sigue en su cargo y obviamente es una comunista de mierda, por tanto, no retírare lo dicho.	3	1
 1082061154443317250	ningun chavista es honrado, son complices del desastre de genocidio de narcotrafico de ecocidio de tortuta y asesita, maldito todos, empezando por algunos ex-familia mia, que se pudran en el maldito infierno	1	0
 1082061154443317250	ningun chavista es honrado, son complices del desastre de genocidio de narcotrafico de ecocidio de tortuta y asesita, maldito todos, empezando por algunos ex-familia mia, que se pudran en el maldito infierno	4	1
 1082355005624119297	Somos los Querandies, herederos de esta tierra. Somos nietos del indio que mataron esos hombres de mierda.	4	0
@@ -1372,6 +1414,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1082388612925325312	Es bien fácil, con la 4t. Para evitar asaltos en el metro.... No viajen en metro. \nUsuarios del metro golpean y le aplican "calzón chino" a un ladrón de celulares https://www.sopitas.com/981716-video-metro-golpean-ladron-celulares-aplican-calzon-chino/ …	3	0
 1082470037334773762	Jeputa es de centro... yo pensé toda la vida que era fascista de ultraderecha, por que nadie me lo dijo, debí haber parecido un idiota. pic.twitter.com/V5w5gxuPOp	2	0
 1082470037334773762	Jeputa es de centro... yo pensé toda la vida que era fascista de ultraderecha, por que nadie me lo dijo, debí haber parecido un idiota. pic.twitter.com/V5w5gxuPOp	1	1
+1082605535600496641	Que vuestra organización criminal sea partifice de que entre en un país democrático la extrema derecha fascista y xenófoba, se paga. Que vuestra organización criminal son la misma lacra está ya más que demostrado.	1	0
+1082605535600496641	Que vuestra organización criminal sea partifice de que entre en un país democrático la extrema derecha fascista y xenófoba, se paga. Que vuestra organización criminal son la misma lacra está ya más que demostrado.	2	1
 1082650294717218817	@fernandorc97 @igayuso_97 no los pongo en la vida la verdad pero hoy me interesaba la noticia de 3 montañistas españoles muertos y patético tú negro asqueroso comegambas farlonida q no lo ves pq te pones porno despues de comer	1	0
 1082650294717218817	@fernandorc97 @igayuso_97 no los pongo en la vida la verdad pero hoy me interesaba la noticia de 3 montañistas españoles muertos y patético tú negro asqueroso comegambas farlonida q no lo ves pq te pones porno despues de comer	4	1
 1082656023498948608	Habrá elegido a un ó una ó une comunista, para entrar en su lenguaje de moda. Lenguaje que un día será recordado como el más absurdo intento de matar un idioma. https://twitter.com/eudmed/status/1082607246066872321 …	4	0
@@ -1414,6 +1458,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1084272965158686720	Mi hijo no es comunista podra ser tonto, estupido, inutil, comunista pero nunca una estrella de porno. pic.twitter.com/xNz6osKLqD	3	1
 1084465050235142144	Diputada Burrita Moreno (De morena) hace el ridículo. http://pejendejadas.com.mx/diputada-burrita-moreno-de-morena-hace-el-ridiculo/ … #Aguascalientes #Ags.	6	0
 1084465050235142144	Diputada Burrita Moreno (De morena) hace el ridículo. http://pejendejadas.com.mx/diputada-burrita-moreno-de-morena-hace-el-ridiculo/ … #Aguascalientes #Ags.	1	1
+1084469658772799490	Para ti todo lo que suena a independencia es un crimen...si, Puigdemont es un criminal solo para la “justicia” de Españistan...el otro es un criminal a secas, machista, homófobo, xenófobo, racista y fascista...un ejemplo a seguir...y no, no voy a borrar el tweet...	3	1
 1084499105693556737	No puede ser tan hermosa está mujer la puta madre pic.twitter.com/JXemkgezby	5	0
 1084530550243618816	Jajaja q chino de mierda	1	0
 1084530550243618816	Jajaja q chino de mierda	4	1
@@ -1421,6 +1466,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1084624674565296129	y lo sale a correr con una botella de vidrio por  toda la plaza tirandole la botella con los pies y la situación termina la nena gritandole "sos un pelotudo de mierda" fue re marido y mujer jsjksjs	2	0
 1084624674565296129	y lo sale a correr con una botella de vidrio por  toda la plaza tirandole la botella con los pies y la situación termina la nena gritandole "sos un pelotudo de mierda" fue re marido y mujer jsjksjs	1	1
 1084693443555848192	Trabaja maldito negro esclavo	3	1
+1084798255760760832	Buenos días puto, aquí formado desde las 5 de la mañana en San Juan del Río Querétaro para comprar una torta de tamal #cuantosmasamlo #escazesdeguajolotas\n\nHasta aquí mi reporte Joaquín 	3	0
 1084830178717642752	Lavate Guarrón antes de follar.  Duchate un poco y aseate que das asco. Luego elige uno de tus Levis Strauss de 100€ cada uno (no del carrefour). Y sigue con esa pinta de asqueroso feminazi.	1	0
 1084830178717642752	Lavate Guarrón antes de follar.  Duchate un poco y aseate que das asco. Luego elige uno de tus Levis Strauss de 100€ cada uno (no del carrefour). Y sigue con esa pinta de asqueroso feminazi.	2	1
 1084857597390397440	Escribis para la mierda y tu defensa es que yo soy un imbecil, digna feminista	1	0
@@ -1470,10 +1516,13 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1087082661087244289	En kouya no kotobuki han introducido a la puta loli inaguantable que encima se pelea con la otra loli de pelo negro, te lo juro, el segundo episodio me han dado ganas de quitarlo por dios, que puto asco de episodio de verdad, no me ha gustado nada	1	1
 1087106625926807564	Jajsj callate torta ah	3	0
 1087106625926807564	Jajsj callate torta ah	2	1
+1087181439299452928	Q mas cara de mierda q tu indio	2	1
 1087416043495215104	Pinche presidente ilegítimo indio de mierda.	5	1
 1087449228861952001	Mal, muy mal, maten al hijo de puta que mato a la mujer pero y los que no tienen nada que ver que? Todo por culpa del comunismo horrible. Que triste por los venezolanos. https://twitter.com/HectorReporta/status/1087164884570247168 …	4	0
 1087449228861952001	Mal, muy mal, maten al hijo de puta que mato a la mujer pero y los que no tienen nada que ver que? Todo por culpa del comunismo horrible. Que triste por los venezolanos. https://twitter.com/HectorReporta/status/1087164884570247168 …	3	1
 1087450329925517318	Tres años de cárcel por matar de una pedrada a mujer de Mérida http://bit.ly/2Hr77Ax  pic.twitter.com/n9aTzgcZJb	3	0
+1087505222879100929	Por eso reafirmo que es por su sexo y añado que no necesita la fuerza fisica. Todas esas mujeres que han muerto podrían haber envenenado a sus parejas. Y no lo hicieron. La mujer no es débil por su constitución física, la mujer es menos “violenta”, no tan predispuesta a matar	2	0
+1087505222879100929	Por eso reafirmo que es por su sexo y añado que no necesita la fuerza fisica. Todas esas mujeres que han muerto podrían haber envenenado a sus parejas. Y no lo hicieron. La mujer no es débil por su constitución física, la mujer es menos “violenta”, no tan predispuesta a matar	1	1
 1087526430722965504	Somos la vergüenza mundial con un gobierno mediocre #TiemposCuánticos\nBBC News Mundo - Feminicidio en Ecuador: la \nadvertencia del presidente Lenín Moreno a los migrantes venezolanos tras el asesinato de una mujer embarazada a manos de su expareja https://www.bbc.com/mundo/noticias-america-latina-46942272 …	5	0
 1087535158666907649	Cuando ser oposición sólo es oponerse a todo en los de conseguir el cuchillo para repartir la torta, sin importar si te cortas los dedos o si lastimas a alguien más....es porque estás super mal o simplemente eres un idiota.	5	0
 1087606318381367296	Después se hace el feminista el hijo de mil puta!	4	0
@@ -1498,6 +1547,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1088074988530421765	Sí señor, en el PP han encontrado al sucesor que merecen, un líder rancio en toda regla, otro fascista malnacido que promete como futuro dictador. Un farsante con carrera y máster regalados. Un futuro corrupto como dios manda, vamos!!	2	1
 1088141959816974337	Tamb quiero matecocido con torta frita y ni la harina tengo jajajajs lpm maldito fin de mes	5	0
 1088158809523191808	Maldito hijo de puta!! me reiré cuando vuelen en pedazos!! y vea morir a cada chavista!! y esta puta revolución de mierda!!  ojala te quede poco tiempo de vida hijo de puta mal nacido!!	3	1
+1088165674508345346	la puta maldita de tu madre maldito loco ojala te mueas maldito chavista	3	1
 1088178384969129984	Aquí hay pueblo chavista, escualidos terroristas de mierda.  pic.twitter.com/MCjmsP77mw	3	1
 1088189803483619347	Q marica	3	0
 1088189803483619347	Q marica	2	1
@@ -1516,7 +1566,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1088221099605803009	Ha opinado otra plasta de mierda izquierdista ignorante. Pudrete comunista de mierda. Cuando López Obrador lleve a México a la miseria veremos a quien le echas la culpa.	4	1
 1088238780073631744	Como se puede ser tan ignorante? Fácil: siendo chavista (o podemista, es lo mismo) y/o comunista. Recuerden que para pertenecer a esos “gremios” hay que ser resentido y/o delincuente y/o bruto; de no ser esto último de nacimiento se vale aprobar un curso intensivo para idiotas	2	0
 1088238780073631744	Como se puede ser tan ignorante? Fácil: siendo chavista (o podemista, es lo mismo) y/o comunista. Recuerden que para pertenecer a esos “gremios” hay que ser resentido y/o delincuente y/o bruto; de no ser esto último de nacimiento se vale aprobar un curso intensivo para idiotas	2	1
-1088256170270302208	Inmoral, fascista, demagogo, corrupto, ladrón, mentiroso, sátrapa, traidor.Te vamos a denunciar, enjuiciar, encarcelar, y quitar todo lo q cobraste indebidamente, a tí y a todos los q como tú apoyaron al narcogobierno genocida y se beneficiaron del patrimonio de los Venezolanos.	1	0
+1088256170270302208	Inmoral, fascista, demagogo, corrupto, ladrón, mentiroso, sátrapa, traidor.Te vamos a denunciar, enjuiciar, encarcelar, y quitar todo lo q cobraste indebidamente, a tí y a todos los q como tú apoyaron al narcogobierno genocida y se beneficiaron del patrimonio de los Venezolanos.	2	0
+1088256170270302208	Inmoral, fascista, demagogo, corrupto, ladrón, mentiroso, sátrapa, traidor.Te vamos a denunciar, enjuiciar, encarcelar, y quitar todo lo q cobraste indebidamente, a tí y a todos los q como tú apoyaron al narcogobierno genocida y se beneficiaron del patrimonio de los Venezolanos.	1	1
 1088266202416332801	Rolin Rolin Rolin.  Que negro malo hdp.	1	0
 1088266202416332801	Rolin Rolin Rolin.  Que negro malo hdp.	2	1
 1088284152259141632	Ni siquiera, porque ese mamagüevo anda haciendo pelis, y escribiendo desde su put IPhone X. Mas privilegiado no puede ser, así sea el más negro de todos los negros. Está en otro nivel de demencia. La cabeza llena de mierda.	2	0
@@ -1527,6 +1578,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1088401028939157506	Noooo para nada   solo quise aclarar por que lo subi...el zocalo esta en chino..por lo tanto asumo que es un video de una denuncia alla.\nNo pretendo desmerecer a ninguna comunidad hdp y timadores hay en todos lados.	3	0
 1088401028939157506	Noooo para nada   solo quise aclarar por que lo subi...el zocalo esta en chino..por lo tanto asumo que es un video de una denuncia alla.\nNo pretendo desmerecer a ninguna comunidad hdp y timadores hay en todos lados.	1	1
 1088404268841947137	Los tipos que bardean al movimiento feminista, cuanto odiarán a las mujeres? A veces me pongo a pensar eso, o acaso serán homosexuales reprimidos? Liberate hermano, vas a sentirte mejor y dejarás de ser un idiota.	3	0
+1088428982998106112	Qué corrupto debe ser el régimen chavista para aceptar sobornos del PP y del hermano de González y para pagarle un buen dinerito a monedero ...	3	0
 1088431957820825601	Quien hablo de color de piel idiota vos podes ser rubio pero un negro de.mierda de alma va de hecho lo sos por meterte a contestarme cuando no me dirije a vos. Comprate uns vida negro fracasado ignorante	3	0
 1088431957820825601	Quien hablo de color de piel idiota vos podes ser rubio pero un negro de.mierda de alma va de hecho lo sos por meterte a contestarme cuando no me dirije a vos. Comprate uns vida negro fracasado ignorante	2	1
 1088447123618549761	Chucha...este wn esta con diarrea, como tan reaccionario, facho pobre 	3	1
@@ -1566,15 +1618,21 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1089911303588794369	Hay chabones tan chupa pijas que se disfrazan de conscientes, permitiendo cualquier cosa, en la vida blanco o negro, o estás de un lado o del otro, esas personas son los típicas que no se la juegan por nadie, no esperen que nadie se juegue por personas así, chupa pija	1	1
 1089977526959640576	Estos hablan de juego sucio y acaso es mentira que venezuela esta quebrada un pais petrolero y no hay gas la luz el agua contamina y a muchos no les llega y no hay medicina antes del bloqueo.ya teniamos muchos defici asi que no inventen ellos tambien quieren un pedazo d la torta	2	0
 1089977526959640576	Estos hablan de juego sucio y acaso es mentira que venezuela esta quebrada un pais petrolero y no hay gas la luz el agua contamina y a muchos no les llega y no hay medicina antes del bloqueo.ya teniamos muchos defici asi que no inventen ellos tambien quieren un pedazo d la torta	1	1
+1090152523112083456	Qué raro un asqueroso Podemita poniéndose al lado de la dictadura de Maduro. Cada vez sois menos por culpa de estas cosas. En España estamos todos con @jguaido y en contra de la dictadura chavista.	1	0
+1090152523112083456	Qué raro un asqueroso Podemita poniéndose al lado de la dictadura de Maduro. Cada vez sois menos por culpa de estas cosas. En España estamos todos con @jguaido y en contra de la dictadura chavista.	1	1
 1090223961034706945	Callate la jeta guebon, o mejor muerete chavista de mierda!!!	1	0
 1090223961034706945	Callate la jeta guebon, o mejor muerete chavista de mierda!!!	4	1
+1090353857086013441	Por qué no entienden que el puto salón de clases no es para tragar! Y menos su torta de chorizo	3	0
+1090399172921098240	Es una buena noticia para los michoacanos que las comparecencias de los aspirantes a la Fiscalía General sean públicas. Ahora, nuestro trabajo en el congreso será garantizar que se contemplen en la ley la autonomía y la evaluación del desempeño del fiscal.http://bit.ly/2Tn97Lx 	3	0
 1090419776114053120	mili salva torta de mierda te cruce con tu novia y ni cinco de pelotaaaa hasta te saludé 	1	0
 1090419776114053120	mili salva torta de mierda te cruce con tu novia y ni cinco de pelotaaaa hasta te saludé 	4	1
 1090434319913549825	Pobre maldito malandro enchufado chavista cabron de  drogadicto HDP parásito..cara de placa	3	1
 1090456773423710213	Cuando un régimen se debilita,  se militariza,  señal que esta pronto a caer, aunque lamentablemente a costa de vidas civiles inocentes. Solo un abyecto comunista ignorante como maduro puede lograr la mayor pobreza de latinoamerica sobre la más abundante riqueza de petróleo	4	0
 1090456773423710213	Cuando un régimen se debilita,  se militariza,  señal que esta pronto a caer, aunque lamentablemente a costa de vidas civiles inocentes. Solo un abyecto comunista ignorante como maduro puede lograr la mayor pobreza de latinoamerica sobre la más abundante riqueza de petróleo	1	1
 1090500088953221121	Este chino es un puto crack https://www.youtube.com/attribution_link?a=TOt0VuwlJ7Q&u=%2Fwatch%3Fv%3DhPB14ozGBT4%26feature%3Dshare …	3	0
-1090611944233537538	@FelipeBadamTums estimado a mi padre le dieron el alta gracias a dios.  pero puto genio con el que salio  toy que le doy una torta de milhojas paciencia señor paciencia....	3	0
+1090611944233537538	@FelipeBadamTums estimado a mi padre le dieron el alta gracias a dios.  pero puto genio con el que salio  toy que le doy una torta de milhojas paciencia señor paciencia....	4	0
+1090701914734497793	Otro estupido mas amigo chavista te digo el 80% de las divisas ósea de la platica que le entra a tu camarada y se usa para comprarte la bolsita que te dan vienen de EEUU, los chino y rusos no pagan lo que hacen es cobrar con petróleo INSTRÚYETE	2	0
+1090701914734497793	Otro estupido mas amigo chavista te digo el 80% de las divisas ósea de la platica que le entra a tu camarada y se usa para comprarte la bolsita que te dan vienen de EEUU, los chino y rusos no pagan lo que hacen es cobrar con petróleo INSTRÚYETE	1	1
 1090763711550291968	Que grande el negro, que te vaya bien negro puto @wilmarBarrios8  te amohttps://twitter.com/La12tuittera/status/1090683752425185282 …	3	1
 1090771246881669120	harry no quiere decir su sexualidad pero aún así alza las banderas de la comunidad lgbt naaaaa lucrador!!11  a pero si no mostraba apoyo era un homofobico de mierda igual soy harrie chiquis no pasa nadaaaa	3	0
 1090771246881669120	harry no quiere decir su sexualidad pero aún así alza las banderas de la comunidad lgbt naaaaa lucrador!!11  a pero si no mostraba apoyo era un homofobico de mierda igual soy harrie chiquis no pasa nadaaaa	2	1
@@ -1593,6 +1651,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1091295097206067200	Cadena perpetua para violadores, asesinos, pedofilos y asaltantes....NUNCA van a entender si solo se les amonesta o se les protege, la vida de esa mujer ya no es la misma y todo por un imbecil.	3	0
 1091295097206067200	Cadena perpetua para violadores, asesinos, pedofilos y asaltantes....NUNCA van a entender si solo se les amonesta o se les protege, la vida de esa mujer ya no es la misma y todo por un imbecil.	2	1
 1091436659542032384	Lo de feminazi lo dice todo, amigo... mucho rencor detrás de la palabra.	5	0
+1091438096648945664	Mi mama esta hartante con q haga mis 18s en casa eh. La puta madre mujer NO 	1	0
 1091439982118608901	Desde que has dicho loca feminazi tu discurso ha perdido cualquier credibilidad posible.	1	0
 1091439982118608901	Desde que has dicho loca feminazi tu discurso ha perdido cualquier credibilidad posible.	2	1
 1091441995292262401	Esto es como uno que acaba de matar a su mujer dice que no lo volverá a hacer¡DE TRACA!\nEl juicio debe celebrase¡SI O SI!	5	0
@@ -1644,14 +1703,19 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1093235393774931969	Y al puto chino de mierda decirle que estaba en la última jugada del partido, que coló hace que no remara el coño ya que habéis querido perder o que?	2	1
 1093703880985194496	Viejo hdp chorro, la categoría más longeva y es una vergüenza	3	0
 1093703880985194496	Viejo hdp chorro, la categoría más longeva y es una vergüenza	2	1
+1093832124489175041	Hornallas* Ni un zurdo es tan ignorante	1	0
+1093832124489175041	Hornallas* Ni un zurdo es tan ignorante	2	1
 1093919287960633344	Te hacés el gracioso? \nBolsa de mierda.\nSácate esa remera, que aparte de faltarle el respeto a San Martín, te queda 3 números chica, gordo chorro ridículo.	2	0
 1093919287960633344	Te hacés el gracioso? \nBolsa de mierda.\nSácate esa remera, que aparte de faltarle el respeto a San Martín, te queda 3 números chica, gordo chorro ridículo.	3	1
 1093968206119743490	“Nuestra Sociedad está infectada de Socialismo. Cuando se lo aplicó de forma pura fue un fracaso que se cargó con la vida de 150 millones de seres humanos. Con lo cual, lo que diga un comunista o un zurdo de mierda me lo paso por el culo”\n\nPor @JMilei	1	0
 1093968206119743490	“Nuestra Sociedad está infectada de Socialismo. Cuando se lo aplicó de forma pura fue un fracaso que se cargó con la vida de 150 millones de seres humanos. Con lo cual, lo que diga un comunista o un zurdo de mierda me lo paso por el culo”\n\nPor @JMilei	5	1
 1094058933537423360	Si sos de Ituzaingó te pido por favor que te pidas los postres de la postreria pq son el maldito y puto viaje 	5	0
 1094218210621169669	la sensacion que me da el sr. moreno es que hace campaña para macri, los demas compañeros peronistas del sr. se denen querer matar, jaja , y bueno vaya uno a saber que negocia politicamente moreno con el movimiento de peron.	6	0
+1094224257243115520	Estas puto enfermo y me he callado porque creía crees q eras buena persona. Pero lo tuyo es asqueroso y te juro q deberías ir a la puta carcel	2	0
+1094224257243115520	Estas puto enfermo y me he callado porque creía crees q eras buena persona. Pero lo tuyo es asqueroso y te juro q deberías ir a la puta carcel	1	1
 1094288850187403265	Y por que no mames el que estaba grabando hace ni madres. De que sirve tanto puto celular, nada más fomenta el maldito morbo. Que putada. https://twitter.com/josealfredocort/status/1093701292176793600 …	1	0
 1094288850187403265	Y por que no mames el que estaba grabando hace ni madres. De que sirve tanto puto celular, nada más fomenta el maldito morbo. Que putada. https://twitter.com/josealfredocort/status/1093701292176793600 …	2	1
+1094319541553938432	—Oye güey, ¿qué es lo más asqueroso que te ha pasado?\n—Me tropecé y caí de bruces sobre caca de caballo, ¿y a ti?\n—Me dio la mano #RicardoAlemán.\n—¡No mames, qué puto asco, lárgate para allá!	3	0
 1094336336209854465	Que bronca me hacen dar, maldito sea el puto dia en el que cogieron y fui el esperma mar rapido 	4	0
 1094336336209854465	Que bronca me hacen dar, maldito sea el puto dia en el que cogieron y fui el esperma mar rapido 	1	1
 1094384894900400130	en el chino un nene queria un huevo kinder de los chiquitos y el papa le dijo “no hay plata, otro dia te compro” mientras le cobraban dos birras jajaj que hdp	2	0
@@ -1704,6 +1768,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1096837291891453952	Y aún hay gente que defiende una posible futura candidatura de Rafael Ramírez ya que “se presume inocente hasta que se demuestre lo contrario” maldito ladron preso tiene que estar	1	0
 1096837291891453952	Y aún hay gente que defiende una posible futura candidatura de Rafael Ramírez ya que “se presume inocente hasta que se demuestre lo contrario” maldito ladron preso tiene que estar	5	1
 1096947932862054400	Se les ha cerrado algún maldito microbusero o taxista a la mala y usted le ha gritado o pensado:  "pinche indio" . Entonces usted es un racista y clasista.  Que vergüenza de veras.	6	0
+1096974777028349958	No se puede ser opresor y oprimidx? Y el esclavo negro que golpeaba a su mujer? Y la mujer burguesa que explota empledxs? Y el gay de closet que ayuda a violentar a otro que si salió? Deja de inventar para justificar la transfobia por favor.	3	0
 1097096738714910720	Qué ha pasado con la cantidad de personas y famílias, en toda españa y durante los últimos siglos, que no querian formar parte de un estado fascista, cobarde, corrupto y mediocre, de no continuar manteniendo parásitos en contra de la propia sociedad? Pues eso...	2	0
 1097096738714910720	Qué ha pasado con la cantidad de personas y famílias, en toda españa y durante los últimos siglos, que no querian formar parte de un estado fascista, cobarde, corrupto y mediocre, de no continuar manteniendo parásitos en contra de la propia sociedad? Pues eso...	1	1
 1097178382868103168	La verdad, pedazo de sorete disecado. Prefiero ser troll y no una trola hdp que se acuesta con cualquiera para tener un espacio en la tv.\nMugrienta	3	1
@@ -1715,6 +1780,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1097227187143540736	Si idiota, cajas de hambre, condicionadas a lamber el piso, colocarse una franela roja, humillación, control comunista, controlan la comida y controlan las voluntades	3	1
 1097269607193288705	Ni me enteresa quien eres ni donde estás me la suda,\nse q eres un puto moro y te inclinas delante de tu avasallador como todos los marruquis	1	0
 1097269607193288705	Ni me enteresa quien eres ni donde estás me la suda,\nse q eres un puto moro y te inclinas delante de tu avasallador como todos los marruquis	3	1
+1097284546071068672	Acá en PY se van todos a la calle.	2	0
 1097288075481415682	mi perra esta alzada y papa entro el auto la hdp salio me asomo a agarrarla y ya estaba con dos perros enormes la muy puta	3	1
 1097312788039561216	Los dirigentes, jamás van a matar la pasión y el sentimiento que tenemos los hinchas genuinos del club. A las patadas los vamos a echar a todos esos hijos de mil puta que hacen todo mal...	2	0
 1097312788039561216	Los dirigentes, jamás van a matar la pasión y el sentimiento que tenemos los hinchas genuinos del club. A las patadas los vamos a echar a todos esos hijos de mil puta que hacen todo mal...	1	1
@@ -1770,12 +1836,14 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1098576669537955840	Cuando voy al chino, mi perro me esta esperando mirando la puerta y le digo con voz de idiota "Me extrañaste?! Porque YA VOLVIIII!" y le empiezo a bailar.\n\nNo cuenten como vivo.https://twitter.com/unamadresoltera/status/1098548786014629888 …	5	0
 1098639038783913986	Vos despues le decis "gordo puto" o "le dejas el ojo negro" y se hacen las victimas, que son agredidos porque ... http://www.taringa.net/El_4to_Mono/mi/Ul1Hc …	2	0
 1098639038783913986	Vos despues le decis "gordo puto" o "le dejas el ojo negro" y se hacen las victimas, que son agredidos porque ... http://www.taringa.net/El_4to_Mono/mi/Ul1Hc …	3	1
+1098726327132274688	Sigue insistiendo con Botta este tipo, y yo a estas alturas doy por $entado las razones. Hay que recuperar la torta que pu$ieron por este burro y mientras San Lorenzo hundido en la tabla.	2	0
 1098764824731967490	Maldito descarado chavista hijo de puta!!! Cuantas veces acusaste “a los gringos” de injerencistas en tú claro discurso chavista/comunista???	4	0
 1098764824731967490	Maldito descarado chavista hijo de puta!!! Cuantas veces acusaste “a los gringos” de injerencistas en tú claro discurso chavista/comunista???	1	1
 1098786283525156864	El maldito colorado no se va con nada, shoro. Por 3ra vez me voy a poner negro y sigueee	6	0
 1098786283525156864	El maldito colorado no se va con nada, shoro. Por 3ra vez me voy a poner negro y sigueee	1	1
 1098826205535584257	Ojalá al igual que Samuel moreno termine en la cárcel este payaso improvisador ladrón corrupto estafador https://www.facebook.com/713243041/posts/10156249214033042/ …	3	0
 1098826205535584257	Ojalá al igual que Samuel moreno termine en la cárcel este payaso improvisador ladrón corrupto estafador https://www.facebook.com/713243041/posts/10156249214033042/ …	2	1
+1098893661679554561	Chris Paul es el jugador más asqueroso de la NBA. Que le cunda seguir siendo un puto perdedor https://twitter.com/LWOSLALakers/status/1098838419684364289 …	3	0
 1098934691342811136	puto cerdo te has cagado encima maricon asqueroso	2	0
 1098934691342811136	puto cerdo te has cagado encima maricon asqueroso	3	1
 1098957929431093248	Moy bueno que tu punto de vista sea marcha feminista=carnaval (tradicion FESTIVA) de día de muertos. Seguis sin captar que te estoy diciendo que el problema no es el glitter si no tu comparación de mierda.	1	0
@@ -1812,6 +1880,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1099369756677816320	Confirma ud lo q todos pensamos sobre su posición política por la cual nunca Hizo nada por enfrentar la dictadura chavista desde la OEA !! Ud fue cómplice del desastre Chavista Ud. Es una vergüenza para chile y Latinoamérica ... su ambigüedad es criminal	3	0
 1099375728620118017	El burro dice "Cuando hay que echar pádelante voy yo primero", subido en un escenario en Caracas y rodeado de guardias rusos. Cobarde, como buen comunista.	4	0
 1099375728620118017	El burro dice "Cuando hay que echar pádelante voy yo primero", subido en un escenario en Caracas y rodeado de guardias rusos. Cobarde, como buen comunista.	1	1
+1099375813491748865	@juanes eres un hijo de puta. Sabes que Israel MATA niños mujer diestra y siniestra. Ojalá te pudras gran hijo de puta. Eres un inconsciente.	1	0
+1099375813491748865	@juanes eres un hijo de puta. Sabes que Israel MATA niños mujer diestra y siniestra. Ojalá te pudras gran hijo de puta. Eres un inconsciente.	2	1
 1099391468765147136	Antes intentaba poner en práctica la solidaridad de género y creía que los hombres eran los terribles, pero con tanta niña buscona hoy en día, el tema es grave.	1	0
 1099391468765147136	Antes intentaba poner en práctica la solidaridad de género y creía que los hombres eran los terribles, pero con tanta niña buscona hoy en día, el tema es grave.	2	1
 1099401882668359680	Oiga  gonorrea , UD es un hijo de puta cínico, haciéndole propaganda a las rojas ?  Porque no se pudre de una buena vez , ya perdió todos los 8millones de votos q dimos x UD , asqueroso chavista pic.twitter.com/iEBHD7C05U	3	0
@@ -1848,7 +1918,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1099680104526028807	Si quisieran intervenir venezuela militarmente no habria sido con camiones llenos de comida maldito imbecil\nEs hora que dejes tu puto cargo y te internes en un hospital psiquiatrico  \nVes la maldad en todo menos en donde la hay	3	0
 1099696173928144897	ësto veia yo cuando era pendejo, Una serie donde la rosa era mujer , la amarilla era oriental y el negro era negro. Y acá estoy, no discrimino a nadie ni soy un violento, asi que cayense negros de mierda. Manga de trolos mal cogidos. https://www.facebook.com/matias.orihime/posts/10156784269857324 …	1	0
 1099696173928144897	ësto veia yo cuando era pendejo, Una serie donde la rosa era mujer , la amarilla era oriental y el negro era negro. Y acá estoy, no discrimino a nadie ni soy un violento, asi que cayense negros de mierda. Manga de trolos mal cogidos. https://www.facebook.com/matias.orihime/posts/10156784269857324 …	4	1
-1099699203817775104	putos niños de mierda que tiran petardos y jugan al fortnite a ver si se puto mueren	1	0
+1099699203817775104	putos niños de mierda que tiran petardos y jugan al fortnite a ver si se puto mueren	2	0
+1099699203817775104	putos niños de mierda que tiran petardos y jugan al fortnite a ver si se puto mueren	1	1
 1099706841527914497	El facho @RicardoMoran, se ha unido al club de los intolerantes q me bloquearon, y ni cuenta me había dado....\nDebo estar haciendo algo muy bien...pic.twitter.com/jPQowZ79ci	3	1
 1099709450959679490	Por lo menos cambie la terminología comunista, lo hace menos evidente terrorista de mierda, bsbababa lacayoooo, estúpido ignorante	1	0
 1099709450959679490	Por lo menos cambie la terminología comunista, lo hace menos evidente terrorista de mierda, bsbababa lacayoooo, estúpido ignorante	2	1
@@ -1925,7 +1996,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1100143862394376193	Un país el cual llama puta a una mujer que va por la calle por pensar diferente, desinfecta plazas porque la ha pisado cierta gente, obliga a comercios a hacer huelga, corta carreteras por que sí, censura la información que no interesa en tv3, etc. no es precisamente demócrata.	2	0
 1100143862394376193	Un país el cual llama puta a una mujer que va por la calle por pensar diferente, desinfecta plazas porque la ha pisado cierta gente, obliga a comercios a hacer huelga, corta carreteras por que sí, censura la información que no interesa en tv3, etc. no es precisamente demócrata.	1	1
 1100158635165007875	Omg tremendo libro "Ninguna mujer nace puta" de Maria Galindo y Sonia Sánchez	3	0
-1100172480059191301	Las mujeres también lo hacen\nY sigue siendo asqueroso y una puta falta de respeto	1	0
+1100172480059191301	Las mujeres también lo hacen\nY sigue siendo asqueroso y una puta falta de respeto	4	0
 1100175226325950465	Coma mierda biejo orrible hdp, frentudo ladron y corrupto, solo ablar Mirra saben analfabetos terengos indios	1	0
 1100175226325950465	Coma mierda biejo orrible hdp, frentudo ladron y corrupto, solo ablar Mirra saben analfabetos terengos indios	4	1
 1100177846960558083	termino de rendir y le caemos al puto del negro, hay q sacarlo a algun ladoo	5	0
@@ -1947,6 +2018,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1100243106123915264	Hace como 20 años pensaba que Mariano Grondona era EL facho. Hoy creo que si el Dr. tuviera tuiter se lo vería como un socialdemócrata light al lado de los “libercoso” que pululan por acá. Sería una especie de Roy Cortina pobre doctor.	3	1
 1100329545817837568	En serio es comentar lo del Colacao y aparecen 10.000 retromonguers con algun problema en la muñeca o en la puta cabeza por el cual no saben mover un maldito Colacao o sencillamente Nesquik les da una paga por publicidad y por idiotas, no me lo explico.https://twitter.com/asstalosovarios/status/1100309595132776454 …	1	0
 1100329545817837568	En serio es comentar lo del Colacao y aparecen 10.000 retromonguers con algun problema en la muñeca o en la puta cabeza por el cual no saben mover un maldito Colacao o sencillamente Nesquik les da una paga por publicidad y por idiotas, no me lo explico.https://twitter.com/asstalosovarios/status/1100309595132776454 …	3	1
+1100342275509387264	Cállate marica! Hacen eso porque ustedes lo que hacen es sacar comunicados diciendo que están preocupados... les falta de todo, no son del tamaño que el momento requiere	1	0
+1100342275509387264	Cállate marica! Hacen eso porque ustedes lo que hacen es sacar comunicados diciendo que están preocupados... les falta de todo, no son del tamaño que el momento requiere	1	1
 1100347013613400065	No no, tonto no Es, sabe muy bien lo q pasa en Venezuela y lo que hace maduro pero lo ve bien porq es un asqueroso comunista	1	0
 1100347013613400065	No no, tonto no Es, sabe muy bien lo q pasa en Venezuela y lo que hace maduro pero lo ve bien porq es un asqueroso comunista	2	1
 1100367460421775360	Felicidades Doctor!\nMucho Éxito!\nAquí en México nos quedamos con el puto asqueroso mitómano ignorante y pendejo de lopitos y su bola de huelepedos mamavergas	2	0
@@ -1969,6 +2042,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1100438150453907457	Acompañe a agus a rendir y me vengo a encontrar a un profesor q tenia yo cuando venia al colegio viejo culiado ponja hdp	1	1
 1100438654164652033	que onda la gente que odia a los gay´s , o sea quedas mas maricon vos por criticar a alguien que se anima a mostrar quien realmente es.	6	0
 1100438654164652033	que onda la gente que odia a los gay´s , o sea quedas mas maricon vos por criticar a alguien que se anima a mostrar quien realmente es.	1	1
+1100451332794863617	Retrato de #feminazi, son bien contradictorias estos especimenes. pic.twitter.com/Ph4pOYzzjI	1	0
+1100451332794863617	Retrato de #feminazi, son bien contradictorias estos especimenes. pic.twitter.com/Ph4pOYzzjI	1	1
 1100454081158627331	Jajajaja marica	4	0
 1100454081158627331	Jajajaja marica	1	1
 1100458118293659648	Cuando arranquen las prácticas pedazo de un brisco	7	0
@@ -2010,7 +2085,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1100775998084255744	En serio esto es literal o sea mi casa es un primero pero pone bajo y en los telefonillos y todo pero es un puto primero y abajo hay trasteros. El repartidor del chino se monta unos pifostios cada vez que viene el pobre	1	1
 1100830724532432896	Sí, no sirve para nada. Pero a nosotros nos sirve para saber que eres de esos inconsecuentes, incoherentes que le dan la mano a ñañón pese a ser gente de mierda. De esos que gusta quedar bien con el favorcito pero siempre y cuando no resulte inconveniente. Muñeco de torta.	3	0
 1100830724532432896	Sí, no sirve para nada. Pero a nosotros nos sirve para saber que eres de esos inconsecuentes, incoherentes que le dan la mano a ñañón pese a ser gente de mierda. De esos que gusta quedar bien con el favorcito pero siempre y cuando no resulte inconveniente. Muñeco de torta.	2	1
-1100882947366965249	Que sensación de mierda cuando arrancas a preparar una materia y todo es chino básico.	5	0
+1100882947366965249	Que sensación de mierda cuando arrancas a preparar una materia y todo es chino básico.	6	0
 1100906721101447169	El circo Price ya tiene payaso, Roncero es el titular, no había exponente alguno, su cara de torta Blanca lo delata..... a reír en el circo del Chiringuito.	5	0
 1101192390533099520	@radiomitre mi solidaridad con M Tetaz que fue víctima de la prepotencia del ignorante, zurdo y soberbio T Young. Una vergüenza que Mitre tenga este tipo de periodista.	1	0
 1101192390533099520	@radiomitre mi solidaridad con M Tetaz que fue víctima de la prepotencia del ignorante, zurdo y soberbio T Young. Una vergüenza que Mitre tenga este tipo de periodista.	2	1
@@ -2045,6 +2120,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1103429737152565248	López Obrador no es comunista; podrá ser mentiroso, 'neoliberal', idiota, achichincle de Alfonso Romo, priísta, pero nunca "La Esperanza de México". https://twitter.com/ABarloventoInfo/status/1103346636057702406 …	2	1
 1103594410577723392	Como arranqué el día: un viejo petero me dijo cosas y me puse a gritar en la plaza de moreno a las 6:30, bueno, no puede empezar peor	5	0
 1103785124615933954	Soy fascista.\nSoy ignorante.\nSoy mentirosa.\nSoy miserable.\nSoy maleducada.\nSoy esclava del IBEX 35.\nSoy machista.\nSoy Inés.	3	0
+1103792768831365120	Man carisimas las tortas de cumpleaños ya no se puede ni comer un puto pedazo de torta tranquilo man	1	0
+1103807526385209345	Fue muy mala la transmisión .	3	0
 1104013128310898688	Viejo zorete hijo d puta chorro hdp	1	0
 1104013128310898688	Viejo zorete hijo d puta chorro hdp	2	1
 1104077597749772288	Es asqueroso. Y no sólo hay eso. Acoso a los niños, homofobia, xenofobia y un largo etc. Eso lo he visto yo bastante y da puto asco. En algunos casos hasta lo he vivido y por esa parte lo entiendo. Siempre hay subnormales que ensucian lo que yo amo.	2	0
@@ -2186,6 +2263,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1107703982762319872	Siempre serás mujer — siembre seras imbecil https://curiouscat.me/MarcMonkey/post/818716358?t=1552932184 …	3	1
 1107711935058010113	Ya. Porque hay octogenarios que como no tienen escopeta no matan a su mujer.\nhttps://www.20minutos.es/noticia/1393715/0/octogenario/mata-mujer/chamartin/ …\nEl que quiere matar mata, con escopeta o sin escopeta.	2	0
 1107711935058010113	Ya. Porque hay octogenarios que como no tienen escopeta no matan a su mujer.\nhttps://www.20minutos.es/noticia/1393715/0/octogenario/mata-mujer/chamartin/ …\nEl que quiere matar mata, con escopeta o sin escopeta.	1	1
+1107759925638451201	Torta di mele al cacao senza burro\nhttps://www.ricettemonamour.it/torta-di-mele-al-cacao-senza-burro/ … https://www.ricettemonamour.it/torta-di-mele-al-cacao-senza-burro/ …	1	0
 1107790762551533578	El propio pajuo chavista de mierda	2	0
 1107790762551533578	El propio pajuo chavista de mierda	1	1
 1107810312852594694	País de tercer mundo, pobre, fascista y de gobierno corrupto, no pasa nada.. pic.twitter.com/aroZGnHVzA	1	0
@@ -2201,7 +2279,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1107848907848073216	a estos negro de mierda hay que amarrarles el pito entre ellos y que tiren .https://twitter.com/matildablanco/status/1107067031722037249 …	5	1
 1107895981436223488	Eh ya ves, y su mama obligandole a follar con una ramera rusa	4	0
 1107895981436223488	Eh ya ves, y su mama obligandole a follar con una ramera rusa	1	1
-1107899970282229761	Todo su tweet es defendiendo que la edad de consentimiento son 13,es un puto asqueroso	3	0
+1107899970282229761	Todo su tweet es defendiendo que la edad de consentimiento son 13,es un puto asqueroso	4	0
 1107899970282229761	Todo su tweet es defendiendo que la edad de consentimiento son 13,es un puto asqueroso	1	1
 1107947311928365057	Sinverguenza Inmoral criminal comunista vino a buscar su mesada para hacer mercado.@jguaido debe declararlo PERSON NO GRATA en Venezuela y que no le importe que se abstenga la Delcy Solórzano, PROHIBIDO OLVIDAR. 2 votaciones claves y las únicas abstenciones fueron d UNThttps://twitter.com/CaraotaDigital/status/1107945740175884288 …	2	0
 1107947311928365057	Sinverguenza Inmoral criminal comunista vino a buscar su mesada para hacer mercado.@jguaido debe declararlo PERSON NO GRATA en Venezuela y que no le importe que se abstenga la Delcy Solórzano, PROHIBIDO OLVIDAR. 2 votaciones claves y las únicas abstenciones fueron d UNThttps://twitter.com/CaraotaDigital/status/1107945740175884288 …	1	1
@@ -2221,6 +2299,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1108085424839421952	perdón feminazi, digo feminista!\nABORTO LEGAAAAL!!!	1	0
 1108085424839421952	perdón feminazi, digo feminista!\nABORTO LEGAAAAL!!!	4	1
 1108093309933764609	Esta en modo feminazi parece..!!! Si es así difícilmente entienda..!!¡	3	1
+1108104411732213768	Es que dale, va más allá de ser hombre o ser mujer, pegarle a una forra de mierda, facista encima, no es violencia de género, es encajarle una piña x forra.\nLo haría con hombres, personas de la comunidad lgbt, TODO. No es por sus condiciones o lo que sea, es por sus ideales.	1	0
+1108104411732213768	Es que dale, va más allá de ser hombre o ser mujer, pegarle a una forra de mierda, facista encima, no es violencia de género, es encajarle una piña x forra.\nLo haría con hombres, personas de la comunidad lgbt, TODO. No es por sus condiciones o lo que sea, es por sus ideales.	2	1
 1108112532496097280	No soy ni facho ni pro bolsonaro pero así no funciona el mundo. Bolsonaro es presidente por votación democrática en su país y representa a los brasileños no hay ninguna justificación para cerrarle las puertas porque mantenemos relaciones bilaterales con Brasil. Razona las cosas	3	0
 1108116817283895296	deja de jalarle bolas a los gringo ladron de mierda	1	0
 1108116817283895296	deja de jalarle bolas a los gringo ladron de mierda	2	1
@@ -2278,7 +2358,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1108592381539090432	mil veces le expliqué a mi mamá cómo se usa twitter dale mujer me estás  jodiendo CÓMO QUE NO ENTENDES la re puta madre que te parió	1	1
 1108598087998681088	La dvd quiero el puto viaje y entrar a la puta Universidadhttps://twitter.com/TioSantix/status/1079885944302563328 …	5	0
 1108600761590730752	Típico ignorante. Anda a cagar, zurdo!	3	1
-1108671288896311296	Frió de mierda la puta que te parió	1	0
+1108671288896311296	Frió de mierda la puta que te parió	3	0
 1108681054292983809	Y después esta misma gente con este tipo de pensamiento básico anda tratando de facho a todo aquel que piense distinto a ellos ... ahí se nota su ignorancia pobres aves	3	0
 1108681054292983809	Y después esta misma gente con este tipo de pensamiento básico anda tratando de facho a todo aquel que piense distinto a ellos ... ahí se nota su ignorancia pobres aves	1	1
 1108684953078976512	Porque no hizo así con su compinche de Camilo o el fugado del mariscal Zabala maricon CORRUPTO	3	1
@@ -2379,8 +2459,10 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1111220706849763328	Hasta cuando tanto cuento chino.NADIE les cree.Nadie es tan estupido!	1	1
 1111414044437536768	Me importa una mierda lo que piense un zurdo de mierda como tú	3	0
 1111414044437536768	Me importa una mierda lo que piense un zurdo de mierda como tú	2	1
+1111486458278408192	"Un moro es un moro a fin de cuentas." No solo eres ignorante y racista por el burdo comentario, sino que eres inculto e iletrado al no darte cuenta de que los Libaneses no somos Moros.	2	0
 1111734719975178240	El chorro y corrupto más grande de la historia. Ni hablar de su violencia.  \nUsted es un idiota, litle pene	1	0
 1111734719975178240	El chorro y corrupto más grande de la historia. Ni hablar de su violencia.  \nUsted es un idiota, litle pene	4	1
+1111739051957239809	A bueno.... Se cagan en la cara de la gente. Que vieja hdp. Pero peor son los que le siguen la corriente para poder sacar una mínima porción de la torta	2	0
 1111814977504100352	Como lo amo al negro puto♡	4	0
 1111814977504100352	Como lo amo al negro puto♡	2	1
 1112029699956527104	Me da pena Juanes. Que los fascistas de mierda usen una canción tuya para su campaña política fascista tiene que ser muy jodido...	1	0
@@ -2471,6 +2553,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1114659738774646784	Eso es como decir que si te gusta la costura sos puto. Yo no soy torta y amo el fútbol. Me extraña que tú digas éso? 	1	1
 1114687281170919424	Hijo de tu perra madre puto marihuano comprado \nYa chupasela a Fox además hoy es SÁBADO no domingo\nNo seas estúpido	1	0
 1114687281170919424	Hijo de tu perra madre puto marihuano comprado \nYa chupasela a Fox además hoy es SÁBADO no domingo\nNo seas estúpido	2	1
+1114696078270640131	Pronto caerá el inepto de Maduro,  tu tiempo en el poder depende de nuestro petróleo y pronto dejará de llegar esa regalía a la isla, eres un chupa sangre, vividor, dictador, asesino, en fin, eres un comunista de mierda... https://twitter.com/DiazCanelB/status/1114488886602928128 …	3	1
 1114737450784559105	Uno acá en Twitter estaba de los pelos pidiendo a Laje en Podemos Hablar, o que vaya un provida, me encanta cuando se quieren matar cuando ven una feminista, encima quería opinar el muy macho sin utero.	3	0
 1114737450784559105	Uno acá en Twitter estaba de los pelos pidiendo a Laje en Podemos Hablar, o que vaya un provida, me encanta cuando se quieren matar cuando ven una feminista, encima quería opinar el muy macho sin utero.	2	1
 1114909261996404736	La decadencia total. El payaso burlándose de la gente y el ladron, estafador y delincuente queriendo ser gobernador de Baires!!! No me van a decir que no es decadente el programa y los individuos esos!!!	2	0
@@ -2494,7 +2577,9 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1115358569556316161	En una semana gente del Espanyol ha amenazado de muerte a un canterano, ha llamado negro de mierda a un aficionado de otro equipo y ha puesto pegatinas de Ana Frank con la camiseta del Barça en el campo del Girona.\n\nTremendo combo.	5	0
 1115360353032925184	Imbécil idiota Cállate la boca hablando m***** si tú no fuiste capaz de solucionar los problemas porque hablas imbecil si quieres que otro venga a solucionar el desastre que tú dejaste Maldito Ladrón rata	3	0
 1115360353032925184	Imbécil idiota Cállate la boca hablando m***** si tú no fuiste capaz de solucionar los problemas porque hablas imbecil si quieres que otro venga a solucionar el desastre que tú dejaste Maldito Ladrón rata	2	1
+1115406369254006784	Que mujer estúpida.. como pueden haberla votado.. cínica de mierda	3	1
 1115420107092766723	callate vos puta trola idiota tarada tonta mala conchuda boba pelotuda boluda gilas negras sucia cornuda irritante cajetuda sin cerebro hueca chota zorra perra gata mogolica infantil estúpida imbécil bestia animal loca maloliente zopenca invalida diarreosa maloliente culo roto	5	1
+1115426262678429696	Ese señor deja mucho que desear asi hizo broma a la loca feminazi que le echo acido al otro sacerdote la verdad ya todos sabemos sus preferencias políticas pero a veces uno se queda sorprendido con esas actitudes.	3	0
 1115433083380162561	Sos un hdp junior, no te das cuenta que el chorro es la victima? No te das cuenta que le GATILLÓ EN EL PECHO porque no tiene para comer????	2	0
 1115433083380162561	Sos un hdp junior, no te das cuenta que el chorro es la victima? No te das cuenta que le GATILLÓ EN EL PECHO porque no tiene para comer????	1	1
 1115468899095580673	"Si yo fuera mujer, sería re puta" \nMi papá hablando pelotudecessssss jajaj	4	0
@@ -2676,6 +2761,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1116846924064227328	Aaa es que como anda toda esta onda feminazi, el lloriqueo, el patetismo, el cuoteo , etc. uno asume que si una mujer brilla, es por ser mujer, no por un logro.	1	0
 1116846924064227328	Aaa es que como anda toda esta onda feminazi, el lloriqueo, el patetismo, el cuoteo , etc. uno asume que si una mujer brilla, es por ser mujer, no por un logro.	5	1
 1116849973222678528	quiero abrazar a jimin y darle besitos en los cachetes no me puede hacer tan trolo ese pibe.	3	0
+1117096659966672898	Sabras tu lo que busca cada feminista, ignorante	3	0
 1117145186092691463	Julieta trola de mierda	3	1
 1117422645388226560	Chabonnn me hice la famosa torta en taza y mamadera que esta ricaa	3	0
 1117565856488284160	Que me venis a hablar vos cabeza de chizito aplastado, deforme de mierda\nEncima te haces la chora con la foto de un chino del super jaja re imbécil	3	1
@@ -2699,6 +2785,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1119060873287491584	Maaan que maldito puto ascaaa tendre pesadillas durante semanas!  https://twitter.com/SoyacitySV/status/1118935502512644097 …	1	0
 1119060873287491584	Maaan que maldito puto ascaaa tendre pesadillas durante semanas!  https://twitter.com/SoyacitySV/status/1118935502512644097 …	2	1
 1119225949940342784	La realidad así como decís vos, se mide en números y estadísticas, no según lo que le pasó a las 50 personas que vos conozcas. Si seguís viviendo de espaldas a los números, vas a ser zurdo ignorante toda la vida. Todavía estás a tiempo.	3	0
+1119243709101543426	Me levanté a las 6am, fui a buscar a mi hermana a Ezeiza, llegué a mi casa y, atención, ME PUSE A LAVAR EL AUTO. ¿En qué momento me convertí en Ernesto el tachero? Aprovecho para decir que todas las mina son puta y que a todos los negro habría que matarlos. Y que UBER puto (?)	1	0
+1119243709101543426	Me levanté a las 6am, fui a buscar a mi hermana a Ezeiza, llegué a mi casa y, atención, ME PUSE A LAVAR EL AUTO. ¿En qué momento me convertí en Ernesto el tachero? Aprovecho para decir que todas las mina son puta y que a todos los negro habría que matarlos. Y que UBER puto (?)	2	1
 1119276262030290946	Por decirlo no, por votar a VOX. Recuerda que lo que yo digo es que quien vota a un partido que recorta libertades civiles es ignorante por no ser consciente, o fascista por apoyarlo. Así que fascista lo eres si votas a un partido fascista, que entre otras cosas, apoya a Franco.	4	0
 1119276262030290946	Por decirlo no, por votar a VOX. Recuerda que lo que yo digo es que quien vota a un partido que recorta libertades civiles es ignorante por no ser consciente, o fascista por apoyarlo. Así que fascista lo eres si votas a un partido fascista, que entre otras cosas, apoya a Franco.	1	1
 1119289334350458881	Jajajaa callate, chino	1	0
@@ -2747,6 +2835,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1121223198698287109	El unico que puede solucionar este chorro asqueroso es el TAS, aunque no lo creas si BoCa hace toda la fuerza que se necesita	1	1
 1121251187003543552	Pablo Iglesias pretende ser un paladín anticorrupción en #España pero ha sido asesor del régimen #chavista, conocido como el más corrupto en la historia de la humanidad por sus estadísticas dantescas.\n\nQuien confíe en este individuo tiene serios problemas.\npic.twitter.com/lBRVcpHLFe	5	0
 1121251187003543552	Pablo Iglesias pretende ser un paladín anticorrupción en #España pero ha sido asesor del régimen #chavista, conocido como el más corrupto en la historia de la humanidad por sus estadísticas dantescas.\n\nQuien confíe en este individuo tiene serios problemas.\npic.twitter.com/lBRVcpHLFe	1	1
+1121252852347867136	cual fue trola de mierda?!!!!!contestA puta 	1	0
+1121252852347867136	cual fue trola de mierda?!!!!!contestA puta 	2	1
 1121335144084901888	Claro, como Ezra Pound, ese idiota q no había leído. O Carl Schmitt, otro tonto. O Ledesma Ramos, Onésimo Redondo y Víctor de la Serna, aquí en España. No se es fascista por tener poca cultura: se es fascista porq se quiere un tipo concreto de orden social\nhttps://twitter.com/ctxt_es/status/1121068312480374785 …	3	0
 1121416383156371456	q dices puto champion asqueroso	3	0
 1121416383156371456	q dices puto champion asqueroso	4	1
@@ -2767,6 +2857,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1121882658441695232	Acabo de presenciar un robo a una señora y al chorro lo tuve al lado un rato, que gente de mierda	2	1
 1121954979734966273	Weones ladrones .ya no ayan como robarle al chileno pais puto de mierda maldito pinocho que invento las afp viejo de mierda ojala que se este revolcando en el infierno .. https://twitter.com/T13/status/1121814619557752833 …	3	0
 1121954979734966273	Weones ladrones .ya no ayan como robarle al chileno pais puto de mierda maldito pinocho que invento las afp viejo de mierda ojala que se este revolcando en el infierno .. https://twitter.com/T13/status/1121814619557752833 …	2	1
+1121966353202733056	Tenes razón  comi la torta de mierda que hicieron c zoe en la hornalla, y tus pochoclos quemados	3	0
 1122133667151798274	Eres un mentiroso o un ignorante , la ppr está desde el 26 de marzo del 2015 , años antes de los crimenes de Diana y Laura. La cadena perpetua no salva vidas , la inversion en una educacion publica feminista y de calidad si .	8	0
 1122133667151798274	Eres un mentiroso o un ignorante , la ppr está desde el 26 de marzo del 2015 , años antes de los crimenes de Diana y Laura. La cadena perpetua no salva vidas , la inversion en una educacion publica feminista y de calidad si .	1	1
 1122252165307826177	En realidad el imbecil es el Roger Waters. El otro es un comisario comunista del régimen cubano que sabe exactamente lo que está haciendo.	3	0
@@ -2780,7 +2871,10 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1122588084879499264	en sima en el momento de cortar la torta mientras todos se sacaban fotos, yo estaba al lado de mi primo y el hdp me dice ANDA A SACARTE UNA FOTO, AH CIERTO QUE NO PODES PORQUE CON TU GORDURA VAS A OCUPAR TODA LA CÁMARA TANTO QUE SE VA A ROMPER, CASI ME LARGO A LLORAR AHÍ, LO ODIO	6	0
 1122588084879499264	en sima en el momento de cortar la torta mientras todos se sacaban fotos, yo estaba al lado de mi primo y el hdp me dice ANDA A SACARTE UNA FOTO, AH CIERTO QUE NO PODES PORQUE CON TU GORDURA VAS A OCUPAR TODA LA CÁMARA TANTO QUE SE VA A ROMPER, CASI ME LARGO A LLORAR AHÍ, LO ODIO	2	1
 1122595578301558784	Que orgullosa estoy de ser Catalana. Joder, creo que somos un puto ejemplo para España... Y no lo digo por ser indepe, sino porque no damos casi lugar a la puta derecha fascista. #Elecciones2019	5	0
+1122632270379200514	No pueden creer que un peronista, kirchnerista, populista o como le quieras llamar, no sea negro, bruto, chorro, vago y viva en una zanja.\nNo te pasa que no te creen que laburás, que estudiaste o que vivís en Vicente López?	1	0
+1122632270379200514	No pueden creer que un peronista, kirchnerista, populista o como le quieras llamar, no sea negro, bruto, chorro, vago y viva en una zanja.\nNo te pasa que no te creen que laburás, que estudiaste o que vivís en Vicente López?	1	1
 1122666285471621120	La puta ansiedad me va a matar. Empiezan los últimos capítulos largos y de tortura 	5	0
+1123024097343156224	el final es penoso. Aparece la chiquilla de la puta nada jajaj y se carga a un pavo q a priori es el mal hecho criatura...jajaj no lo hemos visto luchar y ya esta muerto! la trama q mas prometia y chau! penoso vaya. 3 ep. mas pa matar a Cersei y chau	2	0
 1123030100805660677	Que menos se puede esperar de un fascista como este imbecil, brasileños tontos, ellos lo votaron	2	0
 1123030100805660677	Que menos se puede esperar de un fascista como este imbecil, brasileños tontos, ellos lo votaron	3	1
 1123074540324773891	Como soy de los q tienen tv viejo, mi solución fue bajar las persianas y todo seguía negro. Pensé “igual está hecho para aquellos televisores con negros intensos” pero no; Fue decisión del puto directo de fotografía. #GoT pic.twitter.com/KPcdbEfTYF	7	0
@@ -2794,10 +2888,13 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1123227619074482176	Andais cagao mamaguevo vais a caer maldito ladron asesino	7	1
 1123244954158096384	No volveras al congreso chavista de mierda....	3	1
 1123249717289324544	callate coño de madre bruja... espia por mandato del regimen. perra	5	1
+1123253036489613313	Moyano compadre la reconcha de tu madre ministerio de la venganza negro sucio chorro hijo de puta.mandaste a quemar colectivos hay q quemarte la mansion vas a terminar peor q tu amigo maduro	2	1
 1123276918218997760	Y entre tanto ramerio,\nya te apodamos\n"la ramera". #Rolita	2	0
 1123276918218997760	Y entre tanto ramerio,\nya te apodamos\n"la ramera". #Rolita	1	1
 1123282434370539521	Eres tremendo pajuo chavista de mierda	3	1
 1123286488223973377	La derecha criminal y fascista de #Venezuela quiere llegar al poder con la fuerza, hablan de democracia, pero hacen todo lo contrario, pero #NoPasaran\n#PLOMO19\n#Nicaragua40Revolución	3	0
+1123293369550233601	Noruega, puesto 25 en libertad económica, de qué socialismo hablas zurdo imbecil? Los países nórdicos son de las economías más libres del mundo, todo lo contrario al socialismo donde el estado tiene un gasto enorme financiado con la presión fiscal. pic.twitter.com/UCs9DkvkL8	1	0
+1123293369550233601	Noruega, puesto 25 en libertad económica, de qué socialismo hablas zurdo imbecil? Los países nórdicos son de las economías más libres del mundo, todo lo contrario al socialismo donde el estado tiene un gasto enorme financiado con la presión fiscal. pic.twitter.com/UCs9DkvkL8	1	1
 1123298994594226176	Típico título de una feminazi de la ciudad. No es violación, es sabido que los potros se divierten en las domas y las yeguas acceden a tener sexo con consentimiento.	4	0
 1123298994594226176	Típico título de una feminazi de la ciudad. No es violación, es sabido que los potros se divierten en las domas y las yeguas acceden a tener sexo con consentimiento.	1	1
 1123302662110371840	si tango es literalmente comunista cada vez q hablamos de matar a Maduro llora sangre	2	0
@@ -2843,6 +2940,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1123708482836996096	Sorprende esa gente \nque no quiere creer que Mujica es un viejo de mierda...\n SI, es un viejo comunista de mierda!!!!	1	0
 1123708482836996096	Sorprende esa gente \nque no quiere creer que Mujica es un viejo de mierda...\n SI, es un viejo comunista de mierda!!!!	5	1
 1123728225665015810	Mi mujer me quiere matar nuevamente pic.twitter.com/6s9OtsAMCe	5	0
+1123738867738259459	Nos gustaría que invitarán a  @ClaudioAlcaraz y su @BandaLaMundial a #ElMacroMobileSuper2019 @LaMejor_Merida	3	0
 1123745391638454273	que asentis vos idiota de mierda si te cagas en todas las personas lgbt	3	1
 1123800641883779072	Lo perra que está Madison en esta foto dios te amo mujer pic.twitter.com/TBBVYdfqXr	6	0
 1123821571464933376	Una feminazi más , lamentable	1	0
@@ -2873,6 +2971,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1124073194040766466	Liberó Juez a ‘El Chofo’ y salió directo a matar al policía que lo detuvo en Lagos de Moreno, Jalisco https://noticaribe.com.mx/2019/05/02/libero-juez-a-el-chofo-y-salio-directo-a-matar-al-policia-que-lo-detuvo-en-lagos-de-moreno-jalisco/ …	1	1
 1124102155768610816	Vuelve a leer lo que te he dicho. Que por mi que les aplasten la cabeza por fachas de mierda, pero que tú primer tweet es absurdo. Lo del libro es una gilipollez enorme. \n\nYo soy comunista por ejemplo, y en mi cuarto tengo libros de mil ideologías. Simplemente.	3	0
 1124102155768610816	Vuelve a leer lo que te he dicho. Que por mi que les aplasten la cabeza por fachas de mierda, pero que tú primer tweet es absurdo. Lo del libro es una gilipollez enorme. \n\nYo soy comunista por ejemplo, y en mi cuarto tengo libros de mil ideologías. Simplemente.	3	1
+1124119484019691522	Suerte que tenemos un espalda mojada para aclarar los tantos.	3	0
 1124125066088914944	Sinvergüenza es al revés ,tú debes ser un sinvergüenza corrupto comunista delincuente corrupto ,que hoy están escudados en la mafia de las ONG's	3	1
 1124131850379722753	Y acaso hoy por hoy no es Chilezuela? Basta ver los noticiarios,matinales,etc el presi haciendo el ridiculo llevando "ayuda humanitaria",recibiendo militares desertores ,criticando a quienes apoyan a Maduro y la de la torta viaja a China olvidando el discurso anti comunista	2	0
 1124131850379722753	Y acaso hoy por hoy no es Chilezuela? Basta ver los noticiarios,matinales,etc el presi haciendo el ridiculo llevando "ayuda humanitaria",recibiendo militares desertores ,criticando a quienes apoyan a Maduro y la de la torta viaja a China olvidando el discurso anti comunista	1	1
@@ -2920,6 +3019,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1124473194549739520	callate perra andate de mi tweet	1	1
 1124498159340855298	Mira que voy a comer tantoooo que hija de puta me quiero matar	5	0
 1124516804670382080	Ni un maldito puto tiro han echo en el segundo tiempo los delanteros del america , ni uno	6	0
+1124516886249725952	Este Chileno de mierda que va ha saber del caso de Venezuela, si nisiquiera sabe hablar el español. Maldito indio de mierda.	3	1
 1124528225852563456	es un mega red flag que un chamo le diga "puta" a una mujer	5	0
 1124528225852563456	es un mega red flag que un chamo le diga "puta" a una mujer	1	1
 1124598151623655424	Twitter me cago en la puta porque quiero subir el video más bonito del mundo y no me puto dejas es que uf	3	0
@@ -2950,6 +3050,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1124814758715244550	JBalvin se cago en dos semanas lo que construyó en más de dos años, así es como ser un machito facho te pasa factura.	3	0
 1124814758715244550	JBalvin se cago en dos semanas lo que construyó en más de dos años, así es como ser un machito facho te pasa factura.	2	1
 1124835433773400070	Pobrecito el chorro , hay que tener empatía con el que te puede matar por un celular.	3	1
+1124851627159109633	Nada de nada, y a este negro de mierda ni una rama de algun arbol.	3	1
 1124872895648473090	Plomo y carcel a ese negro hijo de puta mentiroso, ladron. Ahora si quieren dialogo?. Que hablen con sus conciencias durante 30 años en una carcel en USA. Perro sucio	3	1
 1124874746183680000	Vicente Fox Quesada callate hijo de tu puta madre y devuelve las cuatro plataformas de petróleo que te robaste huachicolero de mierda	1	0
 1124874746183680000	Vicente Fox Quesada callate hijo de tu puta madre y devuelve las cuatro plataformas de petróleo que te robaste huachicolero de mierda	5	1
@@ -2992,9 +3093,11 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1125102211539853313	La primera de Spiderman se estrenó en el 2002, vaya puto viejo de mierda estoy hecho. Lo pienso y me vengo abajo, 20 años ya y sigo siendo un mierdas	5	0
 1125103296191107072	dure 5 meses detrás de alguien que me brindaba cosas a medias y ahora q salí de ahí, esperan q con ellos también siga como marica aceptando cualquier mierda?!? jasjka están es pero mal ñero.	1	0
 1125103296191107072	dure 5 meses detrás de alguien que me brindaba cosas a medias y ahora q salí de ahí, esperan q con ellos también siga como marica aceptando cualquier mierda?!? jasjka están es pero mal ñero.	3	1
+1125111496281866246	Y luego está el otro puto huevon de mierda que me deja toti con los 3 españoles	3	0
 1125112644074135552	Cura maricon y pedofilo	5	1
 1125113864784244736	Que poca perra madre, cuantos puntos le costarán al chófer que aparte de todo el maldito animal se dio a la fuga.	2	0
 1125113864784244736	Que poca perra madre, cuantos puntos le costarán al chófer que aparte de todo el maldito animal se dio a la fuga.	1	1
+1125113921667571713	Desde cuando eres tan marica, nocierto. Yo te amo jajajajaj	3	0
 1125130011986550787	Tu chinga tu madre puto enano de mierda corrupto lamehuevos chupaculos.	1	0
 1125130011986550787	Tu chinga tu madre puto enano de mierda corrupto lamehuevos chupaculos.	4	1
 1125132522445099008	Pa la puta madre báñense vergas, están viendo el puto calor y todavía no se bañan valen verga	2	0
@@ -3004,6 +3107,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1125142543212142596	No digáis más. Esta mujer actúa de payaso en su circo particular de Telecinco y hoy le han puesto su uniforme. Simplemente. https://twitter.com/HolioRomero/status/1125044269725683712 …	5	0
 1125142543212142596	No digáis más. Esta mujer actúa de payaso en su circo particular de Telecinco y hoy le han puesto su uniforme. Simplemente. https://twitter.com/HolioRomero/status/1125044269725683712 …	1	1
 1125144507568336898	no puedes opinar por que tienes trolo en tu user	3	1
+1125149845164122112	Han comenzado “the trolo Civil Wars”	3	0
 1125151742340096007	Chris Brown es un puto patan de mierda y no debería de defenderlo nadie	5	0
 1125151742340096007	Chris Brown es un puto patan de mierda y no debería de defenderlo nadie	1	1
 1125156176025608192	¡En 1961 ganó #Eurovisión una canción marica! https://twitter.com/DaniOVD/status/1124808064752848896 …	3	1
@@ -3013,6 +3117,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1125165873050935303	A que vas maricon... a dar las nalgas o a buscar droga? Ya te voy a pinchar al imperio para que te hagan un seguimiento	3	1
 1125166707612561409	menuda comparación más idiota,ke tiene que ver el sueldo de Cotarelo con que el estado se gaste 88000 € (NUESTROS)en un puto retrato de este hombre que esta aqui no por voluntad divina....sino ( como decia Evaristo) porque sus antepasados se lo montaron divinamente.	5	0
 1125166707612561409	menuda comparación más idiota,ke tiene que ver el sueldo de Cotarelo con que el estado se gaste 88000 € (NUESTROS)en un puto retrato de este hombre que esta aqui no por voluntad divina....sino ( como decia Evaristo) porque sus antepasados se lo montaron divinamente.	3	1
+1125175534395232256	Ay maricon	3	0
 1125179986774827010	No faltaba el rt del facho pobre del sur	2	0
 1125179986774827010	No faltaba el rt del facho pobre del sur	4	1
 1125195406739111936	Jajajaja qué zurdo de mierda. https://twitter.com/JuanGrabois/status/1125176484392513537 …	2	0
@@ -3069,12 +3174,15 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1127406356208717825	El típico ignorante que "humilla" con la palabra indio, mejor ve por un diccionario porque se nota en tu agresividad que no tienes argumentos	5	0
 1127563202567516160	Entendistes bien, una trucha la mina . Y el tarado d del.moro sigue operando para el gobierno....	3	0
 1127652832935600130	Enrique Santiago es el autor de todo ese adefecio de la JEP, un zurdo internacional, resentido, mediocre, corrupto y fracasado, pocas veces escuchamos cuestionar a este Abogado de las Farc, quien les diseñó su propia justicia.	3	1
+1127673724377944066	Deja de publicar pelotudeces boludo de mierda arreglen los servidores da asco tu juego pedazo de puto devolve la plata ladron	1	0
+1127673724377944066	Deja de publicar pelotudeces boludo de mierda arreglen los servidores da asco tu juego pedazo de puto devolve la plata ladron	2	1
 1127692015007825920	Pensar que no me puedo ir a la cama hasta que acabe lo de puto chino, me deprime, mucho, mucho	4	0
 1127692015007825920	Pensar que no me puedo ir a la cama hasta que acabe lo de puto chino, me deprime, mucho, mucho	2	1
 1127693988998332416	Vamosss moreno lo conseguiremos puto crack	5	0
 1127805508755382272	Puto cagon me voy a comer a tu gato oni entonces por decirme chino y despues de eso te cago a piñas por puto cagon	3	1
 1127972760721002497	Me quedo media torta y UNA TORTA HELADA COMPLETA. En esta semana no curso, lo q voy a engordar. Después me voy a querer matar.	3	0
-1128163429892665345	brother que vivo en tu puto pais gitano asqueroso	1	1
+1128027556123488257	Y Gusano Gris? Que me habéis hecho a Gusano Gris? Era un soldado, un esclavo que consiguió un objetivo en la vida al ser liberado, un hombre justo y honorable entrenado por ser Barristan. Y me estás diciendo que, porque se le muere la churri, se pone a matar a inocentes?	3	0
+1128163429892665345	brother que vivo en tu puto pais gitano asqueroso	3	1
 1128361027886878723	No debiste salir de las minas, maldito negro - Ordoñez. Sigue chingando a Mateo. 2019	1	0
 1128361027886878723	No debiste salir de las minas, maldito negro - Ordoñez. Sigue chingando a Mateo. 2019	8	1
 1128422794784645121	j3j3 pues con la tontería 2 veces en el equipo enemigo 2 loses puto champ asqueroso	6	0
@@ -3093,12 +3201,16 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1128740196424527872	Estás bien pendejo, te expliqué por ig y aún así la cagas y te puse “es por emi” JAJAJAJAJAJAJAJA puto negro pendejo.	1	1
 1128799734007816192	La descuadernada institucional era cuando teníamos fast-track en  congreso, una mini-constituyente en cuba, un comunista español creando la JEP, el jefe del cartel de la Toga de magistrado un corrupto de 7 suelas de Fiscal G, todos trabajando para un tahúr.	2	0
 1128799734007816192	La descuadernada institucional era cuando teníamos fast-track en  congreso, una mini-constituyente en cuba, un comunista español creando la JEP, el jefe del cartel de la Toga de magistrado un corrupto de 7 suelas de Fiscal G, todos trabajando para un tahúr.	1	1
-1128817354497044480	Este Nazareno pajero me lleno el pelo de torta el sucio asqueroso	1	0
+1128817354497044480	Este Nazareno pajero me lleno el pelo de torta el sucio asqueroso	3	0
 1128898387443453952	Oukey maldito hijo de perra	3	1
 1128899586888753152	Y el sábado a matar a los @TigresOficial  ya vimos que no trae nada , con o sin Gignac o el chino Zelarayan no pudierón ante el glorioso @Rayados y agradecer al Mr @AlonsoDT  que nos demuestra que está hecho para estos partidos!!!	5	0
+1129070470194782218	Al final el chino del super que te apaga las heladeras de noche supo ser más honesto que estos millonarios de mierda como sarkany que se colgó de la luz y evadió 1 millón y medio de pesos en impuestos.	2	0
+1129070470194782218	Al final el chino del super que te apaga las heladeras de noche supo ser más honesto que estos millonarios de mierda como sarkany que se colgó de la luz y evadió 1 millón y medio de pesos en impuestos.	1	1
 1129088321928466432	chino puto	3	1
 1129089252778815488	Las mismas garantía que vosotros disteis a lo inocentes que cruzaron por vuestro maldito camino lleno de odio y cobardía. \nRecuerdan como se meaban en los pantalones cuando los detenía la Guardia Civil?\nCobardes hijos de perra...\nhttps://amp.elmundo.es/pais-vasco/2019/05/16/5cdd4005fc6c837b7c8b462e.html#click=https://t.co/MJRUCUT4xv …	1	0
 1129089252778815488	Las mismas garantía que vosotros disteis a lo inocentes que cruzaron por vuestro maldito camino lleno de odio y cobardía. \nRecuerdan como se meaban en los pantalones cuando los detenía la Guardia Civil?\nCobardes hijos de perra...\nhttps://amp.elmundo.es/pais-vasco/2019/05/16/5cdd4005fc6c837b7c8b462e.html#click=https://t.co/MJRUCUT4xv …	3	1
+1129178517550305280	Porque ese perro nació en ese puto lugar jediondo asqueroso llamado Tabasco	1	0
+1129178517550305280	Porque ese perro nació en ese puto lugar jediondo asqueroso llamado Tabasco	2	1
 1129180481398951942	¿Cuál fue tu trabajo menos favorito que has tenido? — mecánico. odio la grasa, el combustible, tener que ensuciarme con ambos, el puto olor, y el tener que aprenderme donde va cada asqueroso fragmento...\n no se como le hacen los O… https://curiouscat.me/Kreyden/post/877192189?t=1558052580 …	3	0
 1129182141521309702	Si te ves con alguien: "trola" "puta" "rapidita"\nSi no te ves con nadie: "virga" "santita" "lenta"\nQue sociedad de mierda no?	3	0
 1129186321874989057	Jajajajajaj el gay jorge rodriguez que cuento traera ? Basura comunista la unica solucion que reclama el pueblo venezolano es la salida del inepto, ladron y Narcotraficante MUDURO y que respondan por todos sus crimenes	6	1
@@ -3136,7 +3248,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1130799972797091840	Hijo de perra el demente diputado\n.ojala lo atropelle un burro o dos...	2	1
 1130807040924954625	Callate fascista de mierda, que democracia ni ostias, si soys un país tercer mundista y de país democràtico no tenies nada. #LlibertatPresesPolítiques #LlibertatPresosPolítics #freeCatalanPoliticalPrisioners	3	1
 1130833120276750336	Ajá, yo soy negro y mi maldito user tiene la palabra Nigga, ¿cuál es el peo? En serio siguen ofendiendose por mariqueras? Que webo!	3	0
-1130878074843783168	Hay hombres que piensan que si una mujer se muestra es  puta y que las tapadas son santas, pero conozco más de una con cuello tortuga y falda a los tobillos que lo dan miando y otras que se muestran mucho y   no lo dan ni a oler	3	0
+1130878074843783168	Hay hombres que piensan que si una mujer se muestra es  puta y que las tapadas son santas, pero conozco más de una con cuello tortuga y falda a los tobillos que lo dan miando y otras que se muestran mucho y   no lo dan ni a oler	4	0
 1130878074843783168	Hay hombres que piensan que si una mujer se muestra es  puta y que las tapadas son santas, pero conozco más de una con cuello tortuga y falda a los tobillos que lo dan miando y otras que se muestran mucho y   no lo dan ni a oler	2	1
 1130914791902588931	Ojalá volver al H1Z1 y dejar de jugar al puto lol, si es que maldito daybreak con lo bien que estaba el juego xd	2	0
 1130914791902588931	Ojalá volver al H1Z1 y dejar de jugar al puto lol, si es que maldito daybreak con lo bien que estaba el juego xd	1	1
@@ -3210,12 +3322,14 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1132525659778162688	El resto es ganas de salir a matar porque es idiota+inútil+chorro.	3	0
 1132525659778162688	El resto es ganas de salir a matar porque es idiota+inútil+chorro.	2	1
 1132531934947684352	Chupame la pija bolso gallina hija de puta, que hacemos en primera que puto de mierda?	3	1
+1132597109423824896	Yo tenía la rosa (que no sale en la foto pero weno) y una pinche perra me la robó en infantil y me dio su vaso rojo de mierda. Mónica, sigo queriendo pisarte la cabeza, algún día lo haré. https://twitter.com/Charmalover/status/1131221666745524224 …	2	0
 1132615046855581698	Y que se espera de unos pocos muertos de hambre que buscaron incansablemente convertirse en lo contrario de su ideología comunista, ahora son imperialistas pero no por trabajo si no por malditos ladrones corruptos @nayibbukele, cacería de brujas para los corruptos.\n#politicaSvhttps://twitter.com/nayibbukele/status/1132526940135579649 …	2	0
 1132615046855581698	Y que se espera de unos pocos muertos de hambre que buscaron incansablemente convertirse en lo contrario de su ideología comunista, ahora son imperialistas pero no por trabajo si no por malditos ladrones corruptos @nayibbukele, cacería de brujas para los corruptos.\n#politicaSvhttps://twitter.com/nayibbukele/status/1132526940135579649 …	3	1
 1132649918374580226	Adrianita no sea ignorante vea el montsje de petro comunista trasmitido por caracol y rcn es usted estupida ahi le dejo el link https://youtu.be/R1kp8sDPH_A 	1	0
 1132649918374580226	Adrianita no sea ignorante vea el montsje de petro comunista trasmitido por caracol y rcn es usted estupida ahi le dejo el link https://youtu.be/R1kp8sDPH_A 	2	1
 1132687895570112512	Chinguen su puta madre @Rayados\n-Compran a Pizarro sobornando a Higuera\n-le dan otra final a Tigres\n-le frenan a Jonathan González su oportunidad para ir al mundial sub 20\n\nLos maldigo por eso puto equipo de cagada y pecho frío	3	0
 1132687895570112512	Chinguen su puta madre @Rayados\n-Compran a Pizarro sobornando a Higuera\n-le dan otra final a Tigres\n-le frenan a Jonathan González su oportunidad para ir al mundial sub 20\n\nLos maldigo por eso puto equipo de cagada y pecho frío	2	1
+1132709221127118848	Ignorante comunista defendiendo las atrocidades de la la izquierda criminal y putrefacta ademas cobarde usando la foto de una mujer que no tiene valores morales	3	1
 1132737893619982337	Estos personajes serán de la secta chavista porque piensan igual de ignorante que ese sector	2	0
 1132737893619982337	Estos personajes serán de la secta chavista porque piensan igual de ignorante que ese sector	1	1
 1132743463965941760	Nada que extrañarse. @lopezobrador_ es un excelente actor, pero también ignorante, como su mujer @BeatrizGMuller ...https://twitter.com/qtf/status/1132741145895866369 …	3	0
@@ -3237,6 +3351,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1132965971797467136	Llamarle puto rojo de mierda a alguien del PP, es como si alguien me dice a mi que soy puro y un ser de luz, QUE ES ENTONCES EL PERRO DE NAIARA?	3	1
 1132977035725463552	Le daría gracias al puto Satanás si hubiese salvado a mi padre, usar a gente que está sufriendo para hacerle la ola a este señor es asqueroso y de periodismo no tiene ni la p. https://twitter.com/elmundoes/status/1132564560483966985 …	3	0
 1132979772148125696	típico de comunista! Quieren paz a costa de matar el q se atraviese	3	0
+1132981033673138177	ya le he dado puto subnormal pero me sigues apareciendo idiota	3	1
 1133005331238391814	Llamarle puta a una mujer que decidió no seguir contigo, es de ardido #SorryBaby	3	0
 1133009622439256064	no es puta .es una mujer que merece respeto y su contrato.. tener un culo grande es obra de dios.. quizas deberia vestirse  en otra manera. pero es su eleccion.	6	0
 1133016827024560128	Publiqué en Twitter unas fotos de La Plaza de Las Cortes llena de meadas con un olor nauseabundo, la respuesta de alguno de sus seguidores fue "la meada es del negro del WhatsApp puto facha franquista", he citado literalmente y alguna cosa más así que, idos ahí mismo, ya sabéis.	3	0
@@ -3255,6 +3370,9 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1133074718955900928	Loco, tu mujer e’ una perra, una diabla  pic.twitter.com/m4ol9k8ZO1	2	1
 1133075844144852992	el wey dice "feminazi" ahí se acaba su derecho a opinar	5	0
 1133085177310195714	Y pro Maduro ! Un comunista asqueroso	5	1
+1133104468579495937	Chica eres tonta de nacimiento aléjate de buitres empezando por el moro asqueroso  busca fama por que esos viven de recoger la basura de los container . Que asco	2	0
+1133104468579495937	Chica eres tonta de nacimiento aléjate de buitres empezando por el moro asqueroso  busca fama por que esos viven de recoger la basura de los container . Que asco	1	1
+1133113487444598788	Y eso no ha podido pasar porque tú no eres ni la puta Hello Kitty ni el puto Deadpool	3	0
 1133114463949926400	Coño! Coño! Lo teníamos allí, puto penalti de mierda....ahora a jodernos más.....puta mierda todo...	4	0
 1133114463949926400	Coño! Coño! Lo teníamos allí, puto penalti de mierda....ahora a jodernos más.....puta mierda todo...	1	1
 1133127630964875264	Que gente de mierda culiau estoy viajando parada xq nadie quiere darme un puto asiento	2	0
@@ -3269,17 +3387,21 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1133156103045484545	Pensé que estos viejos de mierda del siglo pasado no existían. Y no soy comunista, por que este weon piensa que todos los que no están de acuerdo con él son de izquierda	3	1
 1133203069636890624	Eres un maldito hijo de puta maldito @NicolasMaduro maldito, maldito.https://twitter.com/johanalvarezr/status/1133173225989529600 …	3	0
 1133203069636890624	Eres un maldito hijo de puta maldito @NicolasMaduro maldito, maldito.https://twitter.com/johanalvarezr/status/1133173225989529600 …	3	1
+1133204768346845184	Quien chucha te crees tu ladron ctm hdp, voy contando los días para sacarte la rctm así tus cojudos de seguridad estén a tu lado, te voy a meter una q pedirás perdón al país arrodillado ctm	2	0
+1133204768346845184	Quien chucha te crees tu ladron ctm hdp, voy contando los días para sacarte la rctm así tus cojudos de seguridad estén a tu lado, te voy a meter una q pedirás perdón al país arrodillado ctm	1	1
 1133232426048774144	Soltar globos es de las tradiciones mas estupidas. Si lo hacen van a terminar como el puto globo, entre un vergo de mierda o explotados https://twitter.com/CBS4Indy/status/1132688400853741568 …	3	0
 1133232426048774144	Soltar globos es de las tradiciones mas estupidas. Si lo hacen van a terminar como el puto globo, entre un vergo de mierda o explotados https://twitter.com/CBS4Indy/status/1132688400853741568 …	2	1
 1133244811044040704	Desde el puto principio me he estado refiriendo a la madurez imbecil asi como tu tambien te referiste al principio y comenzaste a darle vueltas con otros temas.	4	0
 1133244811044040704	Desde el puto principio me he estado refiriendo a la madurez imbecil asi como tu tambien te referiste al principio y comenzaste a darle vueltas con otros temas.	1	1
 1133288723787976706	Jajajajajajajajajaja \n“Un estado fascista y opresor”\nEste niñato de mierda tiene la lengua muy larga y el cerebro muy corto.\nSi fuera fascista y opresor no podrías escribir esas gilipoyeces, tal y como ocurre en tu Cuba natal.\nTe un poquito más de respeto. Esto es España. Ok ???	1	0
 1133288723787976706	Jajajajajajajajajaja \n“Un estado fascista y opresor”\nEste niñato de mierda tiene la lengua muy larga y el cerebro muy corto.\nSi fuera fascista y opresor no podrías escribir esas gilipoyeces, tal y como ocurre en tu Cuba natal.\nTe un poquito más de respeto. Esto es España. Ok ???	4	1
+1133291012246384640	Ahora van a decir que Pizarro, es facho.....mamita, cuanto duele un poco de verdad....	3	0
 1133301916405051392	Ojala te caigas y te revientes la boca contra el suelo puto enfermo de mierda https://twitter.com/jai_bailey/status/1132381837207232513 …	3	1
 1133322127384502273	Burro de mierda, como es posible q no puedas producir gasolina en el 2019 a 20 del maldito Comunismo, no puede ser q la industria alimentaria este destruida, ladrón, norcotraficante.	2	0
 1133322127384502273	Burro de mierda, como es posible q no puedas producir gasolina en el 2019 a 20 del maldito Comunismo, no puede ser q la industria alimentaria este destruida, ladrón, norcotraficante.	6	1
 1133350536311451648	Sos una vieja de derecha, meada y pobre. Quedate tranquila que tengo mucha guita vieja meada y no soy peroncho, pero con tal de estar en la vereda de enfrente prefiero serlo. Vieja re contra  puta. Macri te esta cogiendo nada mas que a vos pobre de mierda	1	0
-1133350536311451648	Sos una vieja de derecha, meada y pobre. Quedate tranquila que tengo mucha guita vieja meada y no soy peroncho, pero con tal de estar en la vereda de enfrente prefiero serlo. Vieja re contra  puta. Macri te esta cogiendo nada mas que a vos pobre de mierda	4	1
+1133350536311451648	Sos una vieja de derecha, meada y pobre. Quedate tranquila que tengo mucha guita vieja meada y no soy peroncho, pero con tal de estar en la vereda de enfrente prefiero serlo. Vieja re contra  puta. Macri te esta cogiendo nada mas que a vos pobre de mierda	5	1
+1133353735973945344	Acabo de encontrar EL chino que vende mi tableta de chocolate preferida a un euro. A un puto euro. No necesito más.	3	0
 1133359465229692928	Qué puto payaso de mierda es Feliciano López.	1	0
 1133359465229692928	Qué puto payaso de mierda es Feliciano López.	2	1
 1133374221642555394	bueno ok, puedo ser tu compañía pero sin ser tan marica	3	0
@@ -3316,6 +3438,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1133493642847576065	Y si una persona común y silvestre lo hace lo rajan, es un maldito imbecil y ladrón de mierda	2	1
 1133499290075193345	es....una puta canción del puto rey del reguetón con bad bunny y el lunay es que por favor jslsjskshttps://twitter.com/RickoneyNovios/status/1133485278272921603 …	2	0
 1133499290075193345	es....una puta canción del puto rey del reguetón con bad bunny y el lunay es que por favor jslsjskshttps://twitter.com/RickoneyNovios/status/1133485278272921603 …	1	1
+1133503875011497984	5 años ya negro sucio pic.twitter.com/29dClJFDxC	3	0
 1133513568995950595	Porque no le dio su puta gana y ya, maldito imbécil!	2	0
 1133513568995950595	Porque no le dio su puta gana y ya, maldito imbécil!	1	1
 1133514906823737344	Chloe no me diga que UD. es una feminazi, porque sino me VOY YA A COMPRAR UN PAÑUELO VERDE jajajajajajaaa	2	0
@@ -3371,6 +3494,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1136271200647352325	De los creadores de "facha, Hitler", "lo de Paracuellos era democracia", "las elecciones de 1936 fueron modélicas", y "en Alemania estarías en la Cárcel", llega "Si no hablas de Franco seguido del adjetivo Genocida eres un fascista criminal". https://twitter.com/J_Zaragoza_/status/1136160087247073280 …	2	1
 1136289480732794881	Primero renuncia tú @lopezobrador_ por traición a la patria, rata, mentiroso, corrupto, misógino, huevón, inepto, fascista y un largo etcétera!!	2	0
 1136289480732794881	Primero renuncia tú @lopezobrador_ por traición a la patria, rata, mentiroso, corrupto, misógino, huevón, inepto, fascista y un largo etcétera!!	3	1
+1136453411912724480	Alcalde de Alabama recomendó matar gente de la comunidad LGBT; después se retractó https://www.1lockers.net/2019/06/05/alcalde-de-alabama-recomendo-matar-gente-de-la-comunidad-lgbt-despues-se-retracto/ … pic.twitter.com/voifLh0PMr	3	0
 1136560317645950976	eres un puto hijo de puta asqueroso de los cojones	4	1
 1136579434297909249	Y ya para rizar el rizo: los mató el puto frío malvado comunista XDDDD	2	0
 1136579434297909249	Y ya para rizar el rizo: los mató el puto frío malvado comunista XDDDD	1	1
@@ -3379,7 +3503,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1136667660815671301	Ejemplo: McDonalds (Arcos dorados) JAJAJAJAJA que pedazo de idiota trolazo! 	1	0
 1136667660815671301	Ejemplo: McDonalds (Arcos dorados) JAJAJAJAJA que pedazo de idiota trolazo! 	2	1
 1136669624576163840	Mil veces maldito su puto @TransMilenio y su servicio de mierda.	1	0
-1136669624576163840	Mil veces maldito su puto @TransMilenio y su servicio de mierda.	2	1
+1136669624576163840	Mil veces maldito su puto @TransMilenio y su servicio de mierda.	3	1
 1136761797174861826	Cuál prófugo? ... so burro, ignorante, engendro malvado, mitomano, farsante y fascista.\nAquí no hay justicia, a tal punto q metieron mano negra con fines de persecución a líderes del progresismo del pueblo.\nSi @MashiRafael fuera prófugo, tendría alerta roja en interpol, bruto.	2	0
 1136761797174861826	Cuál prófugo? ... so burro, ignorante, engendro malvado, mitomano, farsante y fascista.\nAquí no hay justicia, a tal punto q metieron mano negra con fines de persecución a líderes del progresismo del pueblo.\nSi @MashiRafael fuera prófugo, tendría alerta roja en interpol, bruto.	1	1
 1136768880808996864	La justicia de mierda quiere sacrificar a dos pitbull por defender su casa, meter en cana a su dueña y darle una indemnización multimillonaria al chorro atacado.\n\nSI QUEREMOS VERDADERA JUSTICIA EN LA ARGENTINA, EL PODER JUDICIAL TIENE QUE DESAPARECER.https://twitter.com/cronica/status/1136621238149890053 …	5	1
@@ -3406,6 +3530,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1137494531996303360	RT lisochoaok: La dueña va a ir presa, a los perros los van a matar y el violador que le cago la vida a una nena de 2 años y el chorro que…	1	1
 1137558655862226946	No lo culpo, descubrir que la novia es chavista es descubrir que es ignorante y bruta. Mal futuro	1	0
 1137558655862226946	No lo culpo, descubrir que la novia es chavista es descubrir que es ignorante y bruta. Mal futuro	4	1
+1137663585696583681	"Als espanyols" así en general? Los conoces a todos como para generalizar? O es tu puto y asqueroso supremacismo que lleva a decir estas cosas?\nPor como estas como estas nunca sereis un estado. No os lo mereceis.	2	0
 1137719968345264128	Por eso es que la humanidad no parece avanzar, al contrario, como que vamos para atrás. Cada quien tratando de sacar ventajas a costa del prójimo. Llámese mexicano espalda mojada, cubano castrista o noruego escandinavo.	5	0
 1137725225674715139	Se puede ser nacional socialista y no querer matar a nadie y se puede no ser nacional socialista y querer matar a todos los judíos\nEstoy bastante segura de que cuando os preguntaban en el cole lo que era el nazismo no teníais ni puta idea y toma cerapio por imbecil	5	0
 1137774985840340993	Ni que ser mujer lgbt se eximiera de ser imbecil	1	0
@@ -3508,6 +3633,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1140336553325187074	Perdón nada. Esta mujer merecía justicia y los hijos d e puta que la jodieron no pagaron nunca. Rial a la cabeza rata de mierda ojalá mueras lentamente	2	1
 1140341816195239937	"Motivador profesional" manda el pelotudo...\nVos lo único q podes "motivar" es repulsión y profundo asco...\nChanta, sátrapa, y desvergonzado, negro de mierda!!!	1	0
 1140341816195239937	"Motivador profesional" manda el pelotudo...\nVos lo único q podes "motivar" es repulsión y profundo asco...\nChanta, sátrapa, y desvergonzado, negro de mierda!!!	2	1
+1140349844495749125	Estoy todo de verde. Llego a pasar cerca de una feminazi y se va a debatir entre abrazarme o arrojarme una Molotov por macho opresor.	1	0
+1140349844495749125	Estoy todo de verde. Llego a pasar cerca de una feminazi y se va a debatir entre abrazarme o arrojarme una Molotov por macho opresor.	2	1
 1140355137015300103	Pero como me vas a cagar la penca así negro hdp	1	0
 1140355137015300103	Pero como me vas a cagar la penca así negro hdp	2	1
 1140364775337144323	Atorranta ramera militante de la Cámpora,deja de decir estupideces tilinga	2	0
@@ -3535,6 +3662,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1140708367570051072	tienes miedo? necesito un zurdito en mi equipo  @yosoyofficial	2	1
 1140719327055941632	El pichetto menemista facho de derecha 	3	0
 1140719327055941632	El pichetto menemista facho de derecha 	2	1
+1140721748062691330	Jajajajajajajajajaja , porque no le dices a tu mujer que no te gusta la zorra pero lo que te gusta es la VERGA y te gustan los Hombres	2	0
 1140730394536501250	Solo quisiera recordaros que cualquier fichero de audio digitalizado correctamente se escuchará siempre mejor que un puto vinilo de mierda en un tocadiscos de cientos de euros que amplifica el audio con transistores y además lo vuelve a comprimir para emitirlo por el bluetooth.	3	0
 1140752443573243909	Son la escoria de la sociedad!!se juntan:\nEl envidioso\nEl incapaz\nEl ladron\nEl terrorista\nEl vicioso\nEl ventajoso\nEl mentiroso\nEl enredador\nEl malintencionado\nEl satrapa\nEl mediocre\nY los pobres muchachos de hoy que no tienen criterio y se dejan llevar por un porrito,no leen!!	1	0
 1140752443573243909	Son la escoria de la sociedad!!se juntan:\nEl envidioso\nEl incapaz\nEl ladron\nEl terrorista\nEl vicioso\nEl ventajoso\nEl mentiroso\nEl enredador\nEl malintencionado\nEl satrapa\nEl mediocre\nY los pobres muchachos de hoy que no tienen criterio y se dejan llevar por un porrito,no leen!!	2	1
@@ -3628,6 +3756,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1141393750884790278	Jajajja u puto de mierda	1	1
 1141403931890913281	Quien es Johana fuentes?? No hagan famoso a cualquier marica que busca likes y clicks. Que si quieren fácil plata que muestren las tetas. Con Millonarios no se jode	2	0
 1141403931890913281	Quien es Johana fuentes?? No hagan famoso a cualquier marica que busca likes y clicks. Que si quieren fácil plata que muestren las tetas. Con Millonarios no se jode	1	1
+1141404222858125313	#Marvel cree que soy marica e iré a ver nuevamente #AvengersEndGame y gastare mi dinero por un par de estupidos minutos de escenas eliminadas y postcredito Y PUES NO SE EQUIVOCAN HIJUEPUTAAAASSSSS YA QUIERO QUE SALGA.	3	0
 1141407168400375809	Mauro ayer nos contaba que hizo un chiste a una amiga diciendole puta y que todos hicieron silencio. A nosotras nos dice puta y minimo le tiramos un "enano de mierda la concha de tu hermana, anfibio del orto" JAJAJJHHA	7	0
 1141407168400375809	Mauro ayer nos contaba que hizo un chiste a una amiga diciendole puta y que todos hicieron silencio. A nosotras nos dice puta y minimo le tiramos un "enano de mierda la concha de tu hermana, anfibio del orto" JAJAJJHHA	2	1
 1141415848634134528	no se si os pasa , que vais conduciendo por una carretera comarcal , y el 80 % o mas , parece que no tienen prisa , nunca, haces por adelantar a alguno y plaf!!!!! el maricon acelera ja ja ja , a mi me pasa y bastante	5	0
@@ -3645,6 +3774,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1141458942767165440	“Si no sirves pa` matar\nSirves para que te maten\nYo te salgo por delante\nAntes de que yo te ataque con mi pechera y mi cuerno\nSoy bueno para el combate\nEncapuchado de negro\nY mis botas militares”https://twitter.com/Corridosmp3/status/1141221187520831488 …	2	1
 1141459132765147136	como vas a usar emojis posta?? no seas trolo man https://twitter.com/timtobi_/status/1141164329024327680 …	2	0
 1141459132765147136	como vas a usar emojis posta?? no seas trolo man https://twitter.com/timtobi_/status/1141164329024327680 …	3	1
+1141462495250518016	se mataron marica	2	0
 1141464865812439041	#ColSeBailaAQatar\n\nCuadrado y su gambetica marica.\n\n	3	0
 1141467840379310086	Tengo el maldito gol atorado en la garganta y nada marica jdhfejdvdjdbjf\n\n#ColSeBailaAQatar	3	0
 1141467840379310086	Tengo el maldito gol atorado en la garganta y nada marica jdhfejdvdjdbjf\n\n#ColSeBailaAQatar	2	1
@@ -3682,6 +3812,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1143162192365178881	Pero por una puta perra pinche chingada en vez de solo grabar levantate del puto asiento y hazla de pedo cabroooooon https://twitter.com/alekx_04/status/1137848393752096769 …	1	0
 1143162192365178881	Pero por una puta perra pinche chingada en vez de solo grabar levantate del puto asiento y hazla de pedo cabroooooon https://twitter.com/alekx_04/status/1137848393752096769 …	2	1
 1143269268177457152	que hdp se comio la torta https://twitter.com/Fraaanchuuu/status/1142997254262988801 …	3	0
+1143307804431831040	q tenia q ver ??? anda a llamar la atencion a otro lado dios deja d joder	3	0
+1143307813906780161	Yo cogiendo las poquitas indirectas que me lanzan.https://twitter.com/larrozaromina/status/1141916944674828288 …	2	0
 1143380447747067904	Que quede bien clarito que ser puto, torta o bisexual es mejor que ser delincuente. Yo te voto, pero mejoremos el discurso, porfa. https://twitter.com/perfilcom/status/1143201246347743232 …	2	0
 1143380447747067904	Que quede bien clarito que ser puto, torta o bisexual es mejor que ser delincuente. Yo te voto, pero mejoremos el discurso, porfa. https://twitter.com/perfilcom/status/1143201246347743232 …	1	1
 1143391516976721920	Re que quién no quiere un negro esclavo pic.twitter.com/wc3A7Q0JFc	1	0
@@ -3737,6 +3869,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1145135720002215938	Ta puto el chino... jajajaja https://www.facebook.com/1047713478/posts/10217807289067747/ …	3	1
 1145142348474531840	Lo maldito peor es que el puto lunes volverá atascar de acarreados el zócalo, no mamen que puta vergüenza	3	0
 1145152588737843200	hoy marchan los que te discriminan si no eres feminista, los que te llaman ignorante si defiendes el capitalismo, los que te humillan si eres de derecha, los que se burlan de ti si crees en Dios.\n\nlo siento, pero yo no marcho con sectas ni seré útil a la izquierda.\n\n#Orgullo2019	1	0
+1145152588737843200	hoy marchan los que te discriminan si no eres feminista, los que te llaman ignorante si defiendes el capitalismo, los que te humillan si eres de derecha, los que se burlan de ti si crees en Dios.\n\nlo siento, pero yo no marcho con sectas ni seré útil a la izquierda.\n\n#Orgullo2019	2	1
 1145171690382663680	Eso pasa por ser un maldito jalabola chavista, por eso estás comiendo mierda camarada.	3	1
 1145289181951909888	Cerra el pico chorro de mierda. Se que sólo seguís con tu madre en busca de impunidad porque por plata ya se las llevaron toda. Devuelvan y no vuelvan. Hagan algo por nuestro país. Váyanse a Venezuela y no regresen	2	0
 1145289181951909888	Cerra el pico chorro de mierda. Se que sólo seguís con tu madre en busca de impunidad porque por plata ya se las llevaron toda. Devuelvan y no vuelvan. Hagan algo por nuestro país. Váyanse a Venezuela y no regresen	4	1
@@ -3810,6 +3943,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1147177061871738880	Estoy así  de mandar a la verga a los homofóbicos, femichairas pederas y gente que siga trepada en el puto mame de la pinche perra sirenita. Primer aviso alv. 	1	1
 1147187636941086728	Mas que eso es un maldito chavista	1	0
 1147187636941086728	Mas que eso es un maldito chavista	4	1
+1147227739176558592	ESTADOS UNIDOS\nAlabama: desestiman caso de mujer acusada de matar a su feto tras recibir un disparo\nUn gran jurado había acusado a Marshae Jones, de 27 años, de homicidio involuntario porque recibió disparos en el abdomen y perdió el embarazo d cinco meses\nhttp://www.lr21.com.uy/mujeres/1404767-alabama-desestiman-caso-de-mujer-acusada-de-matar-a-su-feto-tras-recibir-un-disparo … pic.twitter.com/1t4tNwoFS8	3	0
 1147498373240512513	Jjjj...me parece payaso facha que si pasas x Catalunya y quieres visitarme,quedamos en mi pueblo y veremos quien da las ostias a quien. Si te gusta azotar a niños supongo q es x lo peredasta q eres fascista, pero eso te lo quito yo con unas ostias bien dadas payaso...	3	1
 1147501787869569025	Jamás en mi vida había tomado un puto café negro y sin azúcar 	3	0
 1147592304942821377	chupame la pija medel chileno puto	1	0
@@ -4008,13 +4142,18 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1149834853212413952	Podemos normalizar que hoy en día en 2019 el rosa, los pasteles y las tendencias románticas y ""femeninas"" tipo lazos y encajes pueden ser PERFECTAMENTE ADULTOS y lucirlos en ropa super perra, sexy y baddie sin hacerlo automáticamente pedofilo llamando al puto estilo BABYgirl?	3	0
 1149915208552464384	Hoy llegue de laburar y me puse a hacerle la torta de cumpleaños a mi #hermanastro porque quería una torta oreo, le mande una foto de como quedo y me respondio: “wtf” listo pendejo de mierda llego a mi casa y me la bajoneo toda no t dejo ni las migas	4	0
 1149915208552464384	Hoy llegue de laburar y me puse a hacerle la torta de cumpleaños a mi #hermanastro porque quería una torta oreo, le mande una foto de como quedo y me respondio: “wtf” listo pendejo de mierda llego a mi casa y me la bajoneo toda no t dejo ni las migas	1	1
+1150147974363779073	Recordad, ¿Para qué matar a una zorra para vestir a otra?	3	1
 1150164111373885441	No se si fue queriendo o no... Pero le compre a mi amiga torta fritas y en vez de venir ella, me trajo a su amiga que me las entregue (esa amiga siempre le dije que me parece super linda) jajaja hdp 	7	0
+1150193181683851265	Viste que los viejos cada vez cenan más temprano.	3	0
+1150193183466409991	Como tuuu	2	0
 1150228608335646720	Maravilloso hilo ciertamente nos quieren vender q maduro y solo el es el problema. Ahora padrino moreno y toda esa cúpula ; han sido parte d torturas opresión y corrupción. Democracia sólo habrá quebrando todo barriendo y q no quede nada d esa banda criminal.	3	0
 1150419889431162882	Pero chino de mierda cocina esa carne está más cruda que la realidad !! https://twitter.com/nusr_ett/status/1149702289705316353 …	2	0
 1150419889431162882	Pero chino de mierda cocina esa carne está más cruda que la realidad !! https://twitter.com/nusr_ett/status/1149702289705316353 …	3	1
 1150475619471372288	No, es un fascista por ser un reaccionario de mierda racista, clasista y homofobo	1	0
 1150475619471372288	No, es un fascista por ser un reaccionario de mierda racista, clasista y homofobo	3	1
 1150593173829406720	Nombre callate los ojos, el sazón de acá estaaaa  pinche Tampico no pasa de la torta de la barda que es lo único bueno jaja	5	0
+1150636251726450689	Jajajaja, me das risa, indio asqueroso y jodido. En el terreno que quieras soy superior a ti 	1	0
+1150636251726450689	Jajajaja, me das risa, indio asqueroso y jodido. En el terreno que quieras soy superior a ti 	2	1
 1150644238679531520	Weon yo creo que hoy no duermo, fui a un cumple y la torta estaba Brígida, para matar a un diabético  manjar y chocolate al nivel dios 	5	0
 1150860904130465792	Dejé la plancha (de la ropa) parada en el piso, cuando me bajé de la cama y bajé el pie le atiné justo al maldito pico de la perra plancha y me lo clavé en el pie ME LLEVA LA VERGA, TODO POR DESORDENADA PUTA MADRE	3	0
 1150899533997576193	Qué gilipolleces decís. Machista dice. Es un animal y un hdp y punto. El que fuma tranquilamente qué es, feminista?	2	0
@@ -4049,6 +4188,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1152594637087002624	Son unos hijos de perra que no se merecen nada ....palmeros del puto Real Madrid	2	1
 1152636579741143040	Y lo dice el negro homosexual esclavo uribista evangelico lamesuela de la derecha, queriendo vivir como sanguijuela de uribe pero nunca le darán el aval, pobre  chupa Monda	3	1
 1152981718070112256	Yo a vos gordita trola de mierda	3	1
+1153025023533359107	El mensaje es claro, viven en el pasado. Cómo cualquier zurdo asqueroso.	2	1
 1153148986976559104	me estresa tener el mismo apellido que esta vieja trola de mierda pic.twitter.com/6SAL7CBhqc	1	0
 1153148986976559104	me estresa tener el mismo apellido que esta vieja trola de mierda pic.twitter.com/6SAL7CBhqc	4	1
 1153187975146156037	Si les diera estas pistas:\n\n1) El mas mentiroso\n2) El más corrupto\n3) El destructor del país\n4) El más comunista\n5) El más engaña bobos\n6) El más incumplido\n\n¿Me podrían decir de quien se trata? \nEs para una tarea. \n\nEspero sus respuestas	3	0
@@ -4092,6 +4232,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1154610065724325888	Que mal, estar con una persona a quién no le crees cien porciento. \nQue tienes que estar todo el maldito día peleando, y celando \nY alejandole a muchas personas y prohibiendole cosas. \nQue fastidio enserio  \n-Pero que bueno que todo el puto día finjan otra cosa. 	1	1
 1154612876579155968	me quiero matar, no me llego ni una puta notificacion	2	0
 1154612876579155968	me quiero matar, no me llego ni una puta notificacion	1	1
+1154640651046273024	we ramona para de roncar un toque rescátate perra de mierda	2	0
+1154640651046273024	we ramona para de roncar un toque rescátate perra de mierda	1	1
 1154665958738419712	A ese lo asesinaron por maldito sucio y ladrón no me vengas con excusas!!!!	1	0
 1154665958738419712	A ese lo asesinaron por maldito sucio y ladrón no me vengas con excusas!!!!	4	1
 1154766470838177794	#Cuba Un día como hoy hace 66 años, Fidel y Raul Castro llevaron a matar y morir a varias decenas d jóvenes q ignoraban sus verdaderos planes de instaurar una criminal tiranía comunista. Ellos dos corrieron raudos para salvar sus vidas. Nunca cumplieron con sus promesas al pueblo	3	0
@@ -4099,9 +4241,12 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1154790287409131520	La única guerra sucia que ha existido es la del chavismo contra los ciudadanos por más de 20 años, han practicado un genocidio y tú quieres coexistir en un gobierno con esos asesinos, ¿quién es el sucio en este caso Falcón? Ahhhh se me olvidaba que tú eres chavista también... https://twitter.com/henrifalconlara/status/1152253802277429249 …	1	1
 1154846878955134976	Pero si es lo que estas haciendo, negro asqueroso	1	0
 1154846878955134976	Pero si es lo que estas haciendo, negro asqueroso	2	1
-1154853797153447936	Ojalá la caguama le dé chorro por mamon	1	0
+1154853797153447936	Ojalá la caguama le dé chorro por mamon	2	0
+1154853797153447936	Ojalá la caguama le dé chorro por mamon	1	1
 1154923995671568384	El venezolano comun eligio a chavez, andan cerca de esa turba ignorante. Aterricen señores, que todos queremos que liberen a su país de esa lacra comunista.	1	0
 1154923995671568384	El venezolano comun eligio a chavez, andan cerca de esa turba ignorante. Aterricen señores, que todos queremos que liberen a su país de esa lacra comunista.	2	1
+1155076476531818497	Partele la cara al busca bocas asqueroso ese Carvajal, que es un puto busca bocas. https://twitter.com/finallyxpablo/status/1154928110829264896 …	2	0
+1155076476531818497	Partele la cara al busca bocas asqueroso ese Carvajal, que es un puto busca bocas. https://twitter.com/finallyxpablo/status/1154928110829264896 …	1	1
 1155091608834064384	Pregunta cuantos sueldos minimos toma comerse un desayuno asi comunista de mierda.... ah! Y de salida revisa el bote de la basura para que veas lo que pasa alli...	3	1
 1155154544503992320	Me gusta la torta de ricota, pero comi un cannoli relleno y es asqueroso.	3	0
 1155215379133845504	puies te la s compras puto gilipollas y coges un cuchillo como le pegues un bocao mas a esa pizza voy y te hago cosas malas que por no estar no esta ni echa quee fijo que la haces en el microondas perro asqueroso te odio https://twitter.com/sadtorchdays/status/1155212360476479488 …	2	0
@@ -4113,6 +4258,8 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1155276040761159681	Ese weon es chavista... son mandados a webiar a las fronteras... no entra a Chile ni a palos maldito negro chavista	4	1
 1155308458461323264	Cómo ven este comunista de mierda lo que dice. pic.twitter.com/XrluBy6qBz	3	0
 1155308458461323264	Cómo ven este comunista de mierda lo que dice. pic.twitter.com/XrluBy6qBz	2	1
+1155319812127633409	Bueno, ahora odio a medio México por reirse del "chiste" de "humor negro" que hizo el puto amigo de Luis, ojalá se muera o algo.	2	0
+1155319812127633409	Bueno, ahora odio a medio México por reirse del "chiste" de "humor negro" que hizo el puto amigo de Luis, ojalá se muera o algo.	1	1
 1155334139865960451	Ignorante, mil veces ignorante y comunista. Quieren utilizar el asesinato de lideres sociales que gracias a Duque ha disminuido, como manera de desprestigiar el gobierno de quien ha trabajado tanto por los más desfavorecidos Durante el mandato de Santos mataron muchos mas líderes	2	0
 1155334139865960451	Ignorante, mil veces ignorante y comunista. Quieren utilizar el asesinato de lideres sociales que gracias a Duque ha disminuido, como manera de desprestigiar el gobierno de quien ha trabajado tanto por los más desfavorecidos Durante el mandato de Santos mataron muchos mas líderes	1	1
 1155478113746399232	Solo la amazónica brasileña no toda pero como buen ignorante fascista no sabe que ni la brasileña le pertenece  solo los ciegos de cerebro hablan de esa forma	2	0
@@ -4150,6 +4297,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1156283299519709189	Definitivamente hay algo mas estupido que el chino rios\n\nLos weones que "lo justifican"	3	0
 1156283299519709189	Definitivamente hay algo mas estupido que el chino rios\n\nLos weones que "lo justifican"	2	1
 1156331715545182208	En mi universidad está pintado el Che Guevara con la bandera lgbt!¡!! dioooos todo bien con q seas un fanático comunista antisistema, pero haciendo cosas así aparte de ser un pelotudo estás siendo un ignorante irrespetuoso	3	0
+1156343561664835586	Si les voto es x q son los únicos q hacen oposición cultural e intelectual a la izquierda radical femimarxista... X lo demás se q no me van a solucionar la vida y q acabarán corruptos como todos\nTambién les voto x la actitud fascista de manual q tienen los progres contra vox	2	1
 1156395549819645952	Encima el prerreferendum fascista de mierda este viene con veda alcohólica y de espectáculos.	2	0
 1156395549819645952	Encima el prerreferendum fascista de mierda este viene con veda alcohólica y de espectáculos.	3	1
 1156450555822260224	Tu pasado te condena?? No seas ridicula, Johnny Depp jamas a golpeado a una mujer para que digas esa estupidez, 4 de sus exs mujeres lo defendieron cuando la ultima dona nadie lo acuso falsamente, se nota que eres una ignorante, nadie merece ser maltratado por la persona que ama. pic.twitter.com/CfWkv3I9AU	5	0
@@ -4182,6 +4330,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1156945368942358530	No se sabia que, pero se sabia que un delincuente tarde o temprano haria de las suyas como este criminal de Leiva, muy "defensor" salia, pero era un ladron de corbata.	1	1
 1156954672005095424	Donald Trump, atacó a otro prominente legislador negro este sábado, y tuiteó que su distrito de Baltimore es un “asqueroso desastre infestado de ratas y roedores”.\n.\n.\n.\nPor Veronica Stracqualursi\n\n15:14 ET(19:14 GMT) 27 Julio, 2019\n\nLink: https://cnn.it/32V3n0J  pic.twitter.com/4oCF7l9x7f	2	0
 1156954672005095424	Donald Trump, atacó a otro prominente legislador negro este sábado, y tuiteó que su distrito de Baltimore es un “asqueroso desastre infestado de ratas y roedores”.\n.\n.\n.\nPor Veronica Stracqualursi\n\n15:14 ET(19:14 GMT) 27 Julio, 2019\n\nLink: https://cnn.it/32V3n0J  pic.twitter.com/4oCF7l9x7f	3	1
+1156998008824893440	@sanchezcastejon solo un fascista monárquico de mierda . diria fuerzas independientes. Cuando detras hay la voluntad de un pueblo y votantes.	3	1
 1157006126854148097	También te digo que cuando un tontolhigo al azar decía que no quería ver Capitana Marvel o Los últimos Jedi porque era propaganda feminazi pues tampoco se hacía un artículo sobre ello.	3	0
 1157007058744610817	@Najwa_Nimri aparte de una pedazo de actriz y un monumento de mujer, una voz increíble. La puta ama en todo lo que hace  #lacasadepapel #bellaciaohttps://twitter.com/Najwa_Nimri/status/1154626735608123392 …	3	0
 1157018906474745857	Come mierda grandisimo hdp ladron	1	0
@@ -4256,8 +4405,10 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1157610896753082368	Y seguro que es por el puto estrés y ansiedad de mierda que llevo encima\nEstoy harta	1	1
 1157626668913238017	Yo tengo mi proveedor de puros 24/7 zorron, como soy facho pobre sólo presiono al cubano y yaaa.	2	0
 1157626668913238017	Yo tengo mi proveedor de puros 24/7 zorron, como soy facho pobre sólo presiono al cubano y yaaa.	3	1
+1157635495263952897	extraño a minho edpero q haga otro live a una hora q lo pueda ver puto de mierda	2	0
 1157646198884503552	Es que encima esto, tío! Ni siquiera tiene Chekpoints! Si palmas por una puta espnja de balas que te matará por 1 Hit Kill... A repetir todo el puto nivel desde el principio.\nME CAGO EN SUS PUTOS MUERTOS MAL ENTERRAOS\n https://www.youtube.com/watch?v=ve88BGz0nPc …	1	0
 1157646198884503552	Es que encima esto, tío! Ni siquiera tiene Chekpoints! Si palmas por una puta espnja de balas que te matará por 1 Hit Kill... A repetir todo el puto nivel desde el principio.\nME CAGO EN SUS PUTOS MUERTOS MAL ENTERRAOS\n https://www.youtube.com/watch?v=ve88BGz0nPc …	2	1
+1157647108046053376	Me paso por el twitter mas tarde que parece que el puto Alejandro se quiere pasar el juego de los sco tu mana de mierda	2	0
 1157648127253471232	Como no traje el mate , que negro idiota	4	0
 1157648127253471232	Como no traje el mate , que negro idiota	1	1
 1157679807771140096	"Te sitúes en tu justo lugar" !!! (?) No lo sé Rick, parece facho	4	0
@@ -4304,6 +4455,7 @@ tweet_id	text	count(v.is_hateful)	is_hateful
 1157962269713547265	A mi no me agrada la gestión de la ministra Montenegro.\n\nEs una mujer completamente cerrada, a pesar de autoplocamarse tolerante y no sabe controlar sus emociones.\n\nTambién me parece que esta haciendo una gestión mediocre, a mi parecer, lo del mandilito fue un costoso desacierto.	6	0
 1157973214758408192	Maldita feminazi,  a ti no te importan los niños https://twitter.com/SoniaVivasRive3/status/1156976539700998151 …	1	0
 1157973214758408192	Maldita feminazi,  a ti no te importan los niños https://twitter.com/SoniaVivasRive3/status/1156976539700998151 …	5	1
+1157974576124633090	ADVERTENCIA: Propaganda comunista política sucia, subversiva, mentirosa, manipuladora, terrorista y criminal hecha por esbirros asesinos del régimen criminal de la Flia. Castro. https://twitter.com/DayronU/status/1157592611106021377 …	3	1
 1157977596845576192	Migui eres puto tonto?  Eso no es un ojo, es el maldito Hombrigo, a ver si aprendes 	1	0
 1157977596845576192	Migui eres puto tonto?  Eso no es un ojo, es el maldito Hombrigo, a ver si aprendes 	2	1
 1157985468778242048	El fascismo surgió en el siglo XIX emanado de los movimientos socialistas laboralistas querido ignorante fascista	5	0

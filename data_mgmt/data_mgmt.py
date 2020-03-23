@@ -8,6 +8,9 @@ from nltk.corpus import stopwords
 nltk.download('punkt')
 nltk.download('stopwords')
 
+#TODO: tokenize LOL
+#TODO: John lennon
+
 def new_dataset(dataset_tsv_file, training_set_ratio):
     pairs = None
 
@@ -22,21 +25,40 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
     training_set_file = open("training_set.txt", "w")
     test_set_file = open("test_set.txt", "w")
     
+    training_words = set()
+    test_words = set()
     for i, pair in enumerate(pairs):
-        result = "__label__"+ pair[1] + " " + preprocess(pair[0]) + "\n"
+        preprocessed = preprocess(pair[0])
+        result = "__label__"+ pair[1] + " " + preprocessed + "\n"
         if i < split_index:
+            training_words = training_words.union(preprocessed.split())
             training_set_file.writelines(result)
         else:
+            test_words = test_words.union(preprocessed.split())
             test_set_file.writelines(result)
 
     training_set_file.close()
     test_set_file.close()
 
+    wordsNewInTest = test_words - training_words
+    wordRatio = len(wordsNewInTest) / len(test_words)    
+    pass
+
+
 def preprocess(tweet):
     tweet = tweet.lower()
+    tweet = re.sub(r'\\n', ' ', tweet)
+    tweet = re.sub(r'(\S)(https?):', r'\1 \2:', tweet)
+    p.set_options(p.OPT.MENTION, p.OPT.URL, p.OPT.EMOJI, p.OPT.HASHTAG)
+    tweet = p.tokenize(tweet)
     
+    tokenizer = nltk.tokenize.TweetTokenizer()
+    tweet = tokenizer.tokenize(tweet)
+    tweet = ' '.join(tweet)
+    tweet = re.sub(r'\$ ([A-Z]+?) \$', r'$\1$', tweet)
+    
+    tweet = tweet.split(' '); 
     ### Stopwords removal ###
-    tweet = nltk.word_tokenize(tweet)
     stop_words = set(stopwords.words('spanish'))
     new_sentence = []
     for w in tweet:
@@ -44,15 +66,18 @@ def preprocess(tweet):
             new_sentence.append(w)
     tweet = ' '.join(new_sentence)
 
-    p.set_options(p.OPT.MENTION, p.OPT.URL, p.OPT.EMOJI, p.OPT.HASHTAG, p.OPT.NUMBER)
-    tokenized = p.tokenize(tweet)
-    tokenized = re.sub(r'([!¡]\s?){3,}', r' $EXCLAMATION$ ', tokenized)
-    tokenized = re.sub(r'([¿?]\s?){3,}', r' $QUESTION$ ', tokenized)
-    tokenized = re.sub(r'(\.\s?){3,}', r' $ELLIPSIS$ ', tokenized)
-    leftFix = re.sub(r'(\S)(\$[^$\s]+?\$)', r'\1 \2', tokenized)
-    rightFix = re.sub(r'(\$[^$\s]+?\$)(\S)', r'\1 \2', leftFix)
+    tweet = unidecode.unidecode(tweet)
 
-    return unidecode.unidecode(rightFix)
+    p.set_options(p.OPT.NUMBER)
+    tweet = p.tokenize(tweet)
+    tweet = re.sub(r'([!¡]\s?){3,}', r' $EXCLAMATION$ ', tweet)
+    tweet = re.sub(r'([¿?]\s?){3,}', r' $QUESTION$ ', tweet)
+    tweet = re.sub(r'(\.\s?){3,}', r' $ELLIPSIS$ ', tweet)
+
+    return tweet
+    #tweet = re.sub(r'(\S)(\$[^$\s]+?\$)', r'\1 \2', tweet)
+    #tweet = re.sub(r'(\$[^$\s]+?\$)(\S)', r'\1 \2', tweet)
+    #return unidecode.unidecode(rightFix)
 
 def get_dataset():
     parsing_regex = re.compile(r'^__label__(\d)\s{1}(.*)$')

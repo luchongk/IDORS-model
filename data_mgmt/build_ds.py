@@ -3,6 +3,7 @@ import pprint as pp
 import numpy as np
 import paramiko
 import base64
+import json
 
 dataFileName = sys.argv[1]
 
@@ -18,31 +19,35 @@ valueCounts = {}
 ids = set()
 
 countAmbiguous = 0
-
 with open(dataFileName) as tsvFile:
     tsvReader = csv.DictReader(tsvFile, delimiter="\t")
     for line in tsvReader:
+        #if line['tweet_id'] == "1034785678893232128":
+        #    b = 0
         if line['tweet_id'] not in valueCounts:
             valueCounts[line['tweet_id']] = [0,0]
         valueCounts[line['tweet_id']][int(line['is_hateful'])] = int(line['count'])
     tsvFile.seek(0)
     next(tsvFile)
-    with open('datasets/idors.tsv', 'w') as idorsFile:
-        fieldNames = ['id',	'text', 'HS']
-        writer = csv.DictWriter(idorsFile, fieldnames=fieldNames, delimiter="\t")
-        writer.writeheader()
-        for line in tsvReader:
-            if line['tweet_id'] in ids:
-                continue
-            ids.add(line['tweet_id'])
-            counts = valueCounts[line['tweet_id']]
-            if abs(counts[0] - counts[1]) <= 1:
-                countAmbiguous += 1
-            if counts[0] == counts[1]:
-                print(line['text'])
-                continue
-            label = counts.index(max(counts))
-            writer.writerow({'id': line['tweet_id'], 'text': line['text'], 'HS': str(label)})
+    with open("ambiguous.json", "w") as ambiguousJson:
+        with open('datasets/idors.tsv', 'w') as idorsFile:
+            fieldNames = ['id',	'text', 'HS']
+            writer = csv.DictWriter(idorsFile, fieldnames=fieldNames, delimiter="\t")
+            writer.writeheader()
+            for line in tsvReader:
+                if line['tweet_id'] in ids:
+                    continue
+                ids.add(line['tweet_id'])
+                counts = valueCounts[line['tweet_id']]
+                if abs(counts[0] - counts[1]) <= 1:
+                    toWrite = json.dumps({"tweet_id": line['tweet_id'], "text": line['text']})
+                    ambiguousJson.write(toWrite + "\n")
+                    countAmbiguous += 1
+                if counts[0] == counts[1]:
+                    print(line['text'])
+                    continue
+                label = counts.index(max(counts))
+                writer.writerow({'id': line['tweet_id'], 'text': line['text'], 'HS': str(label)})
             
 
 print("\nAmbiguous:", countAmbiguous)
