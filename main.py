@@ -1,5 +1,5 @@
 import sys
-import models.baseline as baseline_model
+import models.fasttext_model.baseline as baseline_model
 import numpy as np
 import tensorflow as tf
 from models.functional_model import FunctionalModel
@@ -49,7 +49,7 @@ training_dataset_text, test_dataset_text = get_dataset()
 
 ########## Train and Test Process ########## 
 try:
-    ft_model = load_model("baseline.bin")
+    ft_model = load_model("modesl/fasttext_model/baseline.bin")
 except ValueError as err:
     print(err)
     print("Couldn't find a saved model, aborting...")

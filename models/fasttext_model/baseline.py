@@ -10,7 +10,7 @@ def train_and_test(retrain, save):
         model = train(save)
     else:
         try:
-            model = fasttext.load_model("baseline.bin")
+            model = fasttext.load_model("models/fasttext_model/baseline.bin")
         except ValueError as err:
             print(err)
             print("Couldn't find a saved model, aborting...")
@@ -21,9 +21,9 @@ def train_and_test(retrain, save):
 def train(save):
     model = None
     try:
-        model = fasttext.train_supervised(TRAINING_FILE, pretrainedVectors='models/cc.es.300.vec', dim=300)
+        model = fasttext.train_supervised(TRAINING_FILE, pretrainedVectors='models/fasttext_mdeol/cc.es.300.vec', dim=300)
         if save:
-            model.save_model("baseline.bin")
+            model.save_model("models/fasttext_model/baseline.bin")
     except Exception as err:
         print(err)
 
