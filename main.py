@@ -67,6 +67,8 @@ example_dim = training_dataset_embeddings[0].shape
 
 model = FunctionalModel(example_dim)
 
+print(model.summary())
+
 earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=8,
                                                     restore_best_weights=True)
 
