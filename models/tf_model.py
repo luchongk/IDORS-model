@@ -106,8 +106,5 @@ class TfModel(Model):
             self.test_loss.reset_states()
             self.test_accuracy.reset_states()
             self.test_precision.reset_states()
-            self.test_recall.reset_states()
-
-        if save:
-            model.save_weights('tf_weights.h5')       
+            self.test_recall.reset_states()   
                                           
