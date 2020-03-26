@@ -11,6 +11,8 @@ nltk.download('stopwords')
 #TODO: tokenize LOL
 #TODO: John lennon
 
+MAX_WORDS = 33
+
 def new_dataset(dataset_tsv_file, training_set_ratio):
     pairs = None
 
@@ -99,16 +101,20 @@ def get_dataset():
     return training_dataset, test_dataset
 
 def dataset_to_embeddings(dataset, ft_model):
-    result = np.empty((len(dataset), ft_model.get_dimension()))
+    result = np.empty((len(dataset), MAX_WORDS, ft_model.get_dimension()))
 
     for index, example in enumerate(dataset):
-        result[index] = get_tweet_embedding(example[0], ft_model)
+        result[index] = get_tweet_embeddings(example[0], ft_model)
 
     return result
-    
-def get_tweet_embedding(tweet, ft_model):
-    vec = np.repeat(0.0, ft_model.get_dimension())
+
+def get_word_embedding(word, ft_model):
+    return ft_model.get_word_vector(word)
+
+def get_tweet_embeddings(tweet, ft_model):
+    vecs = np.zeros((MAX_WORDS, ft_model.get_dimension()))
     words = tweet.split()
-    for word in words:
-        vec += np.array(ft_model.get_word_vector(word))
-    return np.divide(vec, len(words))
+    for i in range(MAX_WORDS):
+        if i < len(words):
+            vecs[i] = get_word_embedding(words[i], ft_model)
+    return vecs

@@ -5,16 +5,11 @@ from tensorflow.keras import layers
 
 #### Pre-built models ####
 def tass(inputs):
-    x = GlobalMaxPooling1D()(inputs)
+    x = layers.Dense(200, activation='relu')(inputs)
 
-    x = Dense(200, activation='relu')(x)
-    x = Dropout(.2)(x)
-
-    return x
+    return layers.Dropout(.2)(x)
 
 def pereira_kohatsu(inputs):
-    # The first LSTM layer is missing
-
     droppedInputs = layers.Dropout(.8)(inputs)
 
     d1 = layers.Dense(1600, activation='relu')(droppedInputs)
@@ -23,27 +18,35 @@ def pereira_kohatsu(inputs):
 
     d2 = layers.Dense(100, activation='relu')(d1) 
 
-    final = layers.Dropout(.4)(d2)
+    return layers.Dropout(.4)(d2)
 
-    return final
+#### Sentence embedding generators ####
+def conv_tass(inputs):
+    branch1 = layers.Conv1D(200, 2, padding='valid', activation='relu', strides=1)(inputs)
+    branch2 = layers.Conv1D(200, 3, padding='valid', activation='relu', strides=1)(inputs)
+    branch3 = layers.Conv1D(200, 4, padding='valid', activation='relu', strides=1)(inputs)
 
+    concat = layers.concatenate([branch1, branch2, branch3], axis=1)
+    return layers.GlobalMaxPooling1D()(concat)
+
+##def lstm_pk(inputs):
 
 def custom(inputs):
     d1 = layers.Dense(400, activation='relu')(inputs)
 
     lstm_inputs = tf.expand_dims(inputs, 1)
-    lstm = layers.LSTM(400)(lstm_inputs)
+    lstm = layers.LSTM(400, stateful=True)(lstm_inputs)
 
     concat = layers.concatenate([d1, lstm], axis=1)
 
-    final = layers.Dense(400, activation='relu')(concat)
-
-    return final
+    return layers.Dense(400, activation='relu')(concat)
 
 def FunctionalModel(inputShape):
     inputs = keras.Input(shape=inputShape)
 
-    final = custom(inputs)
+    processed_inputs = conv_tass(inputs)
+
+    final = pereira_kohatsu(processed_inputs)
 
     outputs = layers.Dense(1, activation='sigmoid')(final)
 
