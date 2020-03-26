@@ -19,24 +19,24 @@ def main():
             query += """select tweet_id, count(*) as cnt, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate, text
                         from votesIsHateful join tweets on id = tweet_id group by tweet_id having cnt_hate - cnt_not_hate > 1;"""
         elif queryCommand == "hatefulCount":
-            query += """select count(*) from (select tweet_id, count(*) as cnt, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate, text
+            query += """select count(*) from (select tweet_id, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate, text
                         from votesIsHateful join tweets on id = tweet_id group by tweet_id having cnt_hate - cnt_not_hate > 1) as t1;"""
         elif queryCommand == "nonhateful":
             query += """select tweet_id, count(*) as cnt, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate, text
                         from votesIsHateful join tweets on id = tweet_id group by tweet_id having cnt_not_hate - cnt_hate > 1;"""
         elif queryCommand == "nonhatefulCount":
-            query += """select count(*) from (select tweet_id, count(*) as cnt, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate, text
+            query += """select count(*) from (select tweet_id, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate, text
                         from votesIsHateful join tweets on id = tweet_id group by tweet_id having cnt_not_hate - cnt_hate > 1) as t1;"""
         elif queryCommand == "ambiguous":
             query += """select tweet_id, count(*) as cnt, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate, text
                         from votesIsHateful join tweets on id = tweet_id group by tweet_id having abs(cnt_hate - cnt_not_hate) <= 1;"""
         elif queryCommand == "ambiguousCount": 
-            query += """select count(*) from (select tweet_id, count(*) as cnt, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate
+            query += """select count(*) from (select tweet_id, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate
                         from votesIsHateful group by tweet_id having abs(cnt_hate - cnt_not_hate) <= 1) as t1;"""
         elif queryCommand == "skipped":
-            query += "select tweet_id, skipped from votesIsHateful where skipped > 0;"
+            query += "select id, skip_count, text from tweets where skip_count > 0;"
         elif queryCommand == "skippedCount":
-            query += "select count(*) from (select tweet_id, skipped from votesIsHateful where skipped > 0) as t1;"
+            query += "select count(*) from (select id, skip_count from tweets where skip_count > 0) as t1;"
         elif queryCommand == "tweetCount":
             query += "select count(*) from tweets;"
         elif queryCommand == "totalVoteCount":
