@@ -68,7 +68,7 @@ training_dataset_labels = np.asarray([int(ex[1]) for ex in training_dataset_text
 test_dataset_embeddings = dataset_to_embeddings(test_dataset_text, ft_model)
 test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text])
 
-#YES label proportions
+# YES label proportions
 trainProportion, testProportion, allProportion = labelProportion(list(training_dataset_labels), list(test_dataset_labels))
 
 # Dimension of the tweet embeddings                                                
@@ -144,6 +144,10 @@ if retrain:
             Path("runs").mkdir(parents=True, exist_ok=True)
             with open('runs/' + dataset_tsv_file.split('.tsv')[0] + str(math.trunc(time.time())), 'w') as logfile:
                 logfile.write('Using dataset: ' + dataset_tsv_file + '\n')
+                logfile.write('\n###### Postivie label proportion ######\n\n'.format(EPOCHS))
+                logfile.write('For training dataset: {}\n'.format(trainProportion))
+                logfile.write('For test dataset: {}\n'.format(testProportion))
+                logfile.write('For combined dataset: {}\n'.format(allProportion))                
                 logfile.write('\n###### Model Summary ######\n\n'.format(EPOCHS))
                 model.summary(print_fn=lambda x: logfile.write(x + '\n'))
                 logfile.write(template.format(loss, accuracy, precision, recall, auc, fscore))
