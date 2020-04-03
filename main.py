@@ -62,11 +62,11 @@ except ValueError as err:
     print("Couldn't find a saved model, aborting...")
     exit(0)
 
-training_dataset_embeddings = dataset_to_embeddings(training_dataset_text, ft_model)
-training_dataset_labels = np.asarray([int(ex[1]) for ex in training_dataset_text])
+training_dataset_embeddings = dataset_to_embeddings(training_dataset_text, ft_model)[:-2]
+training_dataset_labels = np.asarray([int(ex[1]) for ex in training_dataset_text][:-2])
 
-test_dataset_embeddings = dataset_to_embeddings(test_dataset_text, ft_model)
-test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text])
+test_dataset_embeddings = dataset_to_embeddings(test_dataset_text, ft_model)[:-1]
+test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text][:-1])
 
 # YES label proportions
 trainProportion, testProportion, allProportion = labelProportion(list(training_dataset_labels), list(test_dataset_labels))
@@ -77,19 +77,21 @@ example_dim = training_dataset_embeddings[0].shape
 training_dataset = None
 test_dataset = None
 
+BATCH_SIZE = 1
+
 if (functional):
-    model = FunctionalModel(example_dim)
+    model = FunctionalModel(example_dim, BATCH_SIZE)
 else:
     tf.keras.backend.set_floatx('float64')
 
     training_dataset = tf.data.Dataset.from_tensor_slices((training_dataset_embeddings, training_dataset_labels))
-    training_dataset = training_dataset.shuffle(400).batch(64, drop_remainder=True)
+    training_dataset = training_dataset.shuffle(400).batch(BATCH_SIZE, drop_remainder=True)
 
     test_dataset = tf.data.Dataset.from_tensor_slices((test_dataset_embeddings, test_dataset_labels))
-    test_dataset = test_dataset.batch(64, drop_remainder=True)
+    test_dataset = test_dataset.batch(BATCH_SIZE, drop_remainder=True)
 
     # Optimizer algorithm for training
-    optimizer = tf.keras.optimizers.Adam()
+    optimizer = tf.keras.optimizers.RMSprop()
 
     # Loss function
     loss_object = tf.keras.losses.BinaryCrossentropy(from_logits=True)
@@ -122,17 +124,17 @@ if retrain:
     if (functional):
         model.summary()
         
-        earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=8,
+        earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=16,
                                                     restore_best_weights=True)
         
         history = model.fit(training_dataset_embeddings, training_dataset_labels,
-                    batch_size=64,
-                    epochs=EPOCHS,
+                    batch_size=BATCH_SIZE,
+                    epochs=1000,
                     validation_split=0.2,
                     callbacks=[earlyStopping])
 
         #TODO: Make an evaluate method for the subclassed model
-        loss, accuracy, precision, recall, auc = model.evaluate(test_dataset_embeddings, test_dataset_labels, verbose=2)
+        loss, accuracy, precision, recall, auc = model.evaluate(test_dataset_embeddings, test_dataset_labels, batch_size=BATCH_SIZE, verbose=2)
 
         fscore = 2 * (precision * recall) / (precision + recall)
 

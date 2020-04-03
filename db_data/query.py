@@ -33,8 +33,14 @@ def main():
         elif queryCommand == "ambiguousCount": 
             query += """select count(*) from (select tweet_id, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate
                         from votesIsHateful group by tweet_id having abs(cnt_hate - cnt_not_hate) <= 1) as t1;"""
+        elif queryCommand == "offensive":
+            query += """select tweet_id, count(*) as cnt, sum(is_hateful) as cnt_hate, count(*) - sum(is_hateful) as cnt_not_hate, sum(is_offensive), text
+                        from votesIsHateful join tweets on id = tweet_id group by tweet_id having sum(is_offensive) > 0;"""
+        elif queryCommand == "hateTypes":    
+            query += """select tweet_id, hate_type, count(*), text
+                        from tweets join votesHateType on tweets.id = tweet_id group by tweet_id, text, hate_type order by tweet_id;"""
         elif queryCommand == "skipped":
-            query += "select id, skip_count, text from tweets where skip_count > 0;"
+            query += "select id, skip_count, text from tweets where skip_count > 0 order by skip_count DESC;"
         elif queryCommand == "skippedCount":
             query += "select count(*) from (select id, skip_count from tweets where skip_count > 0) as t1;"
         elif queryCommand == "tweetCount":

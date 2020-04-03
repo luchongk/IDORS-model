@@ -41,19 +41,20 @@ def custom(inputs):
 
     return layers.Dense(400, activation='relu')(concat)
 
-def FunctionalModel(inputShape):
+def FunctionalModel(inputShape, batchSize):
     inputs = keras.Input(shape=inputShape)
+    norm = layers.BatchNormalization()(inputs)
 
-    processed_inputs = conv_tass(inputs)
+    processed_inputs = conv_tass(norm)
 
-    final = pereira_kohatsu(processed_inputs)
+    final = tass(processed_inputs)
 
-    outputs = layers.Dense(1, activation='sigmoid')(final)
+    output = layers.Dense(1, activation="sigmoid")(final)
 
-    model = keras.Model(inputs=inputs, outputs=outputs, name="main_output")
+    model = keras.Model(inputs=inputs, outputs=output, name="main_output")
 
-    model.compile(loss=tf.keras.losses.BinaryCrossentropy(from_logits=True),
-                optimizer=tf.keras.optimizers.Adam(),
+    model.compile(loss=tf.keras.losses.BinaryCrossentropy(),
+                optimizer=tf.keras.optimizers.Adam(learning_rate=0.000001),
                 metrics=['accuracy', tf.keras.metrics.Precision(), tf.keras.metrics.Recall(), tf.keras.metrics.AUC()])
 
     return model
