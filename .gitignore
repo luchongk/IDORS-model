@@ -8,3 +8,6 @@ training_set.txt
 ft_test_set.txt
 ft_training_set.txt
 runs/*
+bert_training*
+bert_test*
+models/bert_model/*
