@@ -21,7 +21,7 @@ def train_and_test(retrain, save):
 def train(save):
     model = None
     try:
-        model = fasttext.train_supervised(TRAINING_FILE, pretrainedVectors='models/fasttext_mdeol/cc.es.300.vec', dim=300)
+        model = fasttext.train_supervised(TRAINING_FILE, pretrainedVectors='models/fasttext_model/cc.es.300.vec', dim=300)
         if save:
             model.save_model("models/fasttext_model/baseline.bin")
     except Exception as err:
