@@ -5,13 +5,15 @@ import tensorflow as tf
 from fasttext import load_model
 from pprint import pprint
 from pathlib import Path
+from datetime import date
 
 from models.fasttext_model import baseline as baseline_model
 from models.functional_model import FunctionalModel
 from models.tf_model import TfModel
-from data_mgmt.data_mgmt import new_dataset, get_dataset, dataset_to_embeddings
+from data_mgmt.data_mgmt import new_dataset, get_dataset, dataset_to_embeddings, get_bert_token_ids
 
-EPOCHS = 400
+EPOCHS = 1
+BATCH_SIZE = 64
 
 def labelProportion(trainLabels, testLabels):
     countYesTraining = 0
@@ -35,6 +37,8 @@ def labelProportion(trainLabels, testLabels):
 
     return (trainProportion, testProportion, allProportion)
 
+# TODO (medium priority): Implement a proper argument parser
+
 # Data manager parameters
 resplit = True if '--resplit' in sys.argv else False
 dataset_tsv_file = sys.argv[-2]
@@ -43,16 +47,18 @@ dataset_tsv_file = sys.argv[-2]
 retrain = True if '--retrain' in sys.argv else False 
 save = True if '--save' in sys.argv else False
 functional = True if '--functional' in sys.argv else False
+use_bert = True if '--use-bert' in sys.argv else False
 training_set_ratio = float(sys.argv[-1])
 
 # Logging parameters
 skipLogging = True if '--skip-logging' in sys.argv else False
 
-# TODO: Change resplit parameter
 if resplit:
     new_dataset(dataset_tsv_file, training_set_ratio)
 
-training_dataset_text, test_dataset_text = get_dataset()
+training_dataset_text, test_dataset_text, training_ex_emb, test_ex_emb = get_dataset()
+
+training_tk_id, test_tk_id = np.array(get_bert_token_ids(resplit))
 
 ########## Train and Test Process ########## 
 try:
@@ -62,25 +68,29 @@ except ValueError as err:
     print("Couldn't find a saved model, aborting...")
     exit(0)
 
-training_dataset_embeddings = dataset_to_embeddings(training_dataset_text, ft_model)[:-2]
-training_dataset_labels = np.asarray([int(ex[1]) for ex in training_dataset_text][:-2])
+training_dataset_embeddings = dataset_to_embeddings(training_dataset_text, ft_model)
+training_dataset_labels = np.asarray([int(ex[1]) for ex in training_dataset_text])
 
-test_dataset_embeddings = dataset_to_embeddings(test_dataset_text, ft_model)[:-1]
-test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text][:-1])
+test_dataset_embeddings = dataset_to_embeddings(test_dataset_text, ft_model)
+test_dataset_labels = np.asarray([int(ex[1]) for ex in test_dataset_text])
 
 # YES label proportions
 trainProportion, testProportion, allProportion = labelProportion(list(training_dataset_labels), list(test_dataset_labels))
 
-# Dimension of the tweet embeddings                                                
+# Dimension of the word embeddings                                                
 example_dim = training_dataset_embeddings[0].shape
+
+# Dimension of the tweet embeddings
+tweet_emb_dim = training_ex_emb[0].shape
+
+# Dimension of bert tokens
+bt_dim = training_tk_id[0].shape 
 
 training_dataset = None
 test_dataset = None
 
-BATCH_SIZE = 1
-
 if (functional):
-    model = FunctionalModel(example_dim, BATCH_SIZE)
+    model = FunctionalModel(example_dim, tweet_emb_dim, bt_dim, use_bert)
 else:
     tf.keras.backend.set_floatx('float64')
 
@@ -124,17 +134,31 @@ if retrain:
     if (functional):
         model.summary()
         
-        earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=16,
+        earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5,
                                                     restore_best_weights=True)
-        
-        history = model.fit(training_dataset_embeddings, training_dataset_labels,
-                    batch_size=BATCH_SIZE,
-                    epochs=1000,
-                    validation_split=0.2,
-                    callbacks=[earlyStopping])
 
-        #TODO: Make an evaluate method for the subclassed model
-        loss, accuracy, precision, recall, auc = model.evaluate(test_dataset_embeddings, test_dataset_labels, batch_size=BATCH_SIZE, verbose=2)
+        training_inputs = [training_dataset_embeddings, training_ex_emb]
+
+        if (use_bert):
+            training_inputs.append(training_tk_ids)
+        
+        history = model.fit(training_inputs, 
+                             training_dataset_labels,
+                             batch_size=BATCH_SIZE,
+                             epochs=EPOCHS,
+                             validation_split=0.2,
+                             callbacks=[earlyStopping])
+
+        test_inputs = [test_dataset_embeddings, test_ex_emb]
+
+        if (use_bert):
+            test_inputs.append(test_tk_ids)
+
+        #TODO (low priority): Make an evaluate method for the subclassed model
+        loss, accuracy, precision, recall, auc = model.evaluate(test_inputs,
+                                                                test_dataset_labels, 
+                                                                batch_size=BATCH_SIZE, 
+                                                                verbose=2)
 
         fscore = 2 * (precision * recall) / (precision + recall)
 
@@ -143,10 +167,13 @@ if retrain:
         print(template.format(loss, accuracy, precision, recall, auc, fscore))
 
         if not skipLogging:
-            Path("runs").mkdir(parents=True, exist_ok=True)
-            with open('runs/' + dataset_tsv_file.split('.tsv')[0] + str(math.trunc(time.time())), 'w') as logfile:
+            directory = "runs/" + date.today().strftime("%m-%d-%Y")
+            Path(directory).mkdir(parents=True, exist_ok=True)
+            with open(directory + '/' + dataset_tsv_file.split('.tsv')[0] + str(math.trunc(time.time())), 'w') as logfile:
                 logfile.write('Using dataset: ' + dataset_tsv_file + '\n')
-                logfile.write('\n###### Postivie label proportion ######\n\n'.format(EPOCHS))
+                logfile.write('Training dataset size: {}'.format(len(training_dataset_embeddings)))
+                logfile.write('Test dataset size: {}'.format(len(test_dataset_embeddings)))
+                logfile.write('\n###### Positive label proportion ######\n\n'.format(EPOCHS))
                 logfile.write('For training dataset: {}\n'.format(trainProportion))
                 logfile.write('For test dataset: {}\n'.format(testProportion))
                 logfile.write('For combined dataset: {}\n'.format(allProportion))                
