@@ -202,4 +202,6 @@ def get_additional_embeddings(all_tweets):
 
     return reduced_dimension_embeddings
 
+if __name__ == "__main__":
+    new_dataset()
     
