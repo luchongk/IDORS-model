@@ -1,4 +1,4 @@
-import csv, re, unidecode, nltk, os, bert 
+import csv, re, unidecode, nltk, os, bert, configparser, sys
 import preprocessor as p, numpy as np
 
 from random import shuffle
@@ -203,5 +203,10 @@ def get_additional_embeddings(all_tweets):
     return reduced_dimension_embeddings
 
 if __name__ == "__main__":
-    new_dataset()
+    config = configparser.ConfigParser()
+    config.read('conf.ini')
+
+    training_set_ratio = float(config['GENERAL']['TRAINING_SET_RATIO'])
+
+    new_dataset(sys.argv[1], training_set_ratio)
     

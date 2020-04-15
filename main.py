@@ -48,7 +48,6 @@ retrain = True if '--retrain' in sys.argv else False
 save = True if '--save' in sys.argv else False
 functional = True if '--functional' in sys.argv else False
 use_bert = True if '--use-bert' in sys.argv else False
-training_set_ratio = float(sys.argv[-1])
 
 # Logging parameters
 skipLogging = True if '--skip-logging' in sys.argv else False
@@ -59,6 +58,7 @@ config.read('conf.ini')
 
 EPOCHS = int(config['GENERAL']['EPOCHS'])
 BATCH_SIZE = int(config['GENERAL']['BATCH_SIZE'])
+training_set_ratio = float(config['GENERAL']['TRAINING_SET_RATIO'])
 
 if resplit:
     new_dataset(dataset_tsv_file, training_set_ratio)
