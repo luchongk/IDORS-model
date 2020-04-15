@@ -1,4 +1,4 @@
-import sys, time, math
+import sys, time, math, configparser
 import numpy as np
 import tensorflow as tf
 
@@ -13,7 +13,7 @@ from models.tf_model import TfModel
 from data_mgmt.data_mgmt import new_dataset, get_dataset, dataset_to_embeddings, get_bert_token_ids
 
 EPOCHS = 1
-BATCH_SIZE = 64
+BATCH_SIZE = 1
 
 def labelProportion(trainLabels, testLabels):
     countYesTraining = 0
@@ -52,6 +52,13 @@ training_set_ratio = float(sys.argv[-1])
 
 # Logging parameters
 skipLogging = True if '--skip-logging' in sys.argv else False
+
+# Config parameters
+config = configparser.ConfigParser()
+config.read('conf.ini')
+
+EPOCHS = int(config['GENERAL']['EPOCHS'])
+BATCH_SIZE = int(config['GENERAL']['BATCH_SIZE'])
 
 if resplit:
     new_dataset(dataset_tsv_file, training_set_ratio)
