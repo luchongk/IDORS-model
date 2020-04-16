@@ -144,7 +144,7 @@ def get_bert_token_ids(resplit):
     train_ids = []
     test_ids = []
 
-    if resplit:
+    if not (os.path.exists('bert_training_ids.txt') and os.path.exists('bert_test_ids.txt')):
         with open("bert_training_set.txt") as tweets_file:
             tweets = tweets_file.readlines()
             for tweet in tweets:

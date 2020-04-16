@@ -76,7 +76,7 @@ def FunctionalModel(inputShape, input2Shape, bertInputShape, use_bert):
 
     tweet_vector = layers.concatenate(tweet_vector_array, axis=1)
 
-    final = haternet(tweet_vector)
+    final = tass(tweet_vector)
 
     output = layers.Dense(1, activation="sigmoid")(final)
 
