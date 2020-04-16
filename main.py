@@ -65,7 +65,7 @@ if resplit:
 
 training_dataset_text, test_dataset_text, training_ex_emb, test_ex_emb = get_dataset()
 
-training_tk_id, test_tk_id = np.array(get_bert_token_ids(resplit))
+training_tk_ids, test_tk_ids = np.array(get_bert_token_ids(resplit))
 
 ########## Train and Test Process ########## 
 try:
@@ -91,7 +91,7 @@ example_dim = training_dataset_embeddings[0].shape
 tweet_emb_dim = training_ex_emb[0].shape
 
 # Dimension of bert tokens
-bt_dim = training_tk_id[0].shape 
+bt_dim = training_tk_ids[0].shape 
 
 training_dataset = None
 test_dataset = None
