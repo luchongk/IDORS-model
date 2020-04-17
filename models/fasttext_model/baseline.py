@@ -1,13 +1,11 @@
-import fasttext
-import pprint
-import sys
+import fasttext, pprint, sys, configparser
 
 TRAINING_FILE = 'training_set.txt'
 TEST_FILE = 'test_set.txt'
 
-def train_and_test(retrain, save):
+def train_and_test(retrain, save, language):
     if retrain:
-        model = train(save)
+        model = train(save, language)
     else:
         try:
             model = fasttext.load_model("models/fasttext_model/baseline.bin")
@@ -18,10 +16,19 @@ def train_and_test(retrain, save):
     if model:
         test(model)
 
-def train(save):
+def train(save, language):
     model = None
+
+    if language == 'english':
+        vec_file = 'models/fasttext_model/cc.en.300.vec'
+    elif language == 'spanish':
+        vec_file = 'models/fasttext_model/cc.es.300.vec'
+    else:
+        print("Language {language} not supported.")
+        exit(0)
+    
     try:
-        model = fasttext.train_supervised(TRAINING_FILE, pretrainedVectors='models/fasttext_model/cc.es.300.vec', dim=300)
+        model = fasttext.train_supervised(TRAINING_FILE, pretrainedVectors=vec_file, dim=300)
         if save:
             model.save_model("models/fasttext_model/baseline.bin")
     except Exception as err:
@@ -37,4 +44,9 @@ if __name__ == "__main__":
     retrain = True if '--retrain' in sys.argv else False 
     save = True if '--save' in sys.argv else False
     
-    train_and_test(retrain, save)
+    config = configparser.ConfigParser()
+    config.read('conf.ini')
+
+    language = config['GENERAL']['LANGUAGE']
+
+    train_and_test(retrain, save, language)

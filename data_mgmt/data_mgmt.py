@@ -90,9 +90,11 @@ def preprocess(tweet):
     tweet = ' '.join(tweet)
     tweet = re.sub(r'\$ ([A-Z]+?) \$', r'$\1$', tweet)
     
-    tweet = tweet.split(' '); 
+    tweet = tweet.split(' ');
+
     ### Stopwords removal ###
-    stop_words = set(stopwords.words('spanish'))
+    language = os.getenv('LANGUAGE')
+    stop_words = set(stopwords.words(language))
     new_sentence = []
     for w in tweet:
         if w not in stop_words:
@@ -207,6 +209,9 @@ if __name__ == "__main__":
     config.read('conf.ini')
 
     training_set_ratio = float(config['GENERAL']['TRAINING_SET_RATIO'])
+    dataset_name = config['GENERAL']['DATASET_NAME']
 
-    new_dataset(sys.argv[1], training_set_ratio)
+    os.environ['LANGUAGE'] = config['GENERAL']['LANGUAGE']
+
+    new_dataset(dataset_name, training_set_ratio)
     

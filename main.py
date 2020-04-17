@@ -1,4 +1,4 @@
-import sys, time, math, configparser
+import sys, time, math, configparser, os
 import numpy as np
 import tensorflow as tf
 
@@ -41,7 +41,6 @@ def labelProportion(trainLabels, testLabels):
 
 # Data manager parameters
 resplit = True if '--resplit' in sys.argv else False
-dataset_tsv_file = sys.argv[-2]
 
 # Model parameters
 retrain = True if '--retrain' in sys.argv else False 
@@ -59,6 +58,10 @@ config.read('conf.ini')
 EPOCHS = int(config['GENERAL']['EPOCHS'])
 BATCH_SIZE = int(config['GENERAL']['BATCH_SIZE'])
 training_set_ratio = float(config['GENERAL']['TRAINING_SET_RATIO'])
+dataset_tsv_file = sys.argv[-2]
+
+# Set general enviroment variables
+os.environ
 
 if resplit:
     new_dataset(dataset_tsv_file, training_set_ratio)
@@ -178,7 +181,7 @@ if retrain:
             Path(directory).mkdir(parents=True, exist_ok=True)
             with open(directory + '/' + dataset_tsv_file.split('.tsv')[0] + str(math.trunc(time.time())), 'w') as logfile:
                 logfile.write('Using dataset: ' + dataset_tsv_file + '\n')
-                logfile.write('Training dataset size: {}'.format(len(training_dataset_embeddings)))
+                logfile.write('Training dataset size: {}\n'.format(len(training_dataset_embeddings)))
                 logfile.write('Test dataset size: {}'.format(len(test_dataset_embeddings)))
                 logfile.write('\n###### Positive label proportion ######\n\n'.format(EPOCHS))
                 logfile.write('For training dataset: {}\n'.format(trainProportion))

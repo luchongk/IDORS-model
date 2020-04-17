@@ -25,7 +25,7 @@ def get_bert_layer():
     bert_model_dir = os.path.join(current_dir, "models/bert_model", "multi_cased_L-12_H-768_A-12")
 
     bert_params = bert.params_from_pretrained_ckpt(bert_model_dir)
-    l_bert = bert.BertModelLayer.from_params(bert_params, name="bert")
+    l_bert = bert.BertModelLayer.from_params(bert_params, trainable=False, name="bert")
     
     return l_bert
 
