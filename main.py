@@ -58,7 +58,7 @@ config.read('conf.ini')
 EPOCHS = int(config['GENERAL']['EPOCHS'])
 BATCH_SIZE = int(config['GENERAL']['BATCH_SIZE'])
 training_set_ratio = float(config['GENERAL']['TRAINING_SET_RATIO'])
-dataset_tsv_file = sys.argv[-2]
+dataset_tsv_file = config['GENERAL']['DATASET_NAME']
 
 # Set general enviroment variables
 os.environ
@@ -177,12 +177,13 @@ if retrain:
         print(template.format(loss, accuracy, precision, recall, auc, fscore))
 
         if not skipLogging:
-            directory = "runs/" + date.today().strftime("%m-%d-%Y")
+            logDir = config['GENERAL']['LOGDIR']
+            directory = logDir + '/' + date.today().strftime("%m-%d-%Y")
             Path(directory).mkdir(parents=True, exist_ok=True)
             with open(directory + '/' + dataset_tsv_file.split('.tsv')[0] + str(math.trunc(time.time())), 'w') as logfile:
-                logfile.write('Using dataset: ' + dataset_tsv_file + '\n')
+                logfile.write('Using dataset: ' + dataset_tsv_file + '\n\n')
                 logfile.write('Training dataset size: {}\n'.format(len(training_dataset_embeddings)))
-                logfile.write('Test dataset size: {}'.format(len(test_dataset_embeddings)))
+                logfile.write('Test dataset size: {}\n'.format(len(test_dataset_embeddings)))
                 logfile.write('\n###### Positive label proportion ######\n\n'.format(EPOCHS))
                 logfile.write('For training dataset: {}\n'.format(trainProportion))
                 logfile.write('For test dataset: {}\n'.format(testProportion))
