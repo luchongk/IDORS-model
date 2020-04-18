@@ -45,7 +45,7 @@ if __name__ == "__main__":
     save = True if '--save' in sys.argv else False
     
     config = configparser.ConfigParser()
-    config.read('conf.ini')
+    config.read('conf.txt')
 
     language = config['GENERAL']['LANGUAGE']
 

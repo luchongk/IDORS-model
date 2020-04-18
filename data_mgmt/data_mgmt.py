@@ -206,7 +206,7 @@ def get_additional_embeddings(all_tweets):
 
 if __name__ == "__main__":
     config = configparser.ConfigParser()
-    config.read('conf.ini')
+    config.read('conf.txt')
 
     training_set_ratio = float(config['GENERAL']['TRAINING_SET_RATIO'])
     dataset_name = config['GENERAL']['DATASET_NAME']

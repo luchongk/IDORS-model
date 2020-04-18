@@ -1,6 +1,7 @@
 temp_dataset.txt
 .vscode
 cc.es.300.vec
+cc.en.300.vec
 *.bin
 test_set.txt
 training_set.txt

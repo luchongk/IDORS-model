@@ -6,6 +6,7 @@ from fasttext import load_model
 from pprint import pprint
 from pathlib import Path
 from datetime import date
+from sklearn.model_selection import KFold
 
 from models.fasttext_model import baseline as baseline_model
 from models.functional_model import FunctionalModel
@@ -53,7 +54,7 @@ skipLogging = True if '--skip-logging' in sys.argv else False
 
 # Config parameters
 config = configparser.ConfigParser()
-config.read('conf.ini')
+config.read('conf.txt')
 
 EPOCHS = int(config['GENERAL']['EPOCHS'])
 BATCH_SIZE = int(config['GENERAL']['BATCH_SIZE'])
