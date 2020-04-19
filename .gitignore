@@ -11,4 +11,5 @@ ft_training_set.txt
 runs/*
 bert_training*
 bert_test*
-models/bert_model/*
+models/bert_model/*_cased_*
+models/bert_model/*_uncased_*
