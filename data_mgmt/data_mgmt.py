@@ -62,7 +62,7 @@ def create_bert_tokenizer():
     bert_model_dir = config['GENERAL']['BERT_MODEL_DIR']
 
     current_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    models_folder = os.path.join(current_dir, bert_model_dir)
+    models_folder = os.path.join(current_dir, "models/bert_model", bert_model_dir)
     vocab_file = os.path.join(models_folder, "vocab.txt")
 
     tokenizer = bert.bert_tokenization.FullTokenizer(vocab_file, do_lower_case=True)
@@ -150,7 +150,7 @@ def get_bert_token_ids():
     train_ids = []
     test_ids = []
 
-    if not ((os.path.exists('bert_training_ids.txt') and os.path.exists('bert_test_ids.txt')):
+    if not (os.path.exists('bert_training_ids.txt') and os.path.exists('bert_test_ids.txt')):
         with open("bert_training_set.txt") as tweets_file:
             tweets = tweets_file.readlines()
             for tweet in tweets:
@@ -203,7 +203,7 @@ def get_additional_embeddings(all_tweets):
     tf_idf_vectorizer = TfidfVectorizer()
     tf_idf_embeddings = tf_idf_vectorizer.fit_transform(all_tweets)
 
-    svd = TruncatedSVD(n_components=300)
+    svd = TruncatedSVD(n_components=100)
     reduced_dimension_embeddings = svd.fit_transform(tf_idf_embeddings)
 
     return reduced_dimension_embeddings

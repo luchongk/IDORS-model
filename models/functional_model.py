@@ -1,4 +1,4 @@
-import bert, os, tensorflow as tf
+import os, tensorflow as tf
 
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -20,19 +20,6 @@ def haternet(inputs):
 
     return layers.Dropout(.4)(d2)
 
-def get_bert_layer():
-    config = configparser.ConfigParser()
-    config.read('conf.txt')
-    bert_model_dir = config['GENERAL']['BERT_MODEL_DIR']
-
-    current_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    bert_model_dir = os.path.join(current_dir, bert_model_dir)
-
-    bert_params = bert.params_from_pretrained_ckpt(bert_model_dir)
-    l_bert = bert.BertModelLayer.from_params(bert_params, trainable=False, name="bert")
-    
-    return l_bert
-
 #### Sentence embedding generators ####
 def conv_tass(inputs):
     branch1 = layers.Conv1D(200, 2, padding='valid', activation='relu', strides=1)(inputs)
@@ -42,7 +29,7 @@ def conv_tass(inputs):
     concat = layers.concatenate([branch1, branch2, branch3], axis=1)
     return layers.GlobalMaxPooling1D()(concat)
 
-##def lstm_pk(inputs):
+##def lstm_haternet(inputs):
 
 def custom(inputs):
     d1 = layers.Dense(400, activation='relu')(inputs)
@@ -68,15 +55,11 @@ def FunctionalModel(inputShape, input2Shape, bertInputShape, use_bert):
     tweet_vector_array = [processed_inputs, inputs2]
 
     if (use_bert):
-        inputs3 = keras.Input(shape=bertInputShape, name='bert_token_ids')
+        inputs3 = keras.Input(shape=bertInputShape, name='bert_vectors')
 
         input_array.append(inputs3)
 
-        bert_layer = get_bert_layer()
-        bert_vectors = bert_layer(inputs3)
-        bert_vectors = keras.layers.Lambda(lambda seq: seq[:, 0, :])(bert_vectors)
-
-        tweet_vector_array.append(bert_vectors)
+        tweet_vector_array.append(inputs3)
 
     tweet_vector = layers.concatenate(tweet_vector_array, axis=1)
 

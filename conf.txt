@@ -8,7 +8,8 @@ LANGUAGE = spanish
 LOGDIR = runs
 USE_KFOLD = false
 NUM_FOLDS = 10
-BERT_MODEL_DIR = models/bert_model/multi_cased_L-12_H-768_A-12
+BERT_MODEL_DIR = beto_cased_L-12_H-768_A-12
+BERT_CKPT = model.ckpt-2000000
 
 # use_word_vectors = true
 # use_sent_vectors = true

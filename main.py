@@ -9,6 +9,7 @@ from datetime import date
 from sklearn.model_selection import KFold
 
 from models.fasttext_model import baseline as baseline_model
+from models.bert_model import bert_model
 from models.functional_model import FunctionalModel
 from models.tf_model import TfModel
 from data_mgmt.data_mgmt import new_dataset, get_dataset, dataset_to_embeddings, get_bert_token_ids
@@ -48,6 +49,7 @@ retrain = True if '--retrain' in sys.argv else False
 save = True if '--save' in sys.argv else False
 functional = True if '--functional' in sys.argv else False
 use_bert = True if '--use-bert' in sys.argv else False
+retrain_bert_vectors = True if '--retrain-bert' in sys.argv else False
 
 # Logging parameters
 skipLogging = True if '--skip-logging' in sys.argv else False
@@ -92,14 +94,34 @@ example_dim = training_dataset_embeddings[0].shape
 # Dimension of the tweet embeddings
 tweet_emb_dim = training_ex_emb[0].shape
 
-# Dimension of bert tokens
-bt_dim = training_tk_ids[0].shape 
+# Dimension of bert vectors
+bert_dim = 0
+bert_training_vectors = None
+bert_test_vectors = None
+
+if (use_bert):
+    if (retrain_bert_vectors):
+        # Dimension of bert tokens
+        bert_tk_dim = training_tk_ids[0].shape
+
+        bert = bert_model.get_bert_model(bert_tk_dim)
+
+        bert_training_vectors = bert.predict(training_tk_ids)
+        bert_test_vectors = bert.predict(test_tk_ids)
+
+        np.savetxt('bert_training_vectors.txt', bert_training_vectors)
+        np.savetxt('bert_test_vectors.txt', bert_test_vectors)
+    else:
+        bert_training_vectors = np.loadtxt('bert_training_vectors.txt')
+        bert_test_vectors = np.loadtxt('bert_test_vectors.txt')
+
+    bert_dim = bert_training_vectors[0].shape
 
 training_dataset = None
 test_dataset = None
 
 if (functional):
-    model = FunctionalModel(example_dim, tweet_emb_dim, bt_dim, use_bert)
+    model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
 else:
     tf.keras.backend.set_floatx('float64')
 
@@ -157,7 +179,7 @@ if retrain:
 
                 if (use_bert):
                     training_inputs.append(
-                        [training_tk_ids[i] for i in train_index]
+                        [bert_training_vectors[i] for i in train_index]
                     )
 
                 val_inputs = [
@@ -167,7 +189,7 @@ if retrain:
 
                 if (use_bert):
                     val_inputs.append(
-                        [training_tk_ids[i] for i in val_index]
+                        [bert_training_vectors[i] for i in val_index]
                     )
 
                 training_labels = np.asarray([training_dataset_labels[i] for i in train_index])
@@ -183,7 +205,7 @@ if retrain:
             training_inputs = [training_dataset_embeddings, training_ex_emb]
 
             if (use_bert):
-                training_inputs.append(training_tk_ids)
+                training_inputs.append(bert_training_vectors)
             
             history = model.fit(training_inputs, 
                                 training_dataset_labels,
@@ -195,7 +217,7 @@ if retrain:
         test_inputs = [test_dataset_embeddings, test_ex_emb]
 
         if (use_bert):
-            test_inputs.append(test_tk_ids)
+            test_inputs.append(bert_test_vectors)
 
         #TODO (low priority): Make an evaluate method for the subclassed model
         loss, accuracy, precision, recall, auc = model.evaluate(test_inputs,
