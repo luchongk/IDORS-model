@@ -8,7 +8,7 @@ def get_bert_layer(bert_model_dir):
     
     return l_bert
 
-def get_bert_model(bertTokensShape):
+def BertModel(bertTokensShape):
     config = configparser.ConfigParser()
     config.read('conf.txt')
     bert_model_dir = config['GENERAL']['BERT_MODEL_DIR']
