@@ -60,9 +60,7 @@ EPOCHS = int(config['GENERAL']['EPOCHS'])
 BATCH_SIZE = int(config['GENERAL']['BATCH_SIZE'])
 training_set_ratio = float(config['GENERAL']['TRAINING_SET_RATIO'])
 dataset_tsv_file = config['GENERAL']['DATASET_NAME']
-
-# Set general enviroment variables
-os.environ
+use_kfold = True if config['GENERAL']['USE_KFOLD'] == 'true' else False
 
 if resplit:
     new_dataset(dataset_tsv_file, training_set_ratio)
@@ -148,17 +146,51 @@ if retrain:
         earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5,
                                                     restore_best_weights=True)
 
-        training_inputs = [training_dataset_embeddings, training_ex_emb]
+        if (use_kfold):
+            num_folds = int(config['GENERAL']['NUM_FOLDS'])
+            splits = KFold(10).split(training_dataset_embeddings, training_dataset_labels)
+            for train_index, val_index in splits:
+                training_inputs = [
+                    np.asarray([training_dataset_embeddings[i] for i in train_index]),
+                    np.asarray([training_ex_emb[i] for i in train_index])
+                ]
 
-        if (use_bert):
-            training_inputs.append(training_tk_ids)
-        
-        history = model.fit(training_inputs, 
-                             training_dataset_labels,
-                             batch_size=BATCH_SIZE,
-                             epochs=EPOCHS,
-                             validation_split=0.2,
-                             callbacks=[earlyStopping])
+                if (use_bert):
+                    training_inputs.append(
+                        [training_tk_ids[i] for i in train_index]
+                    )
+
+                val_inputs = [
+                    np.asarray([training_dataset_embeddings[i] for i in val_index]),
+                    np.asarray([training_ex_emb[i] for i in val_index])
+                ]
+
+                if (use_bert):
+                    val_inputs.append(
+                        [training_tk_ids[i] for i in val_index]
+                    )
+
+                training_labels = np.asarray([training_dataset_labels[i] for i in train_index])
+                val_labels = np.asarray([training_dataset_labels[i] for i in val_index])
+
+                history = model.fit(training_inputs, 
+                                training_labels,
+                                batch_size=BATCH_SIZE,
+                                epochs=EPOCHS,
+                                validation_data=(val_inputs, val_labels),
+                                callbacks=[earlyStopping])
+        else:
+            training_inputs = [training_dataset_embeddings, training_ex_emb]
+
+            if (use_bert):
+                training_inputs.append(training_tk_ids)
+            
+            history = model.fit(training_inputs, 
+                                training_dataset_labels,
+                                batch_size=BATCH_SIZE,
+                                epochs=EPOCHS,
+                                validation_split=0.2,
+                                callbacks=[earlyStopping])
 
         test_inputs = [test_dataset_embeddings, test_ex_emb]
 

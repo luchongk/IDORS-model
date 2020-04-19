@@ -2,11 +2,13 @@
 EPOCHS = 100
 BATCH_SIZE = 64
 TRAINING_SET_RATIO = 0.8
-DATASET_NAME = davidson_10K.tsv
+DATASET_NAME = idors.tsv
 # supported languages are spanish and english
-LANGUAGE = english
+LANGUAGE = spanish
 LOGDIR = runs
+USE_KFOLD = false
+NUM_FOLDS = 10
 
-# use_word_vectors='false'
-# use_sent_vectors='false'
-# use_bert='true'
+# use_word_vectors = true
+# use_sent_vectors = true
+# use_bert = false
