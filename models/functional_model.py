@@ -21,8 +21,12 @@ def haternet(inputs):
     return layers.Dropout(.4)(d2)
 
 def get_bert_layer():
+    config = configparser.ConfigParser()
+    config.read('conf.txt')
+    bert_model_dir = config['GENERAL']['BERT_MODEL_DIR']
+
     current_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    bert_model_dir = os.path.join(current_dir, "models/bert_model", "multi_cased_L-12_H-768_A-12")
+    bert_model_dir = os.path.join(current_dir, bert_model_dir)
 
     bert_params = bert.params_from_pretrained_ckpt(bert_model_dir)
     l_bert = bert.BertModelLayer.from_params(bert_params, trainable=False, name="bert")

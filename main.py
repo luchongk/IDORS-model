@@ -67,7 +67,7 @@ if resplit:
 
 training_dataset_text, test_dataset_text, training_ex_emb, test_ex_emb = get_dataset()
 
-training_tk_ids, test_tk_ids = np.array(get_bert_token_ids(resplit))
+training_tk_ids, test_tk_ids = np.array(get_bert_token_ids())
 
 ########## Train and Test Process ########## 
 try:

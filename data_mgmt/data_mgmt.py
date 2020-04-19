@@ -57,8 +57,12 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
     wordRatio = len(wordsNewInTest) / len(test_words)
 
 def create_bert_tokenizer():
+    config = configparser.ConfigParser()
+    config.read('conf.txt')
+    bert_model_dir = config['GENERAL']['BERT_MODEL_DIR']
+
     current_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    models_folder = os.path.join(current_dir, "models/bert_model", "multi_cased_L-12_H-768_A-12")
+    models_folder = os.path.join(current_dir, bert_model_dir)
     vocab_file = os.path.join(models_folder, "vocab.txt")
 
     tokenizer = bert.bert_tokenization.FullTokenizer(vocab_file, do_lower_case=True)
@@ -141,12 +145,12 @@ def get_dataset():
 
     return training_dataset, test_dataset, training_ex_emb, test_ex_emb
 
-def get_bert_token_ids(resplit):
+def get_bert_token_ids():
     bert_tokenizer = create_bert_tokenizer()
     train_ids = []
     test_ids = []
 
-    if not (os.path.exists('bert_training_ids.txt') and os.path.exists('bert_test_ids.txt')):
+    if not ((os.path.exists('bert_training_ids.txt') and os.path.exists('bert_test_ids.txt')):
         with open("bert_training_set.txt") as tweets_file:
             tweets = tweets_file.readlines()
             for tweet in tweets:
