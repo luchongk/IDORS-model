@@ -9,7 +9,7 @@ from datetime import date
 from sklearn.model_selection import KFold
 
 from models.fasttext_model import baseline as baseline_model
-from models.bert_model import bert_model
+from models.bert_model import get_bert_model
 from models.functional_model import FunctionalModel
 from models.tf_model import TfModel
 from data_mgmt.data_mgmt import new_dataset, get_dataset, dataset_to_embeddings, get_bert_token_ids
@@ -104,7 +104,7 @@ if (use_bert):
         # Dimension of bert tokens
         bert_tk_dim = training_tk_ids[0].shape
 
-        bert = bert_model.get_bert_model(bert_tk_dim)
+        bert = get_bert_model(bert_tk_dim)
 
         bert_training_vectors = bert.predict(training_tk_ids)
         bert_test_vectors = bert.predict(test_tk_ids)
