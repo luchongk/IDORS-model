@@ -15,6 +15,16 @@ with open(dataFileName, "w") as tsvFile:
     tsvFile.writelines(stdout)
 client.close()
 
+desambigEntries = {}
+with open('db_data/desambiguados.csv') as desambiguados:
+    with open("testinho", "w") as testinho:
+        csvReader = csv.DictReader(desambiguados)
+        for line in csvReader:
+            testinho.write(line['text'] + "\n")
+            if line['text'] not in desambigEntries:
+                desambigEntries[line['text']] = {"written": False, "labels": list()}
+            desambigEntries[line['text']]['labels'].append(line['label'])
+
 valueCounts = {}
 ids = set()
 
@@ -30,8 +40,8 @@ with open(dataFileName) as tsvFile:
     
     tsvFile.seek(0)
     next(tsvFile)
-
-    with open("ambiguous.json", "w") as ambiguousJson:
+    
+    with open("db_data/ambiguous.json", "w") as ambiguousJson:
         with open('datasets/idors.tsv', 'w') as idorsFile:
             fieldNames = ['id',	'text', 'HS']
             writer = csv.DictWriter(idorsFile, fieldnames=fieldNames, delimiter="\t")
@@ -44,16 +54,27 @@ with open(dataFileName) as tsvFile:
                 ids.add(line['tweet_id'])
                 counts = valueCounts[line['tweet_id']]
                 
+                label = None
                 if abs(counts[0] - counts[1]) <= 1:
-                    toWrite = json.dumps({"tweet_id": line['tweet_id'], "text": line['text']})
-                    ambiguousJson.write(toWrite + "\n")
-                    countAmbiguous += 1
+                    entry = None
+                    if line['text'].strip() in desambigEntries:
+                        entry = desambigEntries[line['text'].strip()]
+
+                    if entry and not entry['written'] and ('1' in entry['labels']):
+                        label = 1
+                    elif entry and not entry['written'] and ('2' in entry['labels']):
+                        label = 0
+                    else:
+                        toWrite = json.dumps({"tweet_id": line['tweet_id'], "text": line['text'].replace("\\n", "\n")})
+                        ambiguousJson.write(toWrite + "\n")
+                        countAmbiguous += 1
                 
                 if counts[0] == counts[1]:
                     print(line['text'])
                     continue
                 
-                label = counts.index(max(counts))
+                if not label:
+                    label = counts.index(max(counts))
                 writer.writerow({'id': line['tweet_id'], 'text': line['text'], 'HS': str(label)})
             
 

@@ -10,8 +10,7 @@ from sklearn.decomposition import TruncatedSVD
 nltk.download('punkt')
 nltk.download('stopwords')
 
-#TODO: tokenize LOL
-#TODO: John lennon
+#TODO: Separate dataset and vector creation
 
 MAX_WORDS = 33
 
