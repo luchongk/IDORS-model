@@ -179,7 +179,7 @@ if retrain:
 
                 if (use_bert):
                     training_inputs.append(
-                        [bert_training_vectors[i] for i in train_index]
+                        np.asarray([bert_training_vectors[i] for i in train_index])
                     )
 
                 val_inputs = [
@@ -189,7 +189,7 @@ if retrain:
 
                 if (use_bert):
                     val_inputs.append(
-                        [bert_training_vectors[i] for i in val_index]
+                        np.asarray([bert_training_vectors[i] for i in val_index])
                     )
 
                 training_labels = np.asarray([training_dataset_labels[i] for i in train_index])
