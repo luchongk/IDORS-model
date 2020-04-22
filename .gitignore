@@ -13,3 +13,4 @@ bert_training*
 bert_test*
 models/bert_model/*_cased_*
 models/bert_model/*_uncased_*
+run_pipe.sh
