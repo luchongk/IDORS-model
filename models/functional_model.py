@@ -27,9 +27,13 @@ def conv_tass(inputs):
     branch3 = layers.Conv1D(200, 4, padding='valid', activation='relu', strides=1)(inputs)
 
     concat = layers.concatenate([branch1, branch2, branch3], axis=1)
+
     return layers.GlobalMaxPooling1D()(concat)
 
-##def lstm_haternet(inputs):
+def lstm(inputs):
+    lstm_layer = layers.LSTM(600)
+
+    return lstm_layer(inputs)
 
 def custom(inputs):
     d1 = layers.Dense(400, activation='relu')(inputs)
