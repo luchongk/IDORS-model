@@ -170,7 +170,7 @@ if retrain:
 
         if (use_kfold):
             num_folds = int(config['GENERAL']['NUM_FOLDS'])
-            splits = KFold(10).split(training_dataset_embeddings, training_dataset_labels)
+            splits = KFold(num_folds).split(training_dataset_embeddings, training_dataset_labels)
             for train_index, val_index in splits:
                 training_inputs = [
                     np.asarray([training_dataset_embeddings[i] for i in train_index]),
