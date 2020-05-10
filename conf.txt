@@ -1,16 +1,21 @@
 [GENERAL]
-EPOCHS = 100
+EPOCHS = 1
 BATCH_SIZE = 64
 TRAINING_SET_RATIO = 0.8
 DATASET_NAME = idors.tsv
 # supported languages are spanish and english
 LANGUAGE = spanish
 LOGDIR = runs
-USE_KFOLD = false
+USE_KFOLD = true
 NUM_FOLDS = 10
 BERT_MODEL_DIR = beto_cased_L-12_H-768_A-12
 BERT_CKPT = model.ckpt-2000000
 
-# use_word_vectors = true
-# use_sent_vectors = true
-# use_bert = false
+[EMBEDDINGS]
+USE_WORD_EMB = true
+USE_SENT_EMB = true
+USE_BERT_EMB = false
+RETRAIN_BERT_VECTORS = false
+
+[ARCHITECTURE]
+WORD_COMBINATION_STRATEGY = 'conv'
