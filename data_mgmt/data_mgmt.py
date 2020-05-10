@@ -111,6 +111,7 @@ def preprocess(tweet):
     tweet = re.sub(r'([!¡]\s?){3,}', r' $EXCLAMATION$ ', tweet)
     tweet = re.sub(r'([¿?]\s?){3,}', r' $QUESTION$ ', tweet)
     tweet = re.sub(r'(\.\s?){3,}', r' $ELLIPSIS$ ', tweet)
+    tweet = re.sub(r'\b(?:a*(?:(h+|j+)a+|s+)+(h+|j+)?|(?:l+o+)+l+)\b\b(?:a*(?:(h+|j+)a+|s+)+(h+|j+)?|(?:l+o+)+l+)\b', r' $LOL$ ', tweet)
 
     return tweet
     #tweet = re.sub(r'(\S)(\$[^$\s]+?\$)', r'\1 \2', tweet)
