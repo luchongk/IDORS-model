@@ -162,19 +162,29 @@ else:
                 test_recall)
 
 if retrain:
+    template = '\n###### Test results ######\n\nTest Loss: {},\nTest Accuracy: {},\nTest Precision: {},\nTest Recall: {},\nTest AUC: {},\nTest F-Score: {}\n'
+
     if (functional):
         model.summary()
         
-        earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=5,
+        earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', 
+                                                    patience=5,
                                                     restore_best_weights=True)
 
         if (use_kfold):
             num_folds = int(config['GENERAL']['NUM_FOLDS'])
-            splits = KFold(num_folds).split(training_dataset_embeddings, training_dataset_labels)
+            results = np.zeros((num_folds,6))
+
+            dataset_embeddings = np.append(training_dataset_embeddings, test_dataset_embeddings, 0)
+            dataset_ex_embeddings = np.append(training_ex_emb, test_ex_emb, 0)
+            dataset_labels = np.append(training_dataset_labels, test_dataset_labels, 0)
+
+            splits = KFold(num_folds).split(dataset_embeddings, dataset_labels)
+            test_step = 0
             for train_index, val_index in splits:
                 training_inputs = [
-                    np.asarray([training_dataset_embeddings[i] for i in train_index]),
-                    np.asarray([training_ex_emb[i] for i in train_index])
+                    np.asarray([dataset_embeddings[i] for i in train_index]),
+                    np.asarray([dataset_ex_embeddings[i] for i in train_index])
                 ]
 
                 if (use_bert):
@@ -182,25 +192,51 @@ if retrain:
                         np.asarray([bert_training_vectors[i] for i in train_index])
                     )
 
-                val_inputs = [
-                    np.asarray([training_dataset_embeddings[i] for i in val_index]),
-                    np.asarray([training_ex_emb[i] for i in val_index])
+                test_inputs = [
+                    np.asarray([dataset_embeddings[i] for i in val_index]),
+                    np.asarray([dataset_ex_embeddings[i] for i in val_index])
                 ]
 
                 if (use_bert):
-                    val_inputs.append(
+                    test_inputs.append(
                         np.asarray([bert_training_vectors[i] for i in val_index])
                     )
 
-                training_labels = np.asarray([training_dataset_labels[i] for i in train_index])
-                val_labels = np.asarray([training_dataset_labels[i] for i in val_index])
+                training_labels = np.asarray([dataset_labels[i] for i in train_index])
+                test_labels = np.asarray([dataset_labels[i] for i in val_index])
 
                 history = model.fit(training_inputs, 
                                 training_labels,
                                 batch_size=BATCH_SIZE,
                                 epochs=EPOCHS,
-                                validation_data=(val_inputs, val_labels),
+                                validation_split=0.2,
                                 callbacks=[earlyStopping])
+
+                loss, accuracy, precision, recall, auc = model.evaluate(test_inputs,
+                                                    test_labels, 
+                                                    batch_size=BATCH_SIZE, 
+                                                    verbose=2)
+                                                    
+                results[test_step][0] = loss
+                results[test_step][1] = accuracy
+                results[test_step][2] = precision
+                results[test_step][3] = recall
+                results[test_step][4] = auc
+                results[test_step][5] = 2 * (precision * recall) / (precision + recall)
+
+                test_step += 1
+
+                tf.keras.backend.clear_session()
+
+                model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
+            
+            mean_results = np.mean(results, axis=0)
+            print(template.format(mean_results[0], 
+                                mean_results[1], 
+                                mean_results[2], 
+                                mean_results[3], 
+                                mean_results[4], 
+                                mean_results[5]))
         else:
             training_inputs = [training_dataset_embeddings, training_ex_emb]
 
@@ -214,22 +250,20 @@ if retrain:
                                 validation_split=0.2,
                                 callbacks=[earlyStopping])
 
-        test_inputs = [test_dataset_embeddings, test_ex_emb]
+            test_inputs = [test_dataset_embeddings, test_ex_emb]
 
-        if (use_bert):
-            test_inputs.append(bert_test_vectors)
+            if (use_bert):
+                test_inputs.append(bert_test_vectors)
 
-        #TODO (low priority): Make an evaluate method for the subclassed model
-        loss, accuracy, precision, recall, auc = model.evaluate(test_inputs,
+            #TODO (low priority): Make an evaluate method for the subclassed model
+            loss, accuracy, precision, recall, auc = model.evaluate(test_inputs,
                                                                 test_dataset_labels, 
                                                                 batch_size=BATCH_SIZE, 
                                                                 verbose=2)
 
-        fscore = 2 * (precision * recall) / (precision + recall)
-
-        template = '\n###### Test results ######\n\nTest Loss: {},\nTest Accuracy: {},\nTest Precision: {},\nTest Recall: {},\nTest AUC: {},\nTest F-Score: {}\n'
+            fscore = 2 * (precision * recall) / (precision + recall)
         
-        print(template.format(loss, accuracy, precision, recall, auc, fscore))
+            print(template.format(loss, accuracy, precision, recall, auc, fscore))
 
         if not skipLogging:
             logDir = config['GENERAL']['LOGDIR']
