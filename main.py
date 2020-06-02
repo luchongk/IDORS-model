@@ -12,6 +12,7 @@ from models.fasttext_model import baseline as baseline_model
 from models.bert_model import bert_model
 from models.functional_model import FunctionalModel
 from models.tf_model import TfModel
+from models.svm import SVM
 from data_mgmt.data_mgmt import new_dataset, get_dataset, dataset_to_embeddings, get_bert_token_ids
 
 EPOCHS = 1
@@ -63,6 +64,7 @@ BATCH_SIZE = int(config['GENERAL']['BATCH_SIZE'])
 training_set_ratio = float(config['GENERAL']['TRAINING_SET_RATIO'])
 dataset_tsv_file = config['GENERAL']['DATASET_NAME']
 use_kfold = True if config['GENERAL']['USE_KFOLD'] == 'true' else False
+model_type = config['GENERAL']['MODEL_TYPE']
 
 if resplit:
     new_dataset(dataset_tsv_file, training_set_ratio)
@@ -120,9 +122,11 @@ if (use_bert):
 training_dataset = None
 test_dataset = None
 
-if (functional):
+if (model_type == 'functional'):
     model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
-else:
+elif (model_type == 'svm'):
+    model = SVM()
+elif (model_type == 'classed'):
     tf.keras.backend.set_floatx('float64')
 
     training_dataset = tf.data.Dataset.from_tensor_slices((training_dataset_embeddings, training_dataset_labels))
@@ -164,7 +168,7 @@ else:
 if retrain:
     template = '\n###### Test results ######\n\nTest Loss: {},\nTest Accuracy: {},\nTest Precision: {},\nTest Recall: {},\nTest AUC: {},\nTest F-Score: {}\n'
 
-    if (functional):
+    if (model_type == 'functional'):
         model.summary()
         
         earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', 
@@ -231,6 +235,7 @@ if retrain:
                 model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
             
             mean_results = np.mean(results, axis=0)
+            
             print(template.format(mean_results[0], 
                                 mean_results[1], 
                                 mean_results[2], 
@@ -290,7 +295,60 @@ if retrain:
                     logfile.write('\n')
                 logfile.write('\n##### Raw metrics history #####\n\n')
                 pprint(metricsHistory, logfile)
-    else:
+    elif (model_type == 'svm'):
+        if (use_kfold):
+            num_folds = int(config['GENERAL']['NUM_FOLDS'])
+            results = np.zeros((num_folds,4))
+
+            dataset_embeddings = np.append(training_dataset_embeddings, test_dataset_embeddings, 0)
+            dataset_ex_embeddings = np.append(training_ex_emb, test_ex_emb, 0)
+            dataset_labels = np.append(training_dataset_labels, test_dataset_labels, 0)
+
+            splits = KFold(num_folds).split(dataset_embeddings, dataset_labels)
+            test_step = 0
+            for train_index, val_index in splits:
+                training_dataset_embeddings = np.asarray([dataset_embeddings[i] for i in train_index])
+                training_ex_emb = np.asarray([dataset_ex_embeddings[i] for i in train_index])
+
+                if (use_bert):
+                    training_inputs.append(
+                        np.asarray([bert_training_vectors[i] for i in train_index])
+                    )
+
+                test_dataset_embeddings = np.asarray([dataset_embeddings[i] for i in val_index])
+                test_ex_emb = np.asarray([dataset_ex_embeddings[i] for i in val_index])
+
+                if (use_bert):
+                    test_inputs.append(
+                        np.asarray([bert_training_vectors[i] for i in val_index])
+                    )
+
+                training_labels = np.asarray([dataset_labels[i] for i in train_index])
+                test_labels = np.asarray([dataset_labels[i] for i in val_index])
+
+                model.fit(training_dataset_embeddings, training_ex_emb, training_labels)
+                accuracy, precision, recall, fscore = model.evaluate(test_dataset_embeddings, test_ex_emb, test_labels)
+                                                    
+                results[test_step][0] = accuracy
+                results[test_step][1] = precision
+                results[test_step][2] = recall
+                results[test_step][3] = fscore
+                test_step += 1
+
+                model = SVM()
+            
+            mean_results = np.mean(results, axis=0)
+            
+            print(template.format(mean_results[0], 
+                                mean_results[1], 
+                                mean_results[2], 
+                                mean_results[3], 
+                                mean_results[4], 
+                                mean_results[5]))
+        else:
+            model.fit(training_dataset_embeddings, training_ex_emb, training_dataset_labels)
+            model.evaluate(test_dataset_embeddings, test_ex_emb, test_dataset_labels)
+    elif (model_type == 'classed'):
         model.fit(training_dataset, test_dataset, EPOCHS)
 else:
     try:

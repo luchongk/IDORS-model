@@ -30,7 +30,7 @@ def conv_tass(inputs):
 
     return layers.GlobalMaxPooling1D()(concat)
 
-def lstm(inputs):
+def lstm_haternet(inputs):
     lstm_layer = layers.LSTM(600)
 
     return lstm_layer(inputs)
