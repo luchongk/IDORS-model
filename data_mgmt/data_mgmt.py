@@ -1,4 +1,4 @@
-import csv, re, unidecode, nltk, os, bert, configparser, sys
+import csv, re, unidecode, nltk, os, bert, configparser, sys, re
 import preprocessor as p, numpy as np
 
 from random import shuffle
@@ -35,6 +35,10 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
     test_words = set()
     for i, pair in enumerate(pairs):
         preprocessed = preprocess(pair[0])
+        matches = re.match(r'\s*', preprocessed)
+        groups = matches.groups()
+        if preprocessed == "" or len(re.match(r'', preprocessed).groups()) > 0:
+            continue
         result = "__label__"+ pair[1] + " " + preprocessed + "\n"
         bp_tweet = bert_preprocess(pair[0]) + "\n"
         if i < split_index:
