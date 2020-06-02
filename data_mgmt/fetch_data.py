@@ -17,13 +17,11 @@ client.close()
 
 desambigEntries = {}
 with open('db_data/desambiguados.csv') as desambiguados:
-    with open("testinho", "w") as testinho:
-        csvReader = csv.DictReader(desambiguados)
-        for line in csvReader:
-            testinho.write(line['text'] + "\n")
-            if line['text'] not in desambigEntries:
-                desambigEntries[line['text']] = {"written": False, "labels": list()}
-            desambigEntries[line['text']]['labels'].append(line['label'])
+    csvReader = csv.DictReader(desambiguados)
+    for line in csvReader:
+        if line['text'] not in desambigEntries:
+            desambigEntries[line['text']] = {"written": False, "labels": list()}
+        desambigEntries[line['text']]['labels'].append(line['label'])
 
 valueCounts = {}
 ids = set()
