@@ -122,9 +122,7 @@ if (use_bert):
 training_dataset = None
 test_dataset = None
 
-if (model_type == 'functional'):
-    model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
-elif (model_type == 'svm'):
+if (model_type == 'svm'):
     model = SVM()
 elif (model_type == 'classed'):
     tf.keras.backend.set_floatx('float64')
@@ -169,7 +167,6 @@ if retrain:
     template = '\n###### Test results ######\n\nTest Loss: {},\nTest Accuracy: {},\nTest Precision: {},\nTest Recall: {},\nTest AUC: {},\nTest F-Score: {}\n'
 
     if (model_type == 'functional'):
-        model.summary()
         
         earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', 
                                                     patience=5,
@@ -179,16 +176,14 @@ if retrain:
             num_folds = int(config['GENERAL']['NUM_FOLDS'])
             results = np.zeros((num_folds,6))
 
-            dataset_embeddings = np.append(training_dataset_embeddings, test_dataset_embeddings, 0)
-            dataset_ex_embeddings = np.append(training_ex_emb, test_ex_emb, 0)
-            dataset_labels = np.append(training_dataset_labels, test_dataset_labels, 0)
-
-            splits = KFold(num_folds).split(dataset_embeddings, dataset_labels)
-            test_step = 0
+            splits = KFold(num_folds).split(training_dataset_embeddings, training_dataset_labels)
+            val_step = 0
             for train_index, val_index in splits:
+                model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
+                
                 training_inputs = [
-                    np.asarray([dataset_embeddings[i] for i in train_index]),
-                    np.asarray([dataset_ex_embeddings[i] for i in train_index])
+                    np.asarray([training_dataset_embeddings[i] for i in train_index]),
+                    np.asarray([training_ex_emb[i] for i in train_index])
                 ]
 
                 if (use_bert):
@@ -196,43 +191,41 @@ if retrain:
                         np.asarray([bert_training_vectors[i] for i in train_index])
                     )
 
-                test_inputs = [
-                    np.asarray([dataset_embeddings[i] for i in val_index]),
-                    np.asarray([dataset_ex_embeddings[i] for i in val_index])
+                val_inputs = [
+                    np.asarray([training_dataset_embeddings[i] for i in val_index]),
+                    np.asarray([training_ex_emb[i] for i in val_index])
                 ]
 
                 if (use_bert):
-                    test_inputs.append(
+                    val_inputs.append(
                         np.asarray([bert_training_vectors[i] for i in val_index])
                     )
 
-                training_labels = np.asarray([dataset_labels[i] for i in train_index])
-                test_labels = np.asarray([dataset_labels[i] for i in val_index])
+                training_labels = np.asarray([training_dataset_labels[i] for i in train_index])
+                val_labels = np.asarray([training_dataset_labels[i] for i in val_index])
 
                 history = model.fit(training_inputs, 
                                 training_labels,
+                                validation_data=(val_inputs, val_labels),
                                 batch_size=BATCH_SIZE,
                                 epochs=EPOCHS,
-                                validation_split=0.2,
                                 callbacks=[earlyStopping])
 
-                loss, accuracy, precision, recall, auc = model.evaluate(test_inputs,
-                                                    test_labels, 
+                loss, accuracy, precision, recall, auc = model.evaluate(val_inputs,
+                                                    val_labels, 
                                                     batch_size=BATCH_SIZE, 
                                                     verbose=2)
                                                     
-                results[test_step][0] = loss
-                results[test_step][1] = accuracy
-                results[test_step][2] = precision
-                results[test_step][3] = recall
-                results[test_step][4] = auc
-                results[test_step][5] = 2 * (precision * recall) / (precision + recall)
+                results[val_step][0] = loss
+                results[val_step][1] = accuracy
+                results[val_step][2] = precision
+                results[val_step][3] = recall
+                results[val_step][4] = auc
+                results[val_step][5] = 2 * (precision * recall) / (precision + recall)
 
-                test_step += 1
+                val_step += 1
 
                 tf.keras.backend.clear_session()
-
-                model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
             
             mean_results = np.mean(results, axis=0)
             
@@ -243,6 +236,8 @@ if retrain:
                                 mean_results[4], 
                                 mean_results[5]))
         else:
+            model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
+
             training_inputs = [training_dataset_embeddings, training_ex_emb]
 
             if (use_bert):
@@ -305,7 +300,7 @@ if retrain:
             dataset_labels = np.append(training_dataset_labels, test_dataset_labels, 0)
 
             splits = KFold(num_folds).split(dataset_embeddings, dataset_labels)
-            test_step = 0
+            val_step = 0
             for train_index, val_index in splits:
                 training_dataset_embeddings = np.asarray([dataset_embeddings[i] for i in train_index])
                 training_ex_emb = np.asarray([dataset_ex_embeddings[i] for i in train_index])
@@ -329,11 +324,11 @@ if retrain:
                 model.fit(training_dataset_embeddings, training_ex_emb, training_labels)
                 accuracy, precision, recall, fscore = model.evaluate(test_dataset_embeddings, test_ex_emb, test_labels)
                                                     
-                results[test_step][0] = accuracy
-                results[test_step][1] = precision
-                results[test_step][2] = recall
-                results[test_step][3] = fscore
-                test_step += 1
+                results[val_step][0] = accuracy
+                results[val_step][1] = precision
+                results[val_step][2] = recall
+                results[val_step][3] = fscore
+                val_step += 1
 
                 model = SVM()
             

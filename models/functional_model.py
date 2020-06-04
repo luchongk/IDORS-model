@@ -14,11 +14,12 @@ def haternet(inputs):
 
     d1 = layers.Dense(1600, activation='relu')(droppedInputs)
 
-    d1 = layers.Dropout(.8)(d1)
+    #d1 = layers.Dropout(.4)(d1)
 
     d2 = layers.Dense(100, activation='relu')(d1) 
 
-    return layers.Dropout(.4)(d2)
+    #return layers.Dropout(.2)(d2)
+    return d2
 
 #### Sentence embedding generators ####
 def conv_tass(inputs):
@@ -54,7 +55,7 @@ def FunctionalModel(inputShape, input2Shape, bertInputShape, use_bert):
 
     norm = layers.BatchNormalization()(inputs)
 
-    processed_inputs = conv_tass(norm)
+    processed_inputs = lstm_haternet(norm)#conv_tass(norm)
 
     tweet_vector_array = [processed_inputs, inputs2]
 
@@ -67,14 +68,14 @@ def FunctionalModel(inputShape, input2Shape, bertInputShape, use_bert):
 
     tweet_vector = layers.concatenate(tweet_vector_array, axis=1)
 
-    final = tass(tweet_vector)
+    final = haternet(tweet_vector)#tass(tweet_vector)
 
     output = layers.Dense(1, activation="sigmoid")(final)
 
     model = keras.Model(inputs=input_array, outputs=output, name="main_output")
 
     model.compile(loss=tf.keras.losses.BinaryCrossentropy(),
-                optimizer=tf.keras.optimizers.Adam(),
+                optimizer=tf.keras.optimizers.Adam(0.001),
                 metrics=['accuracy', tf.keras.metrics.Precision(), tf.keras.metrics.Recall(), tf.keras.metrics.AUC()])
 
     return model
