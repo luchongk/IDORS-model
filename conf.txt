@@ -1,6 +1,6 @@
 [GENERAL]
 EPOCHS = 20
-BATCH_SIZE = 16
+BATCH_SIZE = 8
 TRAINING_SET_RATIO = 0.8
 DATASET_NAME = idors.tsv
 # supported languages are spanish and english

@@ -1,4 +1,4 @@
-import sys, time, math, configparser, os
+import sys, time, math, configparser, os, csv
 import numpy as np
 import tensorflow as tf
 
@@ -176,54 +176,66 @@ if retrain:
             num_folds = int(config['GENERAL']['NUM_FOLDS'])
             results = np.zeros((num_folds,6))
 
-            splits = KFold(num_folds).split(training_dataset_embeddings, training_dataset_labels)
-            val_step = 0
+            dataset_embeddings = np.append(training_dataset_embeddings, test_dataset_embeddings, 0)
+            dataset_ex_embeddings = np.append(training_ex_emb, test_ex_emb, 0)
+            dataset_labels = np.append(training_dataset_labels, test_dataset_labels, 0)
+            if(use_bert):
+                dataset_embeddings_bert = np.append(bert_training_vectors, bert_test_vectors, 0)
+
+            splits = KFold(num_folds).split(dataset_embeddings, dataset_labels)
+            test_step = 0
+            bestScore = 0
+            bestModel = None
             for train_index, val_index in splits:
                 model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
                 
                 training_inputs = [
-                    np.asarray([training_dataset_embeddings[i] for i in train_index]),
-                    np.asarray([training_ex_emb[i] for i in train_index])
+                    np.asarray([dataset_embeddings[i] for i in train_index]),
+                    np.asarray([dataset_ex_embeddings[i] for i in train_index])
                 ]
 
                 if (use_bert):
                     training_inputs.append(
-                        np.asarray([bert_training_vectors[i] for i in train_index])
+                        np.asarray([dataset_embeddings_bert[i] for i in train_index])
                     )
 
-                val_inputs = [
-                    np.asarray([training_dataset_embeddings[i] for i in val_index]),
-                    np.asarray([training_ex_emb[i] for i in val_index])
+                test_inputs = [
+                    np.asarray([dataset_embeddings[i] for i in val_index]),
+                    np.asarray([dataset_ex_embeddings[i] for i in val_index])
                 ]
 
                 if (use_bert):
-                    val_inputs.append(
-                        np.asarray([bert_training_vectors[i] for i in val_index])
+                    test_inputs.append(
+                        np.asarray([dataset_embeddings_bert[i] for i in val_index])
                     )
 
-                training_labels = np.asarray([training_dataset_labels[i] for i in train_index])
-                val_labels = np.asarray([training_dataset_labels[i] for i in val_index])
+                training_labels = np.asarray([dataset_labels[i] for i in train_index])
+                test_labels = np.asarray([dataset_labels[i] for i in val_index])
 
                 history = model.fit(training_inputs, 
                                 training_labels,
-                                validation_data=(val_inputs, val_labels),
+                                validation_split=0.2,
                                 batch_size=BATCH_SIZE,
                                 epochs=EPOCHS,
                                 callbacks=[earlyStopping])
 
-                loss, accuracy, precision, recall, auc = model.evaluate(val_inputs,
-                                                    val_labels, 
+                loss, accuracy, precision, recall, auc = model.evaluate(test_inputs,
+                                                    test_labels, 
                                                     batch_size=BATCH_SIZE, 
                                                     verbose=2)
                                                     
-                results[val_step][0] = loss
-                results[val_step][1] = accuracy
-                results[val_step][2] = precision
-                results[val_step][3] = recall
-                results[val_step][4] = auc
-                results[val_step][5] = 2 * (precision * recall) / (precision + recall)
+                results[test_step][0] = loss
+                results[test_step][1] = accuracy
+                results[test_step][2] = precision
+                results[test_step][3] = recall
+                results[test_step][4] = auc
+                results[test_step][5] = 2 * (precision * recall) / (precision + recall)
 
-                val_step += 1
+                if results[test_step][5] > bestScore:
+                    bestScore = results[test_step][5]
+                    bestModel = model
+
+                test_step += 1
 
                 tf.keras.backend.clear_session()
             
@@ -235,6 +247,24 @@ if retrain:
                                 mean_results[3], 
                                 mean_results[4], 
                                 mean_results[5]))
+
+            predictions = bestModel.predict([dataset_embeddings, dataset_ex_embeddings])
+            
+            training_texts = [a[0] for a in training_dataset_text]
+            test_texts = [a[0] for a in test_dataset_text]
+
+            dataset_texts = list(training_texts)
+            dataset_texts.extend(test_texts)
+
+            predictionsFile = open('results/predictions.txt', 'w')
+
+            with open('datasets/idorsPP.tsv') as tsvFile:
+                reader = csv.DictReader(tsvFile, dialect='excel-tab')
+                for r in reader:
+                    if r['pretext']:
+                        i = dataset_texts.index(r['pretext'])
+                        predictionsFile.write(r['id'] + " " + r['HS'] + " " + str(predictions[i]) + " " + r['text'] + "\n")
+
         else:
             model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
 
@@ -300,7 +330,7 @@ if retrain:
             dataset_labels = np.append(training_dataset_labels, test_dataset_labels, 0)
 
             splits = KFold(num_folds).split(dataset_embeddings, dataset_labels)
-            val_step = 0
+            test_step = 0
             for train_index, val_index in splits:
                 training_dataset_embeddings = np.asarray([dataset_embeddings[i] for i in train_index])
                 training_ex_emb = np.asarray([dataset_ex_embeddings[i] for i in train_index])
@@ -324,11 +354,11 @@ if retrain:
                 model.fit(training_dataset_embeddings, training_ex_emb, training_labels)
                 accuracy, precision, recall, fscore = model.evaluate(test_dataset_embeddings, test_ex_emb, test_labels)
                                                     
-                results[val_step][0] = accuracy
-                results[val_step][1] = precision
-                results[val_step][2] = recall
-                results[val_step][3] = fscore
-                val_step += 1
+                results[test_step][0] = accuracy
+                results[test_step][1] = precision
+                results[test_step][2] = recall
+                results[test_step][3] = fscore
+                test_step += 1
 
                 model = SVM()
             
