@@ -10,7 +10,7 @@ USE_KFOLD = true
 NUM_FOLDS = 5
 BERT_MODEL_DIR = beto_cased_L-12_H-768_A-12
 BERT_CKPT = model.ckpt-2000000
-MODEL_TYPE = functional
+MODEL_TYPE = svm
 
 [EMBEDDINGS]
 USE_WORD_EMB = true

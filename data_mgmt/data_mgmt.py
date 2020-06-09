@@ -19,35 +19,35 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
 
     with open('datasets/' + dataset_tsv_file) as tsvfile:
         reader = csv.DictReader(tsvfile, dialect='excel-tab')
-        pairs = [(r['text'], r['HS'], r['id']) for r in reader]
+        pairs = [(r['id'], r['HS'], r['OF'], r['HT'], r['text']) for r in reader]
 
-    #shuffle(pairs)
+    shuffle(pairs)
 
-    #split_index = floor(training_set_ratio * len(pairs))
+    split_index = floor(training_set_ratio * len(pairs))
 
-    """training_set_file = open("training_set.txt", "w")
+    training_set_file = open("training_set.txt", "w")
     test_set_file = open("test_set.txt", "w")
 
     bert_training_file = open("bert_training_set.txt", "w")
-    bert_test_file = open("bert_test_set.txt", "w")"""
+    bert_test_file = open("bert_test_set.txt", "w")
     
     training_words = set()
     test_words = set()
 
     with open('datasets/idorsPP.tsv', 'w') as tsvFile:
-        fieldNames = ['id',	'HS', 'text', 'pretext']
+        fieldNames = ['id',	'HS', 'OF', 'HT', 'text', 'pretext']
         writer = csv.DictWriter(tsvFile, fieldnames=fieldNames, delimiter="\t")
         writer.writeheader()
 
         for i, pair in enumerate(pairs):
-            preprocessed = preprocess(pair[0])
-            writer.writerow({'id': pair[2], 'text': pair[0], 'HS': pair[1], 'pretext': preprocessed})
+            preprocessed = preprocess(pair[4])
+            writer.writerow({'id': pair[0], 'HS': pair[1], 'OF': pair[2], 'HT': pair[3], 'text': pair[4], 'pretext': preprocessed})
             matches = re.match(r'\s*', preprocessed)
             groups = matches.groups()
             if preprocessed == "" or len(re.match(r'', preprocessed).groups()) > 0:
                 continue
             result = "__label__"+ pair[1] + " " + preprocessed + "\n"
-            """bp_tweet = bert_preprocess(pair[0]) + "\n"
+            bp_tweet = bert_preprocess(pair[4]) + "\n"
             if i < split_index:
                 training_words = training_words.union(preprocessed.split())
                 training_set_file.writelines(result)
@@ -64,7 +64,7 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
     bert_test_file.close()
 
     wordsNewInTest = test_words - training_words
-    wordRatio = len(wordsNewInTest) / len(test_words)"""
+    wordRatio = len(wordsNewInTest) / len(test_words)
 
 def create_bert_tokenizer():
     config = configparser.ConfigParser()
@@ -104,7 +104,7 @@ def preprocess(tweet):
     tweet = ' '.join(tweet)
     tweet = re.sub(r'\$ ([A-Z]+?) \$', r'$\1$', tweet)
     
-    tweet = tweet.split(' ');
+    tweet = tweet.split(' ')
 
     ### Stopwords removal ###
     language = os.getenv('LANGUAGE')

@@ -47,27 +47,31 @@ def custom(inputs):
 
 def FunctionalModel(inputShape, input2Shape, bertInputShape, use_bert):
     inputs = keras.Input(shape=inputShape, name='tweet_word_vectors')
-    
+
     inputs2 = keras.Input(shape=input2Shape, name='tweet_vectors')
 
     input_array = [inputs, inputs2]
 
     norm = layers.BatchNormalization()(inputs)
 
-    processed_inputs = conv_tass(norm)#lstm_haternet(norm)
+    processed_inputs = lstm_haternet(norm)#conv_tass(norm)
+
+    inputs2 = layers.BatchNormalization()(inputs2)
 
     tweet_vector_array = [processed_inputs, inputs2]
-
+    
     if (use_bert):
         inputs3 = keras.Input(shape=bertInputShape, name='bert_vectors')
 
         input_array.append(inputs3)
 
+        inputs3 = layers.BatchNormalization()(inputs3)
+
         tweet_vector_array.append(inputs3)
 
     tweet_vector = layers.concatenate(tweet_vector_array, axis=1)
 
-    final = tass(tweet_vector)#haternet(tweet_vector)
+    final = haternet(tweet_vector)#tass(tweet_vector)
 
     output = layers.Dense(1, activation="sigmoid")(final)
 
@@ -75,6 +79,15 @@ def FunctionalModel(inputShape, input2Shape, bertInputShape, use_bert):
 
     model.compile(loss=tf.keras.losses.BinaryCrossentropy(),
                 optimizer=tf.keras.optimizers.Adam(0.001),
-                metrics=['accuracy', tf.keras.metrics.Precision(), tf.keras.metrics.Recall(), tf.keras.metrics.AUC()])
+                metrics=[
+                    'accuracy',
+                    tf.keras.metrics.Precision(),
+                    tf.keras.metrics.Recall(),
+                    tf.keras.metrics.AUC(),
+                    tf.keras.metrics.TruePositives(),
+                    tf.keras.metrics.TrueNegatives(),
+                    tf.keras.metrics.FalsePositives(),
+                    tf.keras.metrics.FalseNegatives()
+                ])
 
     return model

@@ -6,7 +6,7 @@ from fasttext import load_model
 from pprint import pprint
 from pathlib import Path
 from datetime import date
-from sklearn.model_selection import KFold
+from sklearn.model_selection import KFold, StratifiedKFold
 
 from models.fasttext_model import baseline as baseline_model
 from models.bert_model import bert_model
@@ -122,9 +122,7 @@ if (use_bert):
 training_dataset = None
 test_dataset = None
 
-if (model_type == 'svm'):
-    model = SVM()
-elif (model_type == 'classed'):
+if (model_type == 'classed'):
     tf.keras.backend.set_floatx('float64')
 
     training_dataset = tf.data.Dataset.from_tensor_slices((training_dataset_embeddings, training_dataset_labels))
@@ -163,10 +161,11 @@ elif (model_type == 'classed'):
                 test_precision, 
                 test_recall)
 
+bestModel = None
+confusion = None
 if retrain:
-    template = '\n###### Test results ######\n\nTest Loss: {},\nTest Accuracy: {},\nTest Precision: {},\nTest Recall: {},\nTest AUC: {},\nTest F-Score: {}\n'
-
     if (model_type == 'functional'):
+        template = '\n###### Test results ######\n\nTest Loss: {},\nTest Accuracy: {},\nTest Precision: {},\nTest Recall: {},\nTest AUC: {},\nTest F-Score: {}\n'
         
         earlyStopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', 
                                                     patience=5,
@@ -182,10 +181,22 @@ if retrain:
             if(use_bert):
                 dataset_embeddings_bert = np.append(bert_training_vectors, bert_test_vectors, 0)
 
-            splits = KFold(num_folds).split(dataset_embeddings, dataset_labels)
+            training_texts = [a[0] for a in training_dataset_text]
+            test_texts = [a[0] for a in test_dataset_text]
+
+            dataset_texts = list(training_texts)
+            dataset_texts.extend(test_texts)
+
+            splits = StratifiedKFold(num_folds).split(dataset_embeddings, dataset_labels)
             test_step = 0
             bestScore = 0
-            bestModel = None
+            bestTestInput = None
+            bestTP = None
+            bestTN = None
+            bestFP = None
+            bestFN = None
+            bestTexts = None
+            proportions = []
             for train_index, val_index in splits:
                 model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
                 
@@ -211,6 +222,7 @@ if retrain:
 
                 training_labels = np.asarray([dataset_labels[i] for i in train_index])
                 test_labels = np.asarray([dataset_labels[i] for i in val_index])
+                proportions.append(labelProportion(training_labels, test_labels))
 
                 history = model.fit(training_inputs, 
                                 training_labels,
@@ -219,7 +231,7 @@ if retrain:
                                 epochs=EPOCHS,
                                 callbacks=[earlyStopping])
 
-                loss, accuracy, precision, recall, auc = model.evaluate(test_inputs,
+                loss, accuracy, precision, recall, auc, tp, tn, fp, fn = model.evaluate(test_inputs,
                                                     test_labels, 
                                                     batch_size=BATCH_SIZE, 
                                                     verbose=2)
@@ -234,6 +246,13 @@ if retrain:
                 if results[test_step][5] > bestScore:
                     bestScore = results[test_step][5]
                     bestModel = model
+                    bestTestInput = test_inputs
+                    bestTestSet = test_labels
+                    bestTP = tp
+                    bestTN = tn
+                    bestFP = fp
+                    bestFN = fn
+                    bestTexts = [dataset_texts[i] for i in val_index]
 
                 test_step += 1
 
@@ -247,23 +266,27 @@ if retrain:
                                 mean_results[3], 
                                 mean_results[4], 
                                 mean_results[5]))
-
-            predictions = bestModel.predict([dataset_embeddings, dataset_ex_embeddings])
             
-            training_texts = [a[0] for a in training_dataset_text]
-            test_texts = [a[0] for a in test_dataset_text]
+            loss = mean_results[0]
+            accuracy = mean_results[1]
+            precision = mean_results[2]
+            recall = mean_results[3]
+            auc = mean_results[4]
+            fscore = mean_results[5]
+            
+            predictions = bestModel.predict(bestTestInput)
 
-            dataset_texts = list(training_texts)
-            dataset_texts.extend(test_texts)
-
-            predictionsFile = open('results/predictions.txt', 'w')
+            predictionsFile = open(f'results/predictions{str(math.trunc(time.time()))}.txt', 'w')
 
             with open('datasets/idorsPP.tsv') as tsvFile:
                 reader = csv.DictReader(tsvFile, dialect='excel-tab')
                 for r in reader:
                     if r['pretext']:
-                        i = dataset_texts.index(r['pretext'])
-                        predictionsFile.write(r['id'] + " " + r['HS'] + " " + str(predictions[i]) + " " + r['text'] + "\n")
+                        try:
+                            i = bestTexts.index(r['pretext'])
+                            predictionsFile.write(r['id'] + " || " + r['HS'] + " || " + r['OF'] + " || " + r['HT'] + " || " + str(predictions[i][0]) + " || " + r['text'] + "\n")
+                        except:
+                            pass
 
         else:
             model = FunctionalModel(example_dim, tweet_emb_dim, bert_dim, use_bert)
@@ -303,13 +326,26 @@ if retrain:
                 logfile.write('Using dataset: ' + dataset_tsv_file + '\n\n')
                 logfile.write('Training dataset size: {}\n'.format(len(training_dataset_embeddings)))
                 logfile.write('Test dataset size: {}\n'.format(len(test_dataset_embeddings)))
-                logfile.write('\n###### Positive label proportion ######\n\n'.format(EPOCHS))
-                logfile.write('For training dataset: {}\n'.format(trainProportion))
-                logfile.write('For test dataset: {}\n'.format(testProportion))
-                logfile.write('For combined dataset: {}\n'.format(allProportion))                
-                logfile.write('\n###### Model Summary ######\n\n'.format(EPOCHS))
+                logfile.write('\n###### Positive label proportion ######\n\n')
+                for i, p in enumerate(proportions):
+                    logfile.write('For training in fold {}: {}\n'.format(i, p[0]))
+                    logfile.write('For test in fold {}: {}\n'.format(i, p[1]))
+                logfile.write('For combined dataset: {}\n'.format(proportions[0][2]))   
+                logfile.write('\n###### Fold results ######\n\n')
+                for r in results:
+                    logfile.write('loss:{}\n'.format(r[0]))
+                    logfile.write('accuracy:{}\n'.format(r[1]))
+                    logfile.write('precision:{}\n'.format(r[2]))
+                    logfile.write('recall:{}\n'.format(r[3]))
+                    logfile.write('AUC:{}\n'.format(r[4]))
+                    logfile.write('fscore:{}\n\n'.format(r[5]))
+                logfile.write('\n###### Model Summary ######\n\n')
                 model.summary(print_fn=lambda x: logfile.write(x + '\n'))
                 logfile.write(template.format(loss, accuracy, precision, recall, auc, fscore))
+                logfile.write('TP:{}\n'.format(bestTP))
+                logfile.write('TN:{}\n'.format(bestTN))
+                logfile.write('FP:{}\n'.format(bestFP))
+                logfile.write('FN:{}\n'.format(bestFN))
                 logfile.write('\n###### Metrics history for {} epochs: ######\n\n'.format(len(history.epoch)))
                 for epoch in history.epoch:
                     metricsHistory = history.history
@@ -320,56 +356,131 @@ if retrain:
                     logfile.write('\n')
                 logfile.write('\n##### Raw metrics history #####\n\n')
                 pprint(metricsHistory, logfile)
+
+        if save:
+            directory = "saved_models"
+            Path(directory).mkdir(parents=True, exist_ok=True)
+            bestModel.save_weights(directory + '/' + model_type + str(math.trunc(time.time())))
     elif (model_type == 'svm'):
+        template = '\n###### Test results ######\n\nTest Accuracy: {},\nTest Precision: {},\nTest Recall: {},\nTest F-Score: {}\n'
         if (use_kfold):
             num_folds = int(config['GENERAL']['NUM_FOLDS'])
             results = np.zeros((num_folds,4))
 
             dataset_embeddings = np.append(training_dataset_embeddings, test_dataset_embeddings, 0)
             dataset_ex_embeddings = np.append(training_ex_emb, test_ex_emb, 0)
+            dataset_bert_vectors = np.append(bert_training_vectors, bert_test_vectors, 0)
             dataset_labels = np.append(training_dataset_labels, test_dataset_labels, 0)
 
-            splits = KFold(num_folds).split(dataset_embeddings, dataset_labels)
+            training_texts = [a[0] for a in training_dataset_text]
+            test_texts = [a[0] for a in test_dataset_text]
+
+            dataset_texts = list(training_texts)
+            dataset_texts.extend(test_texts)
+
+            splits = StratifiedKFold(num_folds).split(dataset_embeddings, dataset_labels)
             test_step = 0
+            bestScore = 0
+            bestTestSet = None
+            bestTestInput = None
+            bestTP = None
+            bestTN = None
+            bestFP = None
+            bestFN = None
+            bestTexts = None
+            proportions = []
             for train_index, val_index in splits:
+                model = SVM()
+
                 training_dataset_embeddings = np.asarray([dataset_embeddings[i] for i in train_index])
                 training_ex_emb = np.asarray([dataset_ex_embeddings[i] for i in train_index])
 
+                training_embeddings_bert = []
                 if (use_bert):
-                    training_inputs.append(
-                        np.asarray([bert_training_vectors[i] for i in train_index])
-                    )
+                    training_embeddings_bert = np.asarray([dataset_bert_vectors[i] for i in train_index])
 
                 test_dataset_embeddings = np.asarray([dataset_embeddings[i] for i in val_index])
                 test_ex_emb = np.asarray([dataset_ex_embeddings[i] for i in val_index])
 
+                test_embeddings_bert = []
                 if (use_bert):
-                    test_inputs.append(
-                        np.asarray([bert_training_vectors[i] for i in val_index])
-                    )
+                    test_embeddings_bert = np.asarray([dataset_bert_vectors[i] for i in val_index])
 
                 training_labels = np.asarray([dataset_labels[i] for i in train_index])
                 test_labels = np.asarray([dataset_labels[i] for i in val_index])
+                proportions.append(labelProportion(training_labels, test_labels))
 
-                model.fit(training_dataset_embeddings, training_ex_emb, training_labels)
-                accuracy, precision, recall, fscore = model.evaluate(test_dataset_embeddings, test_ex_emb, test_labels)
+                model.fit(training_dataset_embeddings, training_ex_emb, training_embeddings_bert, training_labels)
+                accuracy, precision, recall, fscore, tp, tn, fp, fn = model.evaluate(test_dataset_embeddings, test_ex_emb, test_embeddings_bert, test_labels)
                                                     
                 results[test_step][0] = accuracy
                 results[test_step][1] = precision
                 results[test_step][2] = recall
                 results[test_step][3] = fscore
-                test_step += 1
 
-                model = SVM()
+                if results[test_step][3] > bestScore:
+                    bestScore = results[test_step][3]
+                    bestModel = model
+                    bestTestSet = test_labels
+                    bestTestInput = [test_dataset_embeddings, test_ex_emb, test_embeddings_bert]
+                    bestTP = tp
+                    bestTN = tn
+                    bestFP = fp
+                    bestFN = fn
+                    bestTexts = [dataset_texts[i] for i in val_index]
+                
+                test_step += 1
             
             mean_results = np.mean(results, axis=0)
             
-            print(template.format(mean_results[0], 
-                                mean_results[1], 
-                                mean_results[2], 
-                                mean_results[3], 
-                                mean_results[4], 
-                                mean_results[5]))
+            accuracy = mean_results[0]
+            precision = mean_results[1]
+            recall = mean_results[2]
+            fscore = mean_results[3]
+
+            predictions = bestModel.predict(bestTestInput[0], bestTestInput[1], bestTestInput[2])
+
+            predictionsFile = open(f'results/predictions{str(math.trunc(time.time()))}.txt', 'w')
+
+            with open('datasets/idorsPP.tsv') as tsvFile:
+                reader = csv.DictReader(tsvFile, dialect='excel-tab')
+                for r in reader:
+                    if r['pretext']:
+                        try:
+                            i = bestTexts.index(r['pretext'])
+                            predictionsFile.write(r['id'] + " || " + r['HS'] + " || " + r['OF'] + " || " + r['HT'] + " || " + str(predictions[i]) + " || " + r['text'] + "\n")
+                        except:
+                            pass
+
+            if not skipLogging:
+                logDir = config['GENERAL']['LOGDIR']
+                directory = logDir + '/' + date.today().strftime("%m-%d-%Y")
+                Path(directory).mkdir(parents=True, exist_ok=True)
+                with open(directory + '/' + dataset_tsv_file.split('.tsv')[0] + str(math.trunc(time.time())), 'w') as logfile:
+                    logfile.write('Using dataset: ' + dataset_tsv_file + '\n\n')
+                    logfile.write('Training dataset size: {}\n'.format(len(training_dataset_embeddings)))
+                    logfile.write('Test dataset size: {}\n'.format(len(test_dataset_embeddings)))
+                    logfile.write('\n###### Positive label proportion ######\n\n')
+                    for i, p in enumerate(proportions):
+                        logfile.write('For training in fold {}: {}\n'.format(i, p[0]))
+                        logfile.write('For test in fold {}: {}\n'.format(i, p[1]))
+                    logfile.write('For combined dataset: {}\n'.format(proportions[0][2]))
+                    logfile.write('\n###### Fold results ######\n\n')
+                    for r in results:
+                        logfile.write('accuracy:{}\n'.format(r[0]))
+                        logfile.write('precision:{}\n'.format(r[1]))
+                        logfile.write('recall:{}\n'.format(r[2]))
+                        logfile.write('fscore:{}\n\n'.format(r[3]))
+                    logfile.write(template.format(accuracy, precision, recall, fscore))
+                    logfile.write('TP:{}\n'.format(bestTP))
+                    logfile.write('TN:{}\n'.format(bestTN))
+                    logfile.write('FP:{}\n'.format(bestFP))
+                    logfile.write('FN:{}\n'.format(bestFN))
+            
+            if save:
+                directory = "saved_models"
+                Path(directory).mkdir(parents=True, exist_ok=True)
+                bestModel.save_weights(directory + '/' + model_type + str(math.trunc(time.time())))
         else:
             model.fit(training_dataset_embeddings, training_ex_emb, training_dataset_labels)
             model.evaluate(test_dataset_embeddings, test_ex_emb, test_dataset_labels)
@@ -384,7 +495,4 @@ else:
     except IOError as io_err:
         print(io_err)
         print("Couldn't find a saved TensorFlow model, aborting...")
-
-if save:
-    model.save_weights('tf_weights.h5')
         
