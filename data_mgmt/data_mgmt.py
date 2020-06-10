@@ -19,7 +19,8 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
 
     with open('datasets/' + dataset_tsv_file) as tsvfile:
         reader = csv.DictReader(tsvfile, dialect='excel-tab')
-        pairs = [(r['id'], r['HS'], r['OF'], r['HT'], r['text']) for r in reader]
+        #pairs = [(r['id'], r['HS'], r['OF'], r['HT'], r['text']) for r in reader]
+        pairs = [(r['id'], r['HS'], r['text']) for r in reader]
 
     shuffle(pairs)
 
@@ -34,20 +35,21 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
     training_words = set()
     test_words = set()
 
-    with open('datasets/idorsPP.tsv', 'w') as tsvFile:
-        fieldNames = ['id',	'HS', 'OF', 'HT', 'text', 'pretext']
+    with open('datasets/haternetPP.tsv', 'w') as tsvFile:
+        #fieldNames = ['id',	'HS', 'OF', 'HT', 'text', 'pretext']
+        fieldNames = ['id',	'HS', 'text', 'pretext']
         writer = csv.DictWriter(tsvFile, fieldnames=fieldNames, delimiter="\t")
         writer.writeheader()
 
         for i, pair in enumerate(pairs):
-            preprocessed = preprocess(pair[4])
-            writer.writerow({'id': pair[0], 'HS': pair[1], 'OF': pair[2], 'HT': pair[3], 'text': pair[4], 'pretext': preprocessed})
+            preprocessed = preprocess(pair[2])
+            writer.writerow({'id': pair[0], 'HS': pair[1], 'text': pair[2], 'pretext': preprocessed})
             matches = re.match(r'\s*', preprocessed)
             groups = matches.groups()
             if preprocessed == "" or len(re.match(r'', preprocessed).groups()) > 0:
                 continue
             result = "__label__"+ pair[1] + " " + preprocessed + "\n"
-            bp_tweet = bert_preprocess(pair[4]) + "\n"
+            bp_tweet = bert_preprocess(pair[2]) + "\n"
             if i < split_index:
                 training_words = training_words.union(preprocessed.split())
                 training_set_file.writelines(result)
@@ -63,8 +65,8 @@ def new_dataset(dataset_tsv_file, training_set_ratio):
     bert_training_file.close()
     bert_test_file.close()
 
-    wordsNewInTest = test_words - training_words
-    wordRatio = len(wordsNewInTest) / len(test_words)
+    #wordsNewInTest = test_words - training_words
+    #wordRatio = len(wordsNewInTest) / len(test_words)
 
 def create_bert_tokenizer():
     config = configparser.ConfigParser()

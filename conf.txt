@@ -2,7 +2,7 @@
 EPOCHS = 20
 BATCH_SIZE = 8
 TRAINING_SET_RATIO = 0.8
-DATASET_NAME = idors.tsv
+DATASET_NAME = haternet.tsv
 # supported languages are spanish and english
 LANGUAGE = spanish
 LOGDIR = runs
@@ -10,7 +10,7 @@ USE_KFOLD = true
 NUM_FOLDS = 5
 BERT_MODEL_DIR = beto_cased_L-12_H-768_A-12
 BERT_CKPT = model.ckpt-2000000
-MODEL_TYPE = svm
+MODEL_TYPE = functional
 
 [EMBEDDINGS]
 USE_WORD_EMB = true

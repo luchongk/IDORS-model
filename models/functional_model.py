@@ -54,7 +54,7 @@ def FunctionalModel(inputShape, input2Shape, bertInputShape, use_bert):
 
     norm = layers.BatchNormalization()(inputs)
 
-    processed_inputs = lstm_haternet(norm)#conv_tass(norm)
+    processed_inputs = conv_tass(norm)#lstm_haternet(norm)
 
     inputs2 = layers.BatchNormalization()(inputs2)
 
@@ -71,7 +71,7 @@ def FunctionalModel(inputShape, input2Shape, bertInputShape, use_bert):
 
     tweet_vector = layers.concatenate(tweet_vector_array, axis=1)
 
-    final = haternet(tweet_vector)#tass(tweet_vector)
+    final = tass(tweet_vector)#haternet(tweet_vector)
 
     output = layers.Dense(1, activation="sigmoid")(final)
 

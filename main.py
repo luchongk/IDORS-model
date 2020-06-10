@@ -34,7 +34,7 @@ def labelProportion(trainLabels, testLabels):
         if label == 1:
             countYesTest += 1
         
-    testProportion = countYesTest / len(testLabels)
+    testProportion = 0 if len(testLabels) == 0 else countYesTest / len(testLabels)
 
     allProportion = (countYesTraining + countYesTest) / (len(trainLabels) + len(testLabels))
 
